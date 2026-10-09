@@ -26,6 +26,9 @@ Two independent pages, each with its **own** stylesheet, script, and design toke
 |------|-------|------|--------|
 | Home (`/`) | `index.html`, `style.css`, `script.js` | Plus Jakarta Sans (`@import` in `style.css`) | `--navy-dark`, `--orange-primary`, `--text-*`, `--bg-*` … |
 | Residential (`/residential-construction/`) | `residential-construction/index.html`, `styles.css`, `script.js` | Inter (`<link>` in HTML) | `--navy`, `--orange`, `--gray`, `--tint` … (from Figma "Reference" page) |
+| Commercial (`/commercial/`) | `commercial/index.html`, `css/styles.css`, `js/main.js` (see `commercial/README.md`) | Plus Jakarta Sans | `--navy`, `--orange`, `--text`, `--muted` … (mobile-first) |
+
+**Shared header/footer:** both subpages copy the home page's header, mobile drawer (`#mobileNavDrawer`) and footer markup, with links rewritten to `../#section`. Their CSS is copied into each subpage stylesheet with the home tokens scoped to `.header, .mobile-nav-drawer, .nav-overlay, .footer` (the subpages reuse names like `--navy-dark` with different values). On commercial, home `.btn` rules are wrapped in `:where(.header, .mobile-nav-drawer)` because that page has its own `.btn`. A change to the home header/footer must be repeated in both subpages.
 
 Note the filename difference: root uses `style.css`, subpage uses `styles.css`. Don't assume a token from one page exists in the other.
 
