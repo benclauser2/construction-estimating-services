@@ -173,21 +173,34 @@
   }
 
   /* -------------------------------------------------------------
-     5. Mobile menu
+     5. Mobile nav drawer (same markup as the home page header)
   ------------------------------------------------------------- */
   function initMenu() {
-    const btn = document.querySelector(".menu-btn");
-    const nav = document.getElementById("site-nav");
-    if (!btn || !nav) return;
+    const openBtn = document.getElementById("mobileMenuOpen");
+    const closeBtn = document.getElementById("mobileMenuClose");
+    const drawer = document.getElementById("mobileNavDrawer");
+    const overlay = document.getElementById("navOverlay");
+    if (!openBtn || !drawer || !overlay) return;
+
     function setOpen(open) {
-      btn.setAttribute("aria-expanded", String(open));
-      btn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-      nav.classList.toggle("is-open", open);
+      drawer.classList.toggle("open", open);
+      drawer.inert = !open;
+      overlay.classList.toggle("visible", open);
+      openBtn.setAttribute("aria-expanded", String(open));
+      document.body.style.overflow = open ? "hidden" : "";
+      if (open && closeBtn) closeBtn.focus();
     }
-    btn.addEventListener("click", () => setOpen(btn.getAttribute("aria-expanded") !== "true"));
-    document.addEventListener("keydown", (e) => { if (e.key === "Escape") setOpen(false); });
-    nav.addEventListener("click", (e) => { if (e.target.closest("a")) setOpen(false); });
-    window.matchMedia("(min-width: 1025px)").addEventListener("change", (e) => { if (e.matches) setOpen(false); });
+
+    openBtn.addEventListener("click", () => setOpen(true));
+    if (closeBtn) closeBtn.addEventListener("click", () => { setOpen(false); openBtn.focus(); });
+    overlay.addEventListener("click", () => setOpen(false));
+    drawer.addEventListener("click", (e) => { if (e.target.closest("a")) setOpen(false); });
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "Escape" || !drawer.classList.contains("open")) return;
+      setOpen(false);
+      openBtn.focus();
+    });
+    window.matchMedia("(min-width: 1251px)").addEventListener("change", (e) => { if (e.matches) setOpen(false); });
   }
 
   /* -------------------------------------------------------------
