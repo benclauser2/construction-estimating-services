@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Residential Construction Estimating Costs</title>
+  <meta name="description" content="Residential construction estimating costs show the projected price of a home project before construction begins: how estimates are prepared, which cost categories make up a bid, and what moves the cost.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Reusable icons -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 18l5-5 4 4 3-3 4 4"/>
+  </symbol>
+  <symbol id="i-star" viewBox="0 0 20 20" fill="currentColor">
+    <path d="M10 1.8l2.5 5.2 5.7.8-4.1 4 1 5.7L10 14.8l-5.1 2.7 1-5.7-4.1-4 5.7-.8z"/>
+  </symbol>
+  <symbol id="i-info" viewBox="0 0 16 16">
+    <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.3"/>
+    <path class="i" d="M8 7.2v4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+    <circle class="i" cx="8" cy="4.9" r="0.9" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-logo" viewBox="0 0 34 34" fill="currentColor">
+    <circle cx="27" cy="5" r="4"/><circle cx="17" cy="15" r="4"/><circle cx="27" cy="15" r="4"/><circle cx="7" cy="27" r="4"/><circle cx="17" cy="27" r="4"/><circle cx="27" cy="27" r="4"/>
+  </symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+    <circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>
+  </symbol>
+</svg>
+
+<a class="visually-hidden" href="#main">Skip to content</a>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <div class="container site-header__bar">
+    <a class="logo" href="#" aria-label="Construction home"><svg aria-hidden="true"><use href="#i-logo"/></svg>Construction</a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul class="nav__list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Service<span class="nav__caret" aria-hidden="true">▾</span></a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <button class="icon-btn" type="button" aria-label="Search"><svg width="22" height="22" aria-hidden="true"><use href="#i-search"/></svg></button>
+    </nav>
+    <button class="icon-btn menu-btn" type="button" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">
+      <span class="menu-btn__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="container hero__grid">
+    <div class="hero__content">
+      <p class="eyebrow">Field guide / Residential / EST-001</p>
+      <h1 class="h1">Residential Construction Estimating Costs</h1>
+      <p>Residential construction estimating costs show the projected price of a home project before construction begins. The guide explains how estimates are prepared, which cost categories make up a bid, and how estimators turn project plans into cost figures. The process covers new construction, additions, and remodeling projects while identifying the professionals who rely on accurate cost information.</p>
+      <p>A residential estimate separates expenses into categories to provide a clearer view of expected project spending. Site preparation, foundations, framing, roofing, electrical work, plumbing, interior finishes, labor, and permits contribute to the estimated total. Material prices, location, labor rates, project requirements, design complexity, and site conditions affect the final construction cost.</p>
+      <nav class="toc" aria-label="On this page">
+        <span class="toc__label">On this page</span>
+        <div class="chips">
+          <a class="chip" href="#services">Residential estimates</a>
+          <a class="chip" href="#cost-breakdown">Cost components</a>
+          <a class="chip" href="#project-types">Project types</a>
+          <a class="chip" href="#process">Estimating methods</a>
+          <a class="chip" href="#who">Who uses these numbers</a>
+          <a class="chip" href="#cost-factors">What moves the cost</a>
+        </div>
+      </nav>
+    </div>
+
+    <aside class="estimate" aria-labelledby="est-title">
+      <div class="estimate__head">
+        <h2 class="estimate__title" id="est-title">Sample Estimate</h2>
+        <p class="estimate__sub">2,100 square feet, single-family home</p>
+      </div>
+      <ul class="estimate__rows">
+        <li><span>Site preparation and foundation</span><strong>$31,200</strong></li>
+        <li><span>Framing and structure</span><strong>$52,750</strong></li>
+        <li><span>Roofing</span><strong>$16,850</strong></li>
+        <li><span>Electrical and plumbing</span><strong>$35,400</strong></li>
+        <li><span>Interior finishes</span><strong>$42,600</strong></li>
+        <li><span>Labor and permits</span><strong>$25,900</strong></li>
+      </ul>
+      <div class="estimate__total"><span>Estimated total</span><strong>$204,700</strong></div>
+      <p class="estimate__note clamp" style="--lines:2">The sample estimate shows projected costs across major areas of a 2,100-square-foot single-family home. Each category reflects an estimated share of the total construction budget. Actual expenses vary based on materials, location, labor costs, project requirements, and site conditions.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section class="section" aria-labelledby="reviews-title">
+  <div class="container">
+    <div class="reviews__head">
+      <div>
+        <p class="eyebrow">Field notes / Verified reviews</p>
+        <h2 class="h2" id="reviews-title">What estimators and homeowners found out</h2>
+      </div>
+      <div class="rating">
+        <span class="rating__label">Average variance vs. final bid</span>
+        <span class="rating__pill">4.7 / 5 &nbsp;·&nbsp; across 214 projects</span>
+      </div>
+    </div>
+    <div class="grid cols-3 m-carousel">
+      <figure class="testimonial" style="margin:0">
+        <div class="stars" role="img" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+        <blockquote>“Ran the framing and foundation numbers against our own takeoff and landed within 3%. That almost never happens on a first pass.”</blockquote>
+        <figcaption><div class="testimonial__name">Marcus Webb</div><div class="testimonial__meta">General Contractor, 14 yrs · 2,400 SF · New build</div></figcaption>
+      </figure>
+      <figure class="testimonial" style="margin:0">
+        <div class="stars" role="img" aria-label="4 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg class="is-off"><use href="#i-star"/></svg></div>
+        <blockquote>“Good breakdown of labor vs. materials for a kitchen remodel. Wish it flagged permit cost swings by county, but the base numbers held up.”</blockquote>
+        <figcaption><div class="testimonial__name">Priya Anand</div><div class="testimonial__meta">Remodeling Estimator · 680 SF · Kitchen remodel</div></figcaption>
+      </figure>
+      <figure class="testimonial" style="margin:0">
+        <div class="stars" role="img" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+        <blockquote>“First time pricing an addition myself. This is the first guide that actually explained why two contractor bids were $18K apart.”</blockquote>
+        <figcaption><div class="testimonial__name">Dana Ferris</div><div class="testimonial__meta">Homeowner · 340 SF · Room addition</div></figcaption>
+      </figure>
+    </div>
+    <div class="dots" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="section" id="services" aria-labelledby="services-title">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow">Services and Residential Scope</p>
+      <h2 class="h2" id="services-title">Our Residential Construction Estimating Services</h2>
+      <p class="intro clamp" id="services-intro">Residential construction estimates establish the projected costs needed to plan and price a project before construction starts. Our services turn residential plans into clear cost information that supports budgeting, bidding, purchasing, and project planning. Detailed estimates organize expected expenses across major construction categories. Accurate quantity information helps teams plan material requirements before procurement begins. Clear cost data supports informed pricing decisions during the bidding process. Organized estimates provide a practical financial reference throughout the construction planning stage.</p>
+      <button class="link-more" type="button" data-expand="services-intro" aria-expanded="false">Read More →</button>
+    </div>
+    <div class="grid cols-4 m-carousel" role="tablist" aria-label="Estimating services" data-select>
+      <button class="card" role="tab" id="svc-t1" aria-controls="svc-p1" aria-selected="true"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><span class="tag">EST-01</span><span class="card__title">Residential Construction Cost Estimating Services</span><span class="card__body clamp">Comprehensive project estimates account for labor, materials, equipment, subcontractor charges, and other residential construction expenses. Detailed cost breakdowns provide a clearer view of expected spending across the project. Organized estimates support budget preparation and cost planning.</span><span class="link-cta">Learn More →</span></button>
+      <button class="card" role="tab" id="svc-t2" aria-controls="svc-p2" aria-selected="false" tabindex="-1"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><span class="tag">EST-02</span><span class="card__title">Residential Quantity Takeoff Services</span><span class="card__body clamp">Accurate quantity takeoffs identify required materials from residential architectural and structural drawings to support project cost calculations. Detailed measurements help establish material quantities for each construction stage. Clear takeoff data provides a reliable foundation for project pricing.</span><span class="link-cta">Learn More →</span></button>
+      <button class="card" role="tab" id="svc-t3" aria-controls="svc-p3" aria-selected="false" tabindex="-1"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><span class="tag">EST-03</span><span class="card__title">Residential Material Takeoff Services</span><span class="card__body clamp">Material quantities are separated by trade to help organize budgets, purchasing schedules, and procurement requirements before construction starts. Trade-specific quantities simplify material planning across different areas of the project. Detailed information helps teams prepare purchasing requirements more efficiently.</span><span class="link-cta">Learn More →</span></button>
+      <button class="card" role="tab" id="svc-t4" aria-controls="svc-p4" aria-selected="false" tabindex="-1"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><span class="tag">EST-04</span><span class="card__title">Residential Bid Estimating Services</span><span class="card__body clamp">Bid-ready estimates organize project costs to help contractors and subcontractors prepare pricing for residential construction work. Detailed cost information supports consistent bid preparation across major project categories. Clear estimates help align proposed pricing with project drawings and scope requirements.</span><span class="link-cta">Learn More →</span></button>
+    </div>
+    <div class="dots" aria-hidden="true"></div>
+    <div class="panel" role="tabpanel" id="svc-p1" aria-labelledby="svc-t1"><div class="panel__title"><span class="tag">EST-01</span><h3>1. Residential Construction Cost Estimating Services</h3></div><p>Residential construction cost estimating services provide a detailed projection of the expenses required to complete a home project. Estimates account for labor, materials, equipment, subcontractor costs, permits, and other applicable expenses. Detailed cost breakdowns help establish a clear project budget and support accurate pricing decisions. Estimators review project drawings and scope details to identify required work and associated costs. Organized estimates provide a practical reference for budgeting and procurement planning. Clear cost information supports contractor bidding and project preparation.</p></div>
+    <div class="panel" role="tabpanel" id="svc-p2" aria-labelledby="svc-t2" hidden><div class="panel__title"><span class="tag">EST-02</span><h3>2. Residential Quantity Takeoff Services</h3></div><p>Residential quantity takeoff services provide detailed measurements of materials required for a construction project. Estimators review architectural and structural drawings to identify and quantify materials across different project areas. Accurate takeoffs provide reliable quantity data for cost estimation and material planning. Detailed measurements help reduce quantity errors during project preparation. Organized takeoff reports support budgeting, purchasing, and contractor pricing. Clear material quantities provide a practical reference throughout the estimating process.</p></div>
+    <div class="panel" role="tabpanel" id="svc-p3" aria-labelledby="svc-t3" hidden><div class="panel__title"><span class="tag">EST-03</span><h3>3. Residential Material Takeoff Services</h3></div><p>Residential material takeoff services identify the quantities of materials required for a construction project. Estimators organize material requirements by trade to support residential budgeting, purchasing, and project planning. Detailed quantity information helps establish expected material needs before construction begins. Organized takeoffs support purchasing schedules and procurement preparation. Clear material data helps teams manage project requirements across different construction stages.</p></div>
+    <div class="panel" role="tabpanel" id="svc-p4" aria-labelledby="svc-t4" hidden><div class="panel__title"><span class="tag">EST-04</span><h3>4. Residential Bid Estimating Services</h3></div><p>Residential bid estimating services prepare detailed cost information for contractors and subcontractors, pricing residential construction projects. Estimators review project drawings, specifications, quantities, labor requirements, and material costs to develop organized bid estimates. Clear pricing details help contractors prepare accurate project bids. Detailed estimates provide a structured reference for reviewing project costs before submission. Bid-ready information supports efficient pricing and project planning.</p></div>
+  </div>
+</section>
+
+<!-- ===================== WHY CHOOSE US ===================== -->
+<section class="section" aria-labelledby="why-title">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow">Why Choose Us</p>
+      <h2 class="h2" id="why-title">Why Choose Our Residential Construction Estimating Services?</h2>
+      <p class="intro clamp" id="why-intro">Accurate residential estimates provide reliable cost information for planning and pricing construction projects. Our approach combines detailed takeoffs, current market rates, scope analysis, and quality reviews to create practical project estimates. Organized cost data helps contractors prepare budgets and pricing packages. Clear estimates provide a useful reference throughout the project planning process.</p>
+      <button class="link-more" type="button" data-expand="why-intro" aria-expanded="false">Read More →</button>
+    </div>
+    <div class="grid cols-4 m-carousel" role="tablist" aria-label="Why choose us" data-select>
+      <button class="card" role="tab" id="why-t1" aria-controls="why-p1" aria-selected="true"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><span class="tag">01</span><span class="card__title">Accurate Residential Construction Estimates</span><span class="card__body clamp">Detailed quantity takeoffs, updated pricing, scope checks, and quality reviews help maintain accuracy across each estimate. Cost details are organized by project category for easier budget review. Clear estimates provide a reliable reference for construction planning.</span><span class="link-cta">Learn More →</span></button>
+      <button class="card" role="tab" id="why-t2" aria-controls="why-p2" aria-selected="false" tabindex="-1"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><span class="tag">02</span><span class="card__title">Experienced Residential Construction Estimators</span><span class="card__body clamp">Our estimating team works across new construction, remodeling, additions, and multifamily residential projects with varied scopes. Project experience supports detailed reviews of drawings and construction requirements. Estimators organize project information into clear cost breakdowns.</span><span class="link-cta">Learn More →</span></button>
+      <button class="card" role="tab" id="why-t3" aria-controls="why-p3" aria-selected="false" tabindex="-1"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><span class="tag">03</span><span class="card__title">Location-Based Residential Construction Pricing</span><span class="card__body clamp">Project estimates account for regional labor rates, material costs, subcontractor charges, and local market conditions. Location-specific pricing provides a clearer view of expected construction expenses. Regional cost data supports more relevant project budgeting.</span><span class="link-cta">Learn More →</span></button>
+      <button class="card" role="tab" id="why-t4" aria-controls="why-p4" aria-selected="false" tabindex="-1"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><span class="tag">04</span><span class="card__title">Bid-Ready Residential Construction Estimates</span><span class="card__body clamp">Organized cost information gives contractors and subcontractors a clear pricing package for residential project bids. Detailed estimates simplify the review of labor, material, and subcontractor costs. Structured bid information supports efficient proposal preparation.</span><span class="link-cta">Learn More →</span></button>
+    </div>
+    <div class="dots" aria-hidden="true"></div>
+    <div class="panel" role="tabpanel" id="why-p1" aria-labelledby="why-t1"><div class="panel__title"><span class="tag">01</span><h3>Accurate Residential Construction Estimates</h3></div><p>Detailed quantity takeoffs provide a clear record of required materials and quantities. Current pricing helps align estimates with prevailing project costs. Scope reviews identify required work across project drawings and specifications. Quality control checks help identify errors before the estimate is delivered. Organized cost data makes individual project expenses easier to review. Detailed documentation supports consistent estimating across different residential projects.</p></div>
+    <div class="panel" role="tabpanel" id="why-p2" aria-labelledby="why-t2" hidden><div class="panel__title"><span class="tag">02</span><h3>Experienced Residential Construction Estimators</h3></div><p>Experienced estimators review residential construction plans across different project types and scopes. Estimating work covers new construction, remodeling, additions, and multifamily projects. Detailed plan reviews help identify labor, material, equipment, and subcontractor requirements. Organized cost breakdowns support consistent project pricing. Estimators review project specifications to identify requirements that affect construction costs. Detailed experience supports a thorough assessment of project scope and quantity requirements from a qualified construction estimator.</p></div>
+    <div class="panel" role="tabpanel" id="why-p3" aria-labelledby="why-t3" hidden><div class="panel__title"><span class="tag">03</span><h3>Location-Based Residential Construction Pricing</h3></div><p>Local labor rates influence the workforce costs included in residential estimates. Material prices vary with regional supply conditions and transportation costs. Subcontractor rates differ across construction markets and project locations. Local market data provides relevant cost information for project budgeting. Regional conditions affect material availability and delivery expenses. Location-specific pricing provides a clearer basis for evaluating projected construction costs.</p></div>
+    <div class="panel" role="tabpanel" id="why-p4" aria-labelledby="why-t4" hidden><div class="panel__title"><span class="tag">04</span><h3>Bid-Ready Residential Construction Estimates</h3></div><p>Bid-ready estimates organize project costs into clear categories for contractor review. Detailed pricing information covers labor, materials, equipment, and subcontractor expenses. Organized estimates help contractors prepare project bids based on the defined scope of work. Clear cost breakdowns support project pricing and budget review. Structured bid documents make project costs easier to evaluate before submission. Detailed pricing information helps align bids with project drawings and specifications.</p></div>
+  </div>
+</section>
+
+<!-- ===================== HOW IT WORKS ===================== -->
+<section class="section" id="process" aria-labelledby="process-title">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow">How It Works</p>
+      <h2 class="h2" id="process-title">How Our Residential Construction Estimating Process Works</h2>
+      <p class="intro clamp" id="process-intro">Our residential construction estimating process works by turning project plans into organized cost information. Each stage covers plan review, quantity measurement, pricing, quality control, and estimated delivery. The process provides a structured approach to reviewing project requirements. Detailed cost information supports budgeting and construction planning. Organized estimates provide a clear reference for project pricing and bidding.</p>
+      <button class="link-more" type="button" data-expand="process-intro" aria-expanded="false">Read More →</button>
+    </div>
+    <div class="grid cols-4 m-carousel" role="tablist" aria-label="Process steps" data-select>
+      <button class="card" role="tab" id="pro-t1" aria-controls="pro-p1" aria-selected="true"><span class="card__num">01</span><span class="card__title">Submit Residential Plans and Project Details</span><span class="card__body clamp">Provide architectural drawings, structural plans, specifications, scope notes, and other relevant project documents. Complete project information provides the foundation for accurate estimating.</span><span class="link-cta">Learn More →</span></button>
+      <button class="card" role="tab" id="pro-t2" aria-controls="pro-p2" aria-selected="false" tabindex="-1"><span class="card__num">02</span><span class="card__title">Review Residential Plans and Project Scope</span><span class="card__body clamp">Our estimators examine project drawings, specifications, and scope requirements. The review identifies the work, materials, trades, and cost categories required for the estimate.</span><span class="link-cta">Learn More →</span></button>
+      <button class="card" role="tab" id="pro-t3" aria-controls="pro-p3" aria-selected="false" tabindex="-1"><span class="card__num">03</span><span class="card__title">Complete Residential Quantity Takeoffs and Pricing</span><span class="card__body clamp">Required materials are measured from the project drawings. Labor, subcontractor costs, equipment, and other applicable expenses are calculated and organized into detailed cost breakdowns.</span><span class="link-cta">Learn More →</span></button>
+      <button class="card" role="tab" id="pro-t4" aria-controls="pro-p4" aria-selected="false" tabindex="-1"><span class="card__num">04</span><span class="card__title">Review and Deliver the Residential Estimate</span><span class="card__body clamp">The completed estimate undergoes a quality-control review before delivery. Final formatting organizes quantities and costs into a clear document for budgeting, bidding, and project planning.</span><span class="link-cta">Learn More →</span></button>
+    </div>
+    <div class="dots" aria-hidden="true"></div>
+    <div class="panel" role="tabpanel" id="pro-p1" aria-labelledby="pro-t1"><div class="panel__title"><span class="tag">Step 01</span><h3>1. Submit Residential Plans and Project Details</h3></div><p>Clients provide architectural drawings, structural plans, specifications, scope information, and other relevant project documents. Complete documentation gives estimators the information needed to understand project requirements. Clear project details help establish the scope covered by the estimate. Additional notes help clarify specific construction requirements and project expectations. Complete files reduce gaps during the estimating process.</p></div>
+    <div class="panel" role="tabpanel" id="pro-p2" aria-labelledby="pro-t2" hidden><div class="panel__title"><span class="tag">Step 02</span><h3>2. Review Residential Plans and Project Scope</h3></div><p>Estimators review residential drawings, specifications, scope details, and project requirements. The review identifies construction work, material needs, labor requirements, and applicable cost categories. Detailed plan analysis helps establish the information required for accurate estimating. Estimators examine project details that affect quantities and pricing. Scope review helps maintain consistency between project documents and the final estimate.</p></div>
+    <div class="panel" role="tabpanel" id="pro-p3" aria-labelledby="pro-t3" hidden><div class="panel__title"><span class="tag">Step 03</span><h3>3. Complete Residential Quantity Takeoffs and Pricing</h3></div><p>Estimators measure required materials from residential construction drawings and organize quantities by trade. Labor costs, subcontractor pricing, equipment expenses, and other applicable costs are calculated during the estimating stage. Detailed pricing provides a structured view of projected project expenses. Quantitative data provides a basis for calculating material and labor requirements. Organized pricing helps present project costs in clear categories.</p></div>
+    <div class="panel" role="tabpanel" id="pro-p4" aria-labelledby="pro-t4" hidden><div class="panel__title"><span class="tag">Step 04</span><h3>4. Review and Deliver the Residential Estimate</h3></div><p>Completed estimates undergo quality control to check quantities, pricing, scope coverage, and calculations. Final formatting organizes project costs into a clear and practical document. The completed estimate is then delivered for budgeting, bidding, purchasing, and project planning. Final checks help identify inconsistencies before the estimate reaches the client. A structured final document makes cost information easier to review and reference.</p></div>
+  </div>
+</section>
+
+<!-- ===================== WHO IT'S FOR ===================== -->
+<section class="section" id="who" aria-labelledby="who-title">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow">Who It’s For</p>
+      <h2 class="h2" id="who-title">Who Uses Residential Construction Estimating Services?</h2>
+      <p class="intro clamp" id="who-intro">Residential construction estimating services provide professionals with organized cost data for bidding, budgeting, procurement, financing, and project planning. Detailed estimates account for varying financial and construction requirements across residential projects.</p>
+      <button class="link-more" type="button" data-expand="who-intro" aria-expanded="false">Read More →</button>
+    </div>
+    <div class="grid cols-4 m-carousel" role="tablist" aria-label="Who uses estimates" data-select>
+      <button class="card card--center" role="tab" id="who-t1" aria-controls="who-p1" aria-selected="true"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><span class="tag">A</span><span class="card__title">General Contractors</span><span class="card__body clamp">General contractors rely on estimates to develop project prices, prepare bids, establish budgets, and manage construction costs. Organized cost data helps track expenses across each phase of residential construction.</span><span class="btn-outline">Learn More →</span></button>
+      <button class="card card--center" role="tab" id="who-t2" aria-controls="who-p2" aria-selected="false" tabindex="-1"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><span class="tag">B</span><span class="card__title">Subcontractors</span><span class="card__body clamp">Subcontractors use trade-specific quantity takeoffs and pricing information when preparing residential bids. Accurate quantities help calculate material, labor, and trade-specific costs for each project.</span><span class="btn-outline">Learn More →</span></button>
+      <button class="card card--center" role="tab" id="who-t3" aria-controls="who-p3" aria-selected="false" tabindex="-1"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><span class="tag">C</span><span class="card__title">Home Builders and Remodelers</span><span class="card__body clamp">Home builders and remodelers use estimates to establish budgets, develop client pricing, plan materials, and monitor project expenses. Detailed cost information provides a clear financial reference throughout construction.</span><span class="btn-outline">Learn More →</span></button>
+      <button class="card card--center" role="tab" id="who-t4" aria-controls="who-p4" aria-selected="false" tabindex="-1"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><span class="tag">D</span><span class="card__title">Developers and Property Owners</span><span class="card__body clamp">Developers and property owners use estimates to evaluate project feasibility, establish budgets, prepare financing information, and analyze expected costs. Early estimates help define financial requirements before construction starts.</span><span class="btn-outline">Learn More →</span></button>
+    </div>
+    <div class="dots" aria-hidden="true"></div>
+    <div class="panel" role="tabpanel" id="who-p1" aria-labelledby="who-t1"><div class="panel__title"><span class="tag">A</span><h3>1. General Contractors</h3></div><p>Cover the estimating, bidding, budgeting, and cost-control needs of residential general contractors. Accurate estimates help a general contractor win bids without underpricing the work. Clear budgets keep every trade and supplier tied to the same set of numbers from start to finish. Tracking costs against the original estimate shows early when a project is drifting off course. That visibility protects profit margins and keeps clients confident in the final price.</p></div>
+    <div class="panel" role="tabpanel" id="who-p2" aria-labelledby="who-t2" hidden><div class="panel__title"><span class="tag">B</span><h3>2. Subcontractors</h3></div><p>Cover trade-specific takeoffs, pricing, and bid preparation for residential subcontractors. Each trade counts quantities differently, so the takeoff has to match the scope of that specific trade. Pricing reflects the real cost of labor, materials, and equipment for the work being bid. A well-organized bid makes it easier for a general contractor to compare and accept a proposal. Fewer errors at this stage mean fewer disputes and change orders once the job starts.</p></div>
+    <div class="panel" role="tabpanel" id="who-p3" aria-labelledby="who-t3" hidden><div class="panel__title"><span class="tag">C</span><h3>3. Home Builders and Remodelers</h3></div><p>Cover residential budgeting, client pricing, material planning, and cost control across projects. Builders and remodelers need numbers they can present to clients with confidence. A solid budget sets expectations early and reduces surprises when selections and changes come up. Material planning keeps orders on schedule and limits on-site waste. Ongoing cost tracking lets teams manage several projects at once without losing sight of each one's bottom line.</p></div>
+    <div class="panel" role="tabpanel" id="who-p4" aria-labelledby="who-t4" hidden><div class="panel__title"><span class="tag">D</span><h3>4. Developers and Property Owners</h3></div><p>Cover feasibility, budgeting, financing, and cost planning for residential projects. Early cost figures indicate whether a project makes financial sense before major funds are committed. Lenders and investors expect a clear, well-supported budget when reviewing a funding request. Cost planning helps owners weigh design choices against what they can afford. With reliable numbers in hand, decisions about scope, timing, and financing become easier to make.</p></div>
+  </div>
+</section>
+
+<!-- ===================== PROJECT TYPES ===================== -->
+<section class="section" id="project-types" aria-labelledby="types-title">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow">Project Types</p>
+      <h2 class="h2" id="types-title">What Residential Construction Project Types Can Be Estimated?</h2>
+      <p class="intro clamp" id="types-intro">Residential construction project types that can be estimated are new construction, renovation and remodeling, and multifamily projects. Detailed estimates organize projected costs by construction phase and project requirements. Cost calculations account for materials, labor, equipment, subcontractor work, and other applicable expenses. Project-specific estimates support budgeting, bidding, procurement, and construction planning.</p>
+      <button class="link-more" type="button" data-expand="types-intro" aria-expanded="false">Read More →</button>
+    </div>
+    <div class="grid cols-3 m-carousel" role="tablist" aria-label="Project types" data-select>
+      <button class="card" role="tab" id="typ-t1" aria-controls="typ-p1" aria-selected="true"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><span class="tag">01</span><span class="card__title">New Construction</span><span class="card__body clamp">Ground-up residential projects receive estimates that cover foundation work, structural construction, and final finishing. Detailed estimates organize projected costs across major construction phases. Quantity and pricing information support budgeting before construction begins.</span><span class="link-cta">Learn More →</span></button>
+      <button class="card" role="tab" id="typ-t2" aria-controls="typ-p2" aria-selected="false" tabindex="-1"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><span class="tag">02</span><span class="card__title">Renovation and Remodeling</span><span class="card__body clamp">Existing residential properties receive estimates for additions, modifications, upgrades, and remodeling work. Estimates account for the scope of planned improvements and required construction materials. Detailed cost information helps organize expenses for work within existing structures.</span><span class="link-cta">Learn More →</span></button>
+      <button class="card" role="tab" id="typ-t3" aria-controls="typ-p3" aria-selected="false" tabindex="-1"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><span class="tag">03</span><span class="card__title">Multifamily Projects</span><span class="card__body clamp">Multifamily projects receive estimates for apartments, townhomes, condominiums, and other residential developments with multiple housing units. Detailed estimates organize costs across multiple units and shared construction areas. Quantity and pricing data support budgeting and project planning for larger residential developments.</span><span class="link-cta">Learn More →</span></button>
+    </div>
+    <div class="dots" aria-hidden="true"></div>
+    <div class="panel" role="tabpanel" id="typ-p1" aria-labelledby="typ-t1"><div class="panel__title"><span class="tag">01</span><h3>1. New Construction Projects</h3></div><p>Cover estimating for new residential construction and ground-up home-building projects. Ground-up builds start with a blank slate, so the estimate must account for everything from clearing and grading to final finishes. Site conditions such as soil, slope, and utility access can affect costs before framing even begins. Every system in the home is priced from scratch, which makes complete and accurate plans essential. A thorough estimate at this stage provides builders and owners with a reliable budget for the entire build.</p></div>
+    <div class="panel" role="tabpanel" id="typ-p2" aria-labelledby="typ-t2" hidden><div class="panel__title"><span class="tag">02</span><h3>2. Renovation and Remodeling Projects</h3></div><p>Cover residential renovations, additions, alterations, and remodeling projects. Work on an existing home comes with unknowns that new builds do not have, such as hidden damage or outdated wiring behind the walls. Estimates often include demolition, protection of the areas left untouched, and cleanup, along with the new work. Additions and alterations must tie into the existing structure, which adds labor and coordination. Building a contingency into the estimate helps cover surprises without derailing the budget.</p></div>
+    <div class="panel" role="tabpanel" id="typ-p3" aria-labelledby="typ-t3" hidden><div class="panel__title"><span class="tag">03</span><h3>3. Multifamily Projects</h3></div><p>Cover apartments, townhomes, condominiums, and other multifamily residential developments. Multifamily estimates cover many units at once, so repeated layouts can be priced as a set and multiplied across the building. Shared elements (stairwells, corridors, parking, and common areas) need their own line items. Fire separation, accessibility, and other code requirements often add cost compared with single-family homes. Careful tracking of quantities and costs across units keeps a large project organized and on budget.</p></div>
+  </div>
+</section>
+
+<!-- ===================== DELIVERABLES ===================== -->
+<section class="section" aria-labelledby="del-title">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow">Deliverables</p>
+      <h2 class="h2" id="del-title">What is Included in a Residential Construction Estimate?</h2>
+      <p class="intro clamp" id="del-intro">Residential construction estimates provide detailed cost information beyond the total projected project amount. Each estimate presents quantities, pricing, and expenses related to the planned construction work. Detailed documentation helps clarify how projected costs are distributed across major project categories. Organized cost information supports budgeting, bidding, procurement, and construction planning. Clear deliverables make project costs easier to review and understand.</p>
+      <button class="link-more" type="button" data-expand="del-intro" aria-expanded="false">Read More →</button>
+    </div>
+    <div class="grid cols-3 m-carousel" role="tablist" aria-label="Deliverables" data-select>
+      <button class="card" role="tab" id="del-t1" aria-controls="del-p1" aria-selected="true"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><span class="tag">01</span><span class="card__title">Material Quantities and Takeoffs</span><span class="card__body clamp">Measured material quantities and trade-specific takeoffs are prepared from the project plans. Detailed quantity information supports material planning and accurate project cost calculations.</span><span class="link-cta">Learn More →</span></button>
+      <button class="card" role="tab" id="del-t2" aria-controls="del-p2" aria-selected="false" tabindex="-1"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><span class="tag">02</span><span class="card__title">Labor, Material, and Equipment Costs</span><span class="card__body clamp">Labor, material, and equipment expenses are calculated in accordance with the applicable project requirements. Organized pricing provides a clearer view of the primary expenses contributing to the estimated project cost.</span><span class="link-cta">Learn More →</span></button>
+      <button class="card" role="tab" id="del-t3" aria-controls="del-p3" aria-selected="false" tabindex="-1"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><span class="tag">03</span><span class="card__title">Trade-by-Trade Cost Breakdown</span><span class="card__body clamp">Project expenses are arranged by trade or construction division for easier review. Detailed breakdowns show how each construction category contributes to the projected cost of the project.</span><span class="link-cta">Learn More →</span></button>
+    </div>
+    <div class="dots" aria-hidden="true"></div>
+    <div class="panel" role="tabpanel" id="del-p1" aria-labelledby="del-t1"><div class="panel__title"><span class="tag">01</span><h3>Residential Material Quantities and Takeoffs</h3></div><p>Residential material takeoffs begin with project plans, where required materials are measured by area, length, count, or unit. Measured quantities are then organized by trade so each crew receives relevant material information. Waste allowances account for cutting, damage, and expected material loss during installation. Accurate takeoffs provide a reliable foundation for calculating the remaining project costs. Detailed quantities help support material purchasing and project budgeting.</p></div>
+    <div class="panel" role="tabpanel" id="del-p2" aria-labelledby="del-t2" hidden><div class="panel__title"><span class="tag">02</span><h3>Residential Labor, Material, and Equipment Costs</h3></div><p>Residential construction estimates separate major expenses into labor, materials, and equipment. Labor costs cover workforce requirements, wage rates, productivity, and applicable employment expenses. Material costs cover products required for construction and account for current supplier pricing and delivery expenses. Equipment costs cover rentals, tools, machinery, and other resources required on the job site. Separate cost categories make project expenses easier to review and manage.</p></div>
+    <div class="panel" role="tabpanel" id="del-p3" aria-labelledby="del-t3" hidden><div class="panel__title"><span class="tag">03</span><h3>Residential Trade-by-Trade Cost Breakdown</h3></div><p>Residential construction costs are organized by individual trades or construction divisions for clearer project analysis. Trade breakdowns separate site work, concrete, framing, roofing, electrical, plumbing, and finishing costs into distinct categories. Organized trade costs help contractors compare subcontractor pricing against the defined project scope. Detailed breakdowns show which construction areas account for larger portions of the projected budget. Project changes are easier to update when costs are separated by trade.</p></div>
+  </div>
+</section>
+
+<!-- ===================== COST BREAKDOWN ===================== -->
+<section class="section" id="cost-breakdown" aria-labelledby="cb-title">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow">Cost Breakdown</p>
+      <h2 class="h2" id="cb-title">What is a House Building Cost Breakdown?</h2>
+      <p class="intro clamp" id="cb-intro">A house building cost breakdown divides the total projected cost into major categories, from site preparation through final finishes. Each category has its own pricing to make project expenses easier to review and track. Detailed cost categories help identify where the construction budget is allocated. Organized figures support accurate budgeting and cost control throughout the project. Material, labor, equipment, and subcontractor expenses form key parts of the breakdown. Clear cost information helps contractors and property owners review projected spending before construction begins. A structured breakdown provides a practical reference for comparing estimated costs across different construction stages.</p>
+      <button class="link-more" type="button" data-expand="cb-intro" aria-expanded="false">Read More →</button>
+    </div>
+    <div class="breakdown">
+      <div>
+        <h3>How are Residential Construction Costs Calculated?</h3>
+        <p>Quantities are taken from the plans and priced using current unit rates. Those figures are then added to labor, equipment, and subcontractor costs to arrive at the estimated total.</p>
+      </div>
+      <div class="formula" role="table" aria-label="Calculation formula">
+        <ul>
+          <li role="row"><span role="cell">Material quantities</span><span role="cell">× unit price</span></li>
+          <li role="row"><span role="cell">Labor</span><span role="cell">hours × rate</span></li>
+          <li role="row"><span role="cell">Equipment</span><span role="cell">+ cost</span></li>
+          <li role="row"><span role="cell">Subcontractor costs</span><span role="cell">+ cost</span></li>
+          <li role="row"><span role="cell">Other project expenses</span><span role="cell">+ cost</span></li>
+        </ul>
+        <div class="formula__total" role="row"><span role="cell">Estimated total</span><span role="cell">= Σ</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COST FACTORS ===================== -->
+<section class="section" id="cost-factors" aria-labelledby="cf-title">
+  <div class="container">
+    <div class="sec-head">
+      <h2 class="h2" id="cf-title">What Factors Affect Residential Construction Estimating Costs?</h2>
+      <p class="intro clamp" id="cf-intro">Nine key factors affect residential construction estimating costs before construction begins. Each factor influences the quantities, labor requirements, material expenses, or other costs included in the estimate.</p>
+      <button class="link-more" type="button" data-expand="cf-intro" aria-expanded="false">Read More →</button>
+    </div>
+    <p class="list-intro">Factors that affect residential construction estimating costs are listed below.</p>
+    <ul class="grid cols-3 m-carousel">
+      <li class="card card--compact"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><h3 class="card__title">Project size</h3><p class="card__body--sm">Larger residential projects generally require greater quantities of materials, labor hours, equipment, and construction resources.</p></li>
+      <li class="card card--compact"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><h3 class="card__title">Location</h3><p class="card__body--sm">Local labor rates, material prices, transportation expenses, and regional market conditions affect estimated construction costs.</p></li>
+      <li class="card card--compact"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><h3 class="card__title">Design complexity</h3><p class="card__body--sm">Complex layouts, structural details, custom features, and specialized construction requirements increase the number of estimating considerations.</p></li>
+      <li class="card card--compact"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><h3 class="card__title">Materials</h3><p class="card__body--sm">Material selection, quality, availability, and current prices directly affect the projected construction budget.</p></li>
+      <li class="card card--compact"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><h3 class="card__title">Labor</h3><p class="card__body--sm">Labor rates, workforce requirements, trade availability, and project duration influence the labor portion of the estimate.</p></li>
+      <li class="card card--compact"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><h3 class="card__title">Site conditions</h3><p class="card__body--sm">Soil conditions, grading requirements, accessibility, utilities, and site preparation needs affect projected construction expenses.</p></li>
+      <li class="card card--compact"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><h3 class="card__title">Finishes</h3><p class="card__body--sm">Flooring, cabinetry, fixtures, countertops, paint, and other finish selections influence material and installation costs.</p></li>
+      <li class="card card--compact"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><h3 class="card__title">Market conditions</h3><p class="card__body--sm">Changes in material pricing, labor rates, supply availability, and local demand affect current construction costs.</p></li>
+      <li class="card card--compact"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><h3 class="card__title">Project specifications</h3><p class="card__body--sm">Architectural details, structural requirements, product specifications, and construction standards determine the scope and cost requirements.</p></li>
+    </ul>
+    <div class="dots" aria-hidden="true"></div>
+
+    <div class="grid cols-3 m-carousel" role="tablist" aria-label="Cost driver deep dives" data-select style="margin-top:40px">
+      <button class="card" role="tab" id="cf-t1" aria-controls="cf-p1" aria-selected="true"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><span class="card__title">How do Material Prices Affect Residential Construction Costs?</span><span class="link-cta">Learn More →</span></button>
+      <button class="card" role="tab" id="cf-t2" aria-controls="cf-p2" aria-selected="false" tabindex="-1"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><span class="card__title">How do Labor Rates Affect Residential Construction Costs?</span><span class="link-cta">Learn More →</span></button>
+      <button class="card" role="tab" id="cf-t3" aria-controls="cf-p3" aria-selected="false" tabindex="-1"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><span class="card__title">How do Site Conditions Affect Residential Construction Estimating Costs?</span><span class="link-cta">Learn More →</span></button>
+    </div>
+    <div class="dots" aria-hidden="true"></div>
+    <div class="panel" role="tabpanel" id="cf-p1" aria-labelledby="cf-t1"><div class="panel__title"><h3>How do Material Prices Affect Residential Construction Costs?</h3></div><p>Material choices, required quantities, availability, and market changes influence the material costs included in a residential construction estimate. Material selection sets the baseline, since a cedar siding package or a granite countertop costs far more than a standard alternative. Quantities multiply by the unit price, so a small measurement error or a missing waste allowance can noticeably affect the total. Availability matters because shortages and long lead times can push builders toward substitutes or delay the schedule. Price fluctuations add risk, especially for lumber, steel, copper, and concrete, which can change between the estimate and the purchase. Estimators often reduce that risk by using current supplier quotes, setting a validity window on prices, and building an allowance for increases into the estimate.</p></div>
+    <div class="panel" role="tabpanel" id="cf-p2" aria-labelledby="cf-t2" hidden><div class="panel__title"><h3>How do Labor Rates Affect Residential Construction Costs?</h3></div><p>Local wage levels, crew size, work efficiency, trade requirements, and project complexity affect labor costs in the estimate. Wages vary widely by region and by trade, so the same framing job can cost noticeably more in one market than in another. Crew requirements specify how many workers and for how long a task will need. Productivity rates turn that into hours, which is why estimators rely on realistic output figures rather than best-case assumptions. Complex layouts, tight schedules, and specialty finishes slow the work down and raise the labor line accordingly. Overtime requirements increase labor expenses when projects require accelerated schedules. Subcontractor rates add another cost component for specialized residential trades. Accurate labor assumptions help align projected workforce expenses with the actual project scope.</p></div>
+    <div class="panel" role="tabpanel" id="cf-p3" aria-labelledby="cf-t3" hidden><div class="panel__title"><h3>How do Site Conditions Affect Residential Construction Estimating Costs?</h3></div><p>Grading, excavation, soil characteristics, site accessibility, and utility requirements influence construction costs before structural work begins. A steep or uneven lot may need extensive grading and retaining walls before a foundation can be poured. Rocky or unstable soil can call for extra excavation, engineered fill, or a deeper foundation system. Limited access makes it harder to bring in equipment and deliveries, which adds time and handling cost. Bringing water, sewer, power, and gas to the property can be a major expense, especially on rural or undeveloped lots. Drainage requirements affect site preparation costs and construction planning. Environmental conditions may require additional site work, testing, or specialized construction methods. Detailed site assessments help estimators account for site-related expenses before construction starts.</p></div>
+  </div>
+</section>
+
+<!-- ===================== PROPERTY TYPES ===================== -->
+<section class="section" aria-labelledby="pt-title">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow">By Property Type</p>
+      <h2 class="h2" id="pt-title">Single-Family, Multi-Family &amp; Apartment Estimating Costs</h2>
+      <p class="intro">What drives the number changes with the property type — unit count, shared systems, and scale all shift the estimate.</p>
+    </div>
+    <div class="grid cols-2 m-carousel">
+      <article class="card">
+        <span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span>
+        <h3 class="card__title">What are Single-Family Construction Estimating Costs?</h3>
+        <div class="card__body clamp" id="pt-1">
+          <p>Single-family construction estimating costs include labor, materials, site preparation, and construction work for a single detached residential dwelling. The estimate covers the foundation, structure, roof, exterior, interior finishes, and utility systems. Home size, floor plan, finish level, site conditions, and design choices affect the projected cost. Detailed estimates account for excavation, utilities, mechanical systems, electrical work, plumbing, and contingency allowances. Material quantities and labor requirements are calculated from the project plans and specifications. Local pricing affects material, labor, equipment, and subcontractor costs.</p>
+          <p style="margin-top:12px">A detailed estimate provides a clear budget for planning and construction. Estimators review project specifications to identify construction requirements that affect quantities and pricing. Permit fees, delivery charges, waste allowances, and site-specific requirements contribute to projected expenses. Clear cost categories help contractors and property owners review spending across each construction phase. Detailed estimates provide a reliable basis for budgeting, purchasing, bidding, and construction cost management.</p>
+        </div>
+        <button class="link-cta link-more" style="text-decoration:none;font-weight:600;color:var(--navy);padding:0" type="button" data-expand="pt-1" data-label="Learn More →" aria-expanded="false">Learn More →</button>
+      </article>
+      <article class="card">
+        <span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span>
+        <h3 class="card__title">What are Multi-Family Construction Estimating Costs?</h3>
+        <p class="card__body clamp" id="pt-2">Multi-family construction estimating costs cover projected expenses for duplexes, triplexes, and fourplexes. Estimates account for shared foundations, roofs, utilities, site work, and individual unit requirements. Party walls require additional fire-rated materials and sound insulation. Plumbing, electrical, and HVAC costs include shared systems and unit connections. Site work covers grading, driveways, parking, landscaping, and utility connections. Repeated layouts help organize costs across multiple units while accounting for individual finishes and fixtures. Unit count, building size, layout, material selections, and local labor rates affect the projected budget. Code requirements for fire separation, accessibility, egress, and utilities add further estimating considerations. A detailed cost breakdown helps organize expenses by unit, trade, and shared construction areas for multi-family construction estimating costs.</p>
+        <button class="link-cta link-more" style="text-decoration:none;font-weight:600;color:var(--navy);padding:0" type="button" data-expand="pt-2" data-label="Learn More →" aria-expanded="false">Learn More →</button>
+      </article>
+      <article class="card">
+        <span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span>
+        <h3 class="card__title">What are Apartment Construction Estimating Costs?</h3>
+        <p class="card__body clamp" id="pt-3">Apartment construction estimating costs cover projected expenses for apartment buildings, including unit costs, common areas, shared systems, labor, and materials. Each unit type receives separate pricing based on its layout, size, finishes, and fixtures. Common areas and shared building systems receive separate cost allocations. Building size, unit count, finish levels, site conditions, and local pricing affect the estimated budget. Detailed takeoffs help calculate material quantities across repeated units. Labor costs are organized by trade and construction phase. Code requirements for fire safety, accessibility, sound control, and egress affect project costs. A detailed estimate organizes expenses by units, common areas, and building systems for budgeting and construction planning through Apartment construction estimating costs.</p>
+        <button class="link-cta link-more" style="text-decoration:none;font-weight:600;color:var(--navy);padding:0" type="button" data-expand="pt-3" data-label="Learn More →" aria-expanded="false">Learn More →</button>
+      </article>
+      <article class="card">
+        <span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span>
+        <h3 class="card__title">What are Multifamily Construction Estimating Costs?</h3>
+        <p class="card__body clamp" id="pt-4">Multifamily construction estimating costs cover projected expenses for larger residential developments with multiple buildings or housing units. Estimates account for phased construction, shared infrastructure, site work, building systems, labor, and materials. Project scale, unit count, building design, site conditions, and local pricing affect the estimated budget. Detailed cost breakdowns organize expenses by phase, building, and construction category. Phased estimates support budgeting, financing, scheduling, and project cost management. Shared infrastructure costs cover roads, parking, utilities, drainage, landscaping, and common amenities across the development. Repeated building layouts help organize quantities and pricing across multiple structures. Material takeoffs account for waste allowances, delivery requirements, and bulk purchasing needs. Clear cost reporting helps track projected expenses across each construction phase and building through Multifamily construction estimating costs.</p>
+        <button class="link-cta link-more" style="text-decoration:none;font-weight:600;color:var(--navy);padding:0" type="button" data-expand="pt-4" data-label="Learn More →" aria-expanded="false">Learn More →</button>
+      </article>
+    </div>
+    <div class="dots" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ===================== TRADE-BY-TRADE ===================== -->
+<section class="section section--tint" aria-labelledby="tr-title">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow">Trade-by-Trade</p>
+      <h2 class="h2" id="tr-title">What Residential Construction Costs can be Estimated?</h2>
+      <p class="intro clamp" id="tr-intro">Every main trade and construction category has its own quantities and price. Detailed trade estimates help organize material, labor, and equipment costs across the project. Separate pricing makes project expenses easier to review, compare, and update.</p>
+      <button class="link-more" type="button" data-expand="tr-intro" aria-expanded="false">Read More →</button>
+    </div>
+    <p class="list-intro">Residential construction costs that can be estimated are listed below.</p>
+
+    <div class="tabs-carousel">
+      <button class="arrow-btn" type="button" data-scroll="-1" aria-label="Previous trades">‹</button>
+      <div class="tabs-track" role="tablist" aria-label="Trades" data-trades></div>
+      <button class="arrow-btn" type="button" data-scroll="1" aria-label="Next trades">›</button>
+    </div>
+
+    <div class="tab-card" data-trade-panels>
+      <div role="tabpanel" id="tr-p1" data-tag="TR-01" data-title="Structural Steel" data-desc="Steel members, connections, and framing are costed by their weight and how they are joined."><span class="tag">TR-01</span><h3>What are Structural Steel Estimating Costs?</h3><p>Structural steel estimating costs cover the projected expenses for steel members, connections, framing, and related installation work. Estimates account for steel quantities, member sizes, connection details, fabrication, delivery, and labor requirements. Project design, steel weight, connection methods, and market pricing affect the estimated cost. Detailed takeoffs help organize steel quantities and support accurate project pricing. Fabrication requirements affect material preparation and shop labor expenses. Connection details influence labor, equipment, and installation requirements. Delivery requirements affect transportation costs and scheduling. Clear cost breakdowns provide a practical basis for <a class="anchor" href="#">structural steel estimating costs</a>.</p></div>
+      <div role="tabpanel" id="tr-p2" hidden data-tag="TR-02" data-title="Concrete" data-desc="Footings, foundations, slabs, and flatwork are figured by volume, with the surface finish accounted for."><span class="tag">TR-02</span><h3>What are Concrete Estimating Costs?</h3><p>Concrete estimating costs cover projected expenses for foundations, footings, slabs, walls, columns, and other concrete work. Estimates account for concrete volume, reinforcement, formwork, placement, finishing, and labor. Project size, structural requirements, concrete specifications, and site conditions affect the estimated cost. Detailed quantity takeoffs help organize material and labor requirements. Reinforcement quantities affect material and installation expenses. Formwork requirements influence labor, material, and equipment costs. Concrete placement methods also affect equipment and labor requirements. Clear cost information supports accurate <a class="anchor" href="#">concrete estimating costs</a>.</p></div>
+      <div role="tabpanel" id="tr-p3" hidden data-tag="TR-03" data-title="Masonry" data-desc="Brick, block, and stone are priced based on how many units go in and how much wall area they cover."><span class="tag">TR-03</span><h3>What are Masonry Estimating Costs?</h3><p>Masonry estimating costs cover projected expenses for brick, concrete block, stone, mortar, reinforcement, and installation work. Estimates account for wall areas, material quantities, openings, finishes, and labor requirements. Wall design, material selection, project size, and local pricing affect the estimated cost. Detailed takeoffs help calculate masonry quantities and installation requirements. Wall height affects labor, scaffolding, and equipment requirements. Openings for doors and windows affect material quantities and installation details. Reinforcement and specialized finishes add further material and labor expenses. Organized pricing provides a clear basis for <a class="anchor" href="#">masonry estimating costs</a>.</p></div>
+      <div role="tabpanel" id="tr-p4" hidden data-tag="TR-04" data-title="Electrical" data-desc="Wiring, panels, and fixtures are priced together with the labor for the rough-in and finish phases."><span class="tag">TR-04</span><h3>What are Electrical Estimating Costs?</h3><p>Electrical estimating costs cover projected expenses for wiring, panels, fixtures, outlets, equipment, and electrical installation work. Estimates account for material quantities, circuits, equipment requirements, labor, and installation phases. Building size, electrical design, fixture selections, and project specifications affect the estimated cost. Detailed takeoffs help organize electrical materials and labor requirements. Service capacity affects panel, equipment, and distribution requirements. Fixture counts influence material quantities and installation labor. Project specifications determine wiring, equipment, and control requirements. Clear cost breakdowns support accurate <a class="anchor" href="#">electrical estimating costs</a>.</p></div>
+      <div role="tabpanel" id="tr-p5" hidden data-tag="TR-05" data-title="Plumbing" data-desc="Supply piping, drainage, and fixtures are costed across the rough-in and finish phases."><span class="tag">TR-05</span><h3>What are Plumbing Estimating Costs?</h3><p>Plumbing estimating costs cover projected expenses for supply piping, drainage systems, fixtures, fittings, equipment, and installation work. Estimates account for pipe quantities, fixture counts, connection points, labor, and installation requirements. Building size, plumbing layout, fixture selections, and system complexity affect projected costs. Detailed takeoffs help organize plumbing materials and labor requirements. Pipe sizes affect material quantities and system requirements. Fixture selections influence connection points, fittings, and installation labor. Drainage layouts affect piping quantities and installation methods. Organized pricing provides a clear basis for <a class="anchor" href="#">plumbing estimating costs</a>.</p></div>
+      <div role="tabpanel" id="tr-p6" hidden data-tag="TR-06" data-title="HVAC" data-desc="Heating and cooling units, ductwork, and their installation are priced as one system."><span class="tag">TR-06</span><h3>What are HVAC Estimating Costs?</h3><p>HVAC estimating costs cover projected expenses for heating and cooling equipment, ductwork, controls, ventilation, and installation labor. Estimates account for equipment capacity, duct quantities, system design, materials, and labor requirements. Building size, climate requirements, equipment selections, and system complexity affect the estimated cost. Detailed takeoffs help organize HVAC equipment and installation requirements. Equipment capacity affects unit selection and installation requirements. Duct layouts influence material quantities and labor hours. Controls and ventilation requirements add equipment and installation expenses. Clear cost information supports accurate <a class="anchor" href="#">HVAC estimating costs</a>.</p></div>
+      <div role="tabpanel" id="tr-p7" hidden data-tag="TR-07" data-title="Mechanical" data-desc="Building systems outside of HVAC are priced based on the project's size and complexity."><span class="tag">TR-07</span><h3>What are Mechanical Estimating Costs?</h3><p>Mechanical estimating costs cover projected expenses for building mechanical systems outside of standard HVAC work. Estimates account for equipment, piping, controls, installation materials, and specialized labor. Project size, system requirements, equipment specifications, and design complexity affect projected costs. Detailed quantity takeoffs help organize mechanical equipment and installation requirements. Equipment selection influences material, delivery, and installation costs. Piping requirements affect quantities, fittings, supports, and labor. Specialized systems often require additional coordination and installation planning. Structured pricing provides a reliable basis for <a class="anchor" href="#">mechanical estimating costs</a>.</p></div>
+      <div role="tabpanel" id="tr-p8" hidden data-tag="TR-08" data-title="Drywall" data-desc="Board, taping, texturing, and finishing work are charged by the square foot."><span class="tag">TR-08</span><h3>What are Drywall Estimating Costs?</h3><p>Drywall estimating costs cover projected expenses for drywall boards, framing, taping, texturing, finishing, and installation labor. Estimates account for wall and ceiling areas, board types, openings, layers, and finish requirements. Building size, room layouts, material specifications, and finish levels affect the estimated cost. Detailed measurements help calculate required drywall quantities and labor. Wall heights affect material quantities and installation time. Moisture-resistant or fire-rated boards affect material pricing. Finishing levels influence taping, sanding, texturing, and labor requirements. Organized pricing supports accurate <a class="anchor" href="#">drywall estimating costs</a>.</p></div>
+      <div role="tabpanel" id="tr-p9" hidden data-tag="TR-09" data-title="Roofing" data-desc="Roofing materials, underlayment, and labor are priced based on the roof's area and its pitch."><span class="tag">TR-09</span><h3>What are Roofing Estimating Costs?</h3><p>Roofing estimating costs cover projected expenses for roofing materials, underlayment, flashing, accessories, and installation labor. Estimates account for roof area, pitch, material selection, layers, and installation requirements. Roof design, material quality, site conditions, and labor rates affect the estimated cost. Detailed measurements help establish material quantities and installation requirements. Roof pitch affects installation time, safety requirements, and labor expenses. Material selection determines product quantities, accessories, and installation methods. Flashing and waterproofing details add material and labor requirements. Clear cost breakdowns support accurate <a class="anchor" href="#">roofing estimating costs</a>.</p></div>
+      <div role="tabpanel" id="tr-p10" hidden data-tag="TR-10" data-title="Flooring" data-desc="Materials and labor are costed out room by room, depending on the chosen finish."><span class="tag">TR-10</span><h3>What are Flooring Estimating Costs?</h3><p>Flooring estimating costs cover projected expenses for flooring materials, preparation, installation, trim, and related labor. Estimates account for floor areas, material types, installation methods, waste allowances, and finish requirements. Room layouts, material selections, project size, and labor rates affect the estimated cost. Detailed measurements help organize flooring quantities by room and finish. Subfloor preparation affects labor and material requirements. Flooring patterns influence installation time and material waste. Trim and transition pieces add further material and installation costs. Clear pricing provides a practical basis for <a class="anchor" href="#">flooring estimating costs</a>.</p></div>
+      <div role="tabpanel" id="tr-p11" hidden data-tag="TR-11" data-title="Painting" data-desc="Cost depends on the amount of interior and exterior surface area and how many coats are needed."><span class="tag">TR-11</span><h3>What are Painting Estimating Costs?</h3><p>Painting estimating costs cover projected expenses for interior and exterior surface preparation, paint materials, coatings, and labor. Estimates account for surface areas, preparation requirements, number of coats, paint types, and application methods. Building size, surface conditions, finish selections, and labor rates affect the estimated cost. Detailed measurements help establish material quantities and labor requirements. Surface preparation affects labor hours and material consumption. Paint coverage rates determine the quantity required for each surface. Multiple coats increase material use and application time. Organized cost information supports accurate <a class="anchor" href="#">painting estimating costs</a>.</p></div>
+      <div role="tabpanel" id="tr-p12" hidden data-tag="TR-12" data-title="Sitework" data-desc="Grading, utility lines, and site preparation that must be finished before the foundation starts."><span class="tag">TR-12</span><h3>What are Sitework Estimating Costs?</h3><p>Sitework estimating costs cover projected expenses for grading, site preparation, utility work, drainage, access improvements, and related site activities. Estimates account for site conditions, material quantities, equipment requirements, and labor. Property size, terrain, accessibility, utility requirements, and soil conditions affect the estimated cost. Detailed site measurements help establish the required work and resources. Grading requirements affect equipment hours and soil movement. Utility installation adds material, excavation, and labor costs. Drainage requirements influence site preparation and installation expenses. Clear cost breakdowns support accurate <a class="anchor" href="#">sitework estimating costs</a>.</p></div>
+      <div role="tabpanel" id="tr-p13" hidden data-tag="TR-13" data-title="Earthwork" data-desc="The amount of soil that has to be cut, filled, and relocated on the site."><span class="tag">TR-13</span><h3>What are Earthwork Estimating Costs?</h3><p>Earthwork estimating costs cover projected expenses for cutting, filling, grading, hauling, and relocating soil across a construction site. Estimates account for soil quantities, excavation areas, fill requirements, equipment, hauling distances, and labor. Site size, terrain, soil conditions, and grading requirements affect the estimated cost. Detailed measurements help calculate cut and fill quantities for project planning. Soil type affects excavation methods and equipment requirements. Hauling distances influence transportation time and equipment costs. Imported fill adds material, delivery, and placement expenses. Organized cost data supports accurate <a class="anchor" href="#">earthwork estimating costs</a>.</p></div>
+      <div role="tabpanel" id="tr-p14" hidden data-tag="TR-14" data-title="Excavation" data-desc="Digging out the ground for foundations and utility trenches."><span class="tag">TR-14</span><h3>What are Excavation Estimating Costs?</h3><p>Excavation estimating costs cover projected expenses for digging foundations, trenches, footings, utility lines, and other below-grade work. Estimates account for excavation quantities, soil conditions, equipment, hauling, disposal, and labor requirements. Site access, excavation depth, soil type, and project design affect the estimated cost. Detailed measurements help determine excavation volumes and equipment needs. Excavation depth affects equipment selection, safety requirements, and labor time. Soil conditions influence digging methods and disposal requirements. Hauling and disposal expenses vary according to material quantities and site access. Clear pricing information supports accurate <a class="anchor" href="#">excavation estimating costs</a>.</p></div>
+      <div role="tabpanel" id="tr-p15" hidden data-tag="TR-15" data-title="Landscaping" data-desc="Plants, hardscape features, and the final grading of the lot."><span class="tag">TR-15</span><h3>What are Landscaping Estimating Costs?</h3><p>Landscaping estimating costs cover projected expenses for planting, hardscape features, grading, irrigation, soil preparation, and landscape installation. Estimates account for plant quantities, material selections, site areas, installation requirements, and labor. Property size, landscape design, plant selections, site conditions, and local pricing affect the estimated cost. Detailed takeoffs help organize landscape materials and installation requirements. Plant selections affect material quantities, delivery, and installation costs. Hardscape features add materials, preparation, and installation labor. Irrigation systems require piping, equipment, fixtures, and installation work. Structured pricing provides a clear basis for <a class="anchor" href="#">landscaping estimating costs</a>.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COST CALCULATOR ===================== -->
+<section class="section" aria-labelledby="calc-title">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow">Cost Calculator</p>
+      <h2 class="h2" id="calc-title">How can a House Construction Cost Calculator Support Residential Budgeting?</h2>
+    </div>
+    <div class="callout">
+      <div class="callout__body">
+        <p class="clamp" id="calc-text">A house construction cost calculator supports residential budgeting by providing an early cost range based on home size and basic project details. The calculator helps establish a preliminary budget before detailed plans and specifications are available. The estimate helps identify potential funding requirements during the early planning stage. Preliminary figures help property owners review expected construction expenses before committing to detailed design work. Cost calculators provide a practical starting point for comparing project sizes, finish levels, and basic construction requirements. Detailed professional estimates remain necessary for accurate bids, financing documents, purchasing decisions, and construction planning.</p>
+        <button class="link-more" type="button" data-expand="calc-text" aria-expanded="false">Read More →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SOFTWARE ===================== -->
+<section class="section" aria-labelledby="sw-title">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow">Software</p>
+      <h2 class="h2" id="sw-title">What Construction Estimating Software Supports Residential Projects?</h2>
+      <p class="intro clamp" id="sw-intro">Residential construction estimating software supports takeoffs, pricing, calculations, cost databases, and estimate organization. Each function helps estimators manage project information and prepare detailed cost reports.</p>
+      <button class="link-more" type="button" data-expand="sw-intro" aria-expanded="false">Read More →</button>
+    </div>
+    <p class="list-intro">Construction estimating software that supports residential projects is listed below.</p>
+    <ul class="grid cols-3 m-carousel software-grid">
+      <li class="card card--compact"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><h3 class="card__title">Quantity Takeoffs</h3><p class="card__body--sm">Software helps measure materials and quantities from digital residential construction plans.</p></li>
+      <li class="card card--compact"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><h3 class="card__title">Cost Databases</h3><p class="card__body--sm">Built-in databases store material, labor, equipment, and subcontractor pricing for estimate preparation.</p></li>
+      <li class="card card--compact"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><h3 class="card__title">Cost Calculations</h3><p class="card__body--sm">Automated calculations help apply quantities, unit prices, labor rates, waste factors, and other project costs.</p></li>
+      <li class="card card--compact"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><h3 class="card__title">Estimate Organization</h3><p class="card__body--sm">Structured estimate formats organize costs by trade, phase, material, labor, and project category.</p></li>
+      <li class="card card--compact"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><h3 class="card__title">Plan Integration</h3><p class="card__body--sm">Digital plan tools help connect measurements and quantities with the relevant areas of residential construction drawings.</p></li>
+      <li class="card card--compact"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><h3 class="card__title">Bid Preparation</h3><p class="card__body--sm">Organized cost information helps contractors prepare detailed residential project bids from project scope and pricing data.</p></li>
+    </ul>
+    <div class="dots" aria-hidden="true"></div>
+    <div class="callout">
+      <div class="callout__body">
+        <h3>What is Free Construction Estimating Software Used For?</h3>
+        <p class="clamp" id="free-sw">Free construction estimating software supports basic project scoping, preliminary quantity calculations, and early budget preparation. Free tools often offer limited pricing databases and fewer features compared with professional estimating platforms. Basic estimates help users review potential material and labor expenses during the early planning stage. Simple projects benefit from quick calculations before detailed plans and specifications are available. Free software helps organize basic project costs by trade, material, or construction category. More detailed residential projects require comprehensive takeoffs, current pricing, detailed scope analysis, and accurate cost breakdowns for bid preparation.</p>
+        <button class="link-more" type="button" data-expand="free-sw" aria-expanded="false">Read More →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section class="section" aria-labelledby="prj-title">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow">Example Work</p>
+      <h2 class="h2" id="prj-title">Residential Construction Estimating Projects</h2>
+      <p class="intro">Selected estimates illustrate the scope and level of detail provided for residential construction projects.</p>
+    </div>
+    <div class="grid cols-3 m-carousel" role="tablist" aria-label="Example projects" data-select>
+      <button class="card" role="tab" id="prj-t1" aria-controls="prj-p1" aria-selected="true"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><span class="pill-tag">PRJ-01</span><span class="card__title">Residential Construction Estimate</span><span class="card__body clamp" style="--lines:3">Comprehensive cost estimate covering labor, materials, equipment, and subcontractor costs for a residential construction project.</span><span class="card__divider" style="margin-top:auto"></span><span class="card__meta">2,100 SF · Single Family</span><span class="link-cta" style="margin-top:0">Learn More →</span></button>
+      <button class="card" role="tab" id="prj-t2" aria-controls="prj-p2" aria-selected="false" tabindex="-1"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><span class="pill-tag">PRJ-02</span><span class="card__title">Single-Family Construction Estimate</span><span class="card__body clamp" style="--lines:3">Ground-up estimate covering key construction phases from foundation work through exterior and interior finishing.</span><span class="card__divider" style="margin-top:auto"></span><span class="card__meta">2,400 SF · New Build</span><span class="link-cta" style="margin-top:0">Learn More →</span></button>
+      <button class="card" role="tab" id="prj-t3" aria-controls="prj-p3" aria-selected="false" tabindex="-1"><span class="ico"><svg aria-hidden="true"><use href="#i-img"/></svg></span><span class="pill-tag">PRJ-03</span><span class="card__title">Multi-family Construction Estimate</span><span class="card__body clamp" style="--lines:3">Trade-specific estimate covering individual units, shared building systems, materials, labor, and required construction work.</span><span class="card__divider" style="margin-top:auto"></span><span class="card__meta">8 Units · Multifamily</span><span class="link-cta" style="margin-top:0">Learn More →</span></button>
+    </div>
+    <div class="dots" aria-hidden="true"></div>
+    <div class="panel" role="tabpanel" id="prj-p1" aria-labelledby="prj-t1"><div class="panel__title"><span class="tag">PRJ-01</span><h3>1. Residential Construction Estimate</h3></div><p>Full-scope cost estimate covering labor, materials, and subcontractor pricing for a residential build. This example showcases a representative residential construction estimating project, following a typical home from site preparation through final finishes. Each major category appears as its own line item, including foundation, framing, roofing, plumbing, electrical, HVAC, interior finishes, and permits, so the source of every figure is easy to trace. Material quantities are measured from the plans and priced at current supplier rates, with a waste allowance added for cuts and damage. Labor is calculated from crew size, hours, and local wage rates for each trade. Subcontractor pricing is shown separately for specialty trade work, covering mechanical systems, drywall, and painting. Overhead, profit, and contingency are listed at the end, so the reader can see what sits on top of the direct costs. Adding each category produces the estimated total and shows how every expense contributes to the final figure. The example gives owners, builders, and lenders a reference for reviewing whether a bid covers the full project scope.</p></div>
+    <div class="panel" role="tabpanel" id="prj-p2" aria-labelledby="prj-t2" hidden><div class="panel__title"><span class="tag">PRJ-02</span><h3>2. Single-Family Construction Estimate</h3></div><p>Ground-up estimate for a detached single-family home, from foundation through finishes. This example showcases single-family residential estimating for a single detached home on its own lot. Site preparation is priced first and covers clearing, grading, excavation, and utility connections for the property. The foundation follows, with slab, crawl space, or basement options priced according to excavation, concrete, and labor requirements. Framing, roofing, windows, doors, and exterior materials are estimated from the floor plan and total square footage. Mechanical, electrical, and plumbing systems are sized for the home, so bathroom count, kitchen layout, and HVAC capacity affect the projected costs. Interior finishes include flooring, cabinets, countertops, and paint, depending on the selected finish level. A contingency covers unexpected soil conditions, weather delays, and construction changes. The result provides a clear budget showing how design choices affect the final cost of home construction.</p></div>
+    <div class="panel" role="tabpanel" id="prj-p3" aria-labelledby="prj-t3" hidden><div class="panel__title"><span class="tag">PRJ-03</span><h3>3. Multi-family Construction Estimate</h3></div><p>Trade-by-trade estimate for a multi-unit residential building, including shared systems. This example showcases multifamily and apartment estimating, where costs are organized by trade and allocated across multiple units. One typical unit is priced in detail, then multiplied by the number of matching units, with separate pricing for different unit types. Shared systems cover the structural frame, fire protection, central HVAC, plumbing risers, and electrical distribution for the entire building. Common areas cover corridors, stairwells, lobbies, and parking as separate cost categories. Fire separation, accessibility, sound control, and egress requirements add further estimating considerations compared with single-family homes. Site work is estimated for the property and allocated across the units. Costs are reported by trade, unit, and construction phase, which helps owners and lenders review budgets and track projected spending. The example demonstrates how repeated layouts affect unit costs while larger developments introduce additional construction requirements.</p></div>
+  </div>
+</section>
+
+<!-- ===================== FAQ (TABS) ===================== -->
+<section class="section" aria-label="Residential construction estimating FAQs">
+  <div class="container">
+    <div class="seg-tabs" role="tablist" aria-label="FAQ groups" data-faq-tabs>
+      <button role="tab" id="faq-t1" aria-controls="faq-p1" aria-selected="true">Residential Construction Estimating Costs</button>
+      <button role="tab" id="faq-t2" aria-controls="faq-p2" aria-selected="false" tabindex="-1">About Residential Construction Estimating Costs</button>
+    </div>
+
+    <div class="accordion" role="tabpanel" id="faq-p1" aria-labelledby="faq-t1">
+      <div class="acc-item"><h3><button class="acc-btn" aria-expanded="true" aria-controls="q1">How Accurate are Residential Construction Estimates?<span class="acc-btn__icon" aria-hidden="true">+</span></button></h3>
+        <div class="acc-panel" id="q1"><p>A residential construction estimate typically takes several business days to complete, depending on project size and complexity. Small projects require less plan review and quantity measurement than larger homes or multifamily developments. Detailed projects require additional time for trade takeoffs, pricing, scope review, and quality checks. Complete drawings and specifications help streamline the estimating process and reduce delays caused by missing project information. Complex designs require additional review when plans contain custom details, multiple structures, or specialized systems. Large residential projects require more time to organize quantities across multiple trades and construction phases.</p><p>Revisions to drawings or specifications add further estimating time because quantities and pricing need to be reviewed again. A clear project scope helps establish a practical turnaround time before estimating work begins. Rush requests often require priority scheduling and faster document review. Estimate delivery depends on the number of trades covered and the level of cost detail requested. Projects with complete drawings generally move through quantity takeoffs and pricing more efficiently. Final quality checks require additional time to verify quantities, calculations, and scope coverage before delivery.</p></div></div>
+      <div class="acc-item"><h3><button class="acc-btn" aria-expanded="false" aria-controls="q2">How Long Does a Residential Construction Estimate Take?<span class="acc-btn__icon" aria-hidden="true">+</span></button></h3>
+        <div class="acc-panel" id="q2" hidden><p>A residential construction estimate typically takes several business days to complete, depending on project size and complexity. Small projects require less plan review and quantity measurement than larger homes or multifamily developments. Detailed projects require additional time for trade takeoffs, pricing, scope review, and quality checks. Complete drawings and specifications help streamline the estimating process and reduce delays caused by missing project information. Complex designs require additional review when plans contain custom details, multiple structures, or specialized systems. Large residential projects require more time to organize quantities across multiple trades and construction phases. Revisions to drawings or specifications add further estimating time because quantities and pricing need to be reviewed again. A clear project scope helps establish a practical turnaround time before estimating work begins.</p></div></div>
+      <div class="acc-item"><h3><button class="acc-btn" aria-expanded="false" aria-controls="q3">How Much Do Residential Construction Estimating Services Cost?<span class="acc-btn__icon" aria-hidden="true">+</span></button></h3>
+        <div class="acc-panel" id="q3" hidden><p>Residential construction estimating services typically cost according to project size, scope, complexity, drawing quality, and required level of detail. Small residential projects generally require less estimating work than large custom homes or multifamily developments. Service fees vary based on takeoff requirements, trade coverage, pricing research, and estimate turnaround. A detailed scope review provides a clearer basis for determining the appropriate estimating fee. Projects requiring complete material takeoffs require more measurement and documentation than basic budget estimates. Detailed trade estimates require additional pricing research and cost organization. Revisions require further review when project drawings, materials, or specifications change after the initial estimate. A defined scope helps establish a more accurate service fee before estimating work starts.</p></div></div>
+      <div class="acc-item"><h3><button class="acc-btn" aria-expanded="false" aria-controls="q4">How can Residential Estimates Reduce Cost Overruns?<span class="acc-btn__icon" aria-hidden="true">+</span></button></h3>
+        <div class="acc-panel" id="q4" hidden><p>Residential estimates reduce cost overruns by establishing detailed quantities, current pricing, labor requirements, and project scope before construction begins. Accurate takeoffs help identify material requirements early and reduce purchasing errors. Detailed trade pricing helps reveal missing scope before work starts. Regular estimate updates help account for approved design changes and pricing changes. Clear cost categories help contractors compare projected expenses with actual project costs during construction.</p></div></div>
+    </div>
+
+    <div class="accordion" role="tabpanel" id="faq-p2" aria-labelledby="faq-t2" hidden>
+      <div class="acc-item"><h3><button class="acc-btn" aria-expanded="true" aria-controls="a1">How much does a residential construction estimate cost?<span class="acc-btn__icon" aria-hidden="true">+</span></button></h3>
+        <div class="acc-panel" id="a1"><p>Residential construction estimate costs vary with project size, scope, complexity, drawing quality, and the required level of detail. Basic estimates require less measurement and pricing work than detailed trade-by-trade estimates. Full material takeoffs, labor calculations, subcontractor pricing, and detailed cost reports require additional estimating work. Project location, turnaround requirements, and drawing revisions affect the service fee. A defined project scope helps establish an appropriate estimated cost before work begins. Smaller residential projects generally require fewer hours for plan review, quantity measurement, and cost calculations.</p><p>Larger homes require more extensive takeoffs across structural, architectural, mechanical, electrical, and finishing trades. Custom designs require additional review when unique materials, complex layouts, or specialized systems affect the construction scope. Updated supplier pricing helps keep material costs relevant within the estimate. Local labor rates provide a suitable basis for calculating workforce expenses. Detailed reports require additional preparation when costs need to be broken down by trade, phase, material, and labor category. Clear project documents help establish the estimating workload and support a more accurate service fee.</p></div></div>
+      <div class="acc-item"><h3><button class="acc-btn" aria-expanded="false" aria-controls="a2">How much does it cost to build a residential property?<span class="acc-btn__icon" aria-hidden="true">+</span></button></h3>
+        <div class="acc-panel" id="a2" hidden><p>Residential property construction costs vary according to size, location, design, materials, labor rates, site conditions, and finish level. Larger homes require greater quantities of materials, labor hours, equipment, and construction resources. Custom designs often require additional structural, mechanical, and finishing work. Site preparation, utility connections, permits, and landscaping contribute to the project budget. A detailed construction estimate provides a more reliable project cost than a general price range.</p></div></div>
+      <div class="acc-item"><h3><button class="acc-btn" aria-expanded="false" aria-controls="a3">What does a residential construction estimate include?<span class="acc-btn__icon" aria-hidden="true">+</span></button></h3>
+        <div class="acc-panel" id="a3" hidden><p>Residential construction estimates include detailed cost information that supports budgeting, bidding, procurement, and project planning.</p><p>The inclusions of a residential construction estimate are listed below.</p>
+          <ul>
+            <li><strong>Material Quantities:</strong> Measured quantities identify the materials required for each construction trade.</li>
+            <li><strong>Labor Costs:</strong> Labor calculations account for workforce requirements, hours, productivity, and applicable wage rates.</li>
+            <li><strong>Equipment Costs:</strong> Equipment expenses cover machinery, rentals, tools, and resources required for construction work.</li>
+            <li><strong>Subcontractor Costs:</strong> Specialty trade expenses cover work performed by qualified subcontractors across the project.</li>
+            <li><strong>Trade Costs:</strong> Project expenses are organized by categories such as concrete, framing, roofing, electrical, plumbing, HVAC, drywall, flooring, and painting.</li>
+            <li><strong>Project Expenses:</strong> Additional costs cover permits, delivery, waste allowances, site requirements, and other applicable construction expenses.</li>
+          </ul></div></div>
+      <div class="acc-item"><h3><button class="acc-btn" aria-expanded="false" aria-controls="a4">How accurate are residential construction estimates?<span class="acc-btn__icon" aria-hidden="true">+</span></button></h3>
+        <div class="acc-panel" id="a4" hidden><p>Residential construction estimates provide reliable cost projections when project drawings, specifications, quantities, pricing data, and site information are complete. Detailed takeoffs help establish accurate material quantities, while current pricing supports realistic cost calculations. Quality control reviews help identify calculation errors, missing scope, and inconsistent pricing before the estimate delivery. Final construction costs still change when designs, material selections, labor rates, site conditions, or project scope change. Regular estimate updates help maintain relevant cost information throughout project planning.</p></div></div>
+      <div class="acc-item"><h3><button class="acc-btn" aria-expanded="false" aria-controls="a5">How long does a residential construction estimate take?<span class="acc-btn__icon" aria-hidden="true">+</span></button></h3>
+        <div class="acc-panel" id="a5" hidden><p>Residential construction estimates typically take several business days, although project size, complexity, scope, and documentation affect the required time. Small homes require fewer quantities and trade calculations than large custom homes or multifamily developments. Detailed estimates require time for plan review, quantity takeoffs, pricing, scope analysis, and quality control. Complete drawings and specifications help reduce delays caused by missing information. Design revisions require additional review when quantities or pricing need to be adjusted.</p></div></div>
+      <div class="acc-item"><h3><button class="acc-btn" aria-expanded="false" aria-controls="a6">What information is needed for a residential construction estimate?<span class="acc-btn__icon" aria-hidden="true">+</span></button></h3>
+        <div class="acc-panel" id="a6" hidden><p>Residential construction estimates require project documents and details that define the construction scope, quantities, specifications, and pricing requirements.</p><p>The information needed for a residential construction estimate is listed below.</p>
+          <ul>
+            <li><strong>Architectural Plans:</strong> Floor plans, elevations, sections, schedules, and construction details establish the building layout and scope.</li>
+            <li><strong>Structural Plans:</strong> Foundation plans, framing details, structural schedules, and engineering information define structural requirements.</li>
+            <li><strong>Specifications:</strong> Product requirements, material standards, finish selections, and installation requirements support detailed pricing.</li>
+            <li><strong>Project Scope:</strong> Scope information identifies the work covered by the estimate and clarifies project responsibilities.</li>
+            <li><strong>Site Information:</strong> Property conditions, grading details, utility requirements, accessibility, and site plans support cost calculations for site-related work.</li>
+            <li><strong>Location:</strong> The project location helps determine relevant labor rates, material prices, delivery costs, and regional market conditions.</li>
+            <li><strong>Finish Selections:</strong> Flooring, cabinetry, fixtures, countertops, appliances, and other selections affect material and installation costs.</li>
+          </ul></div></div>
+      <div class="acc-item"><h3><button class="acc-btn" aria-expanded="false" aria-controls="a7">Can residential construction estimates be used for contractor bids?<span class="acc-btn__icon" aria-hidden="true">+</span></button></h3>
+        <div class="acc-panel" id="a7" hidden><p>Yes, residential construction estimates can support contractor bids when they include detailed quantities, current pricing, labor costs, subcontractor expenses, and a defined project scope. Bid-ready estimates organize project costs into clear categories for pricing review. Contractors use detailed cost information to develop proposed project prices and evaluate expected expenses. Accurate drawings and specifications help align the estimate with the work required under the bid. Scope changes and updated supplier pricing require revisions to the estimate before final bid submission.</p></div></div>
+      <div class="acc-item"><h3><button class="acc-btn" aria-expanded="false" aria-controls="a8">What is the difference between a residential construction estimate and a material takeoff?<span class="acc-btn__icon" aria-hidden="true">+</span></button></h3>
+        <div class="acc-panel" id="a8" hidden><p>The difference between a residential construction estimate and a material takeoff lies in their purpose and level of cost detail. A material takeoff identifies and measures the quantities of materials required for construction. A residential construction estimate uses those quantities to calculate projected costs across materials, labor, equipment, subcontractors, and other project expenses. Material takeoffs organize quantities by trade or construction category based on project drawings. Construction estimates apply current unit prices and labor rates to those quantities. Material takeoffs provide an important foundation for detailed cost estimating. A complete construction estimate provides a broader financial view of the projected project cost.</p></div></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="logo" href="#" aria-label="Construction home"><svg aria-hidden="true"><use href="#i-logo"/></svg>Construction</a>
+        <p class="footer__desc">Accurate construction estimating and takeoff services to help contractors, builders, and construction professionals plan projects with confidence.</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Twitter">t</a><a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+      <nav class="footer__col" aria-labelledby="f1"><h2 id="f1">Company</h2><ul><li><a href="#">About Us</a></li><li><a href="#">Our Services</a></li><li><a href="#">Our Team</a></li><li><a href="#">Why Choose Us</a></li><li><a href="#">Testimonials</a></li></ul></nav>
+      <nav class="footer__col" aria-labelledby="f2"><h2 id="f2">Estimating Services</h2><ul><li><a href="#">Construction Estimating</a></li><li><a href="#">Quantity Takeoffs</a></li><li><a href="#">Material Takeoffs</a></li><li><a href="#">Cost Estimating</a></li><li><a href="#">Bid Preparation</a></li></ul></nav>
+      <nav class="footer__col" aria-labelledby="f3"><h2 id="f3">Resources</h2><ul><li><a href="#">Estimating Guide</a></li><li><a href="#">Construction Blog</a></li><li><a href="#">FAQs</a></li><li><a href="#">Industries We Serve</a></li><li><a href="#">Request a Quote</a></li></ul></nav>
+      <nav class="footer__col" aria-labelledby="f4"><h2 id="f4">Contact us</h2><ul><li><a href="#">Information</a></li><li><a href="#">Request a quote</a></li><li><a href="#">Consultation</a></li><li><a href="#">Help center</a></li><li><a href="#">Terms and conditions</a></li></ul></nav>
+    </div>
+    <div class="footer__bottom">Copyright © 2026 Construction Estimating | All Rights Reserved | <a href="#">Terms and Conditions</a> | <a href="#">Privacy Policy</a></div>
+  </div>
+</footer>
+
+<div class="tooltip" role="tooltip" id="trade-tooltip"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

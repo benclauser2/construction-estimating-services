@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4F6FA"/>
+      <stop offset="100%" stop-color="#E4E9F2"/>
+    </linearGradient>
+
+    <linearGradient id="navyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#213866"/>
+      <stop offset="100%" stop-color="#142446"/>
+    </linearGradient>
+
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F08028"/>
+      <stop offset="100%" stop-color="#D96B16"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(33, 56, 102, 0.06)" stroke-width="1"/>
+    </pattern>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#142446" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="640" height="440" rx="16" fill="url(#bgGrad)"/>
+  <rect width="640" height="440" fill="url(#grid)"/>
+
+  <!-- Main Blueprint Window Card -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="30" width="580" height="380" rx="14" fill="url(#cardGrad)" stroke="#CBD5E1" stroke-width="1.5"/>
+
+    <!-- Window Bar Header -->
+    <rect x="30" y="30" width="580" height="40" rx="14" fill="#1E293B"/>
+    <rect x="30" y="56" width="580" height="14" fill="#1E293B"/>
+    <circle cx="54" cy="50" r="5" fill="#EF4444"/>
+    <circle cx="70" cy="50" r="5" fill="#F59E0B"/>
+    <circle cx="86" cy="50" r="5" fill="#10B981"/>
+    <text x="110" y="54" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#94A3B8">BUILDING SPECIFICATION &amp; ESTIMATE TAKEOFF — SITE_PLAN_REV2.CAD</text>
+  </g>
+
+  <!-- Left Side: Architectural Blueprint Building Model -->
+  <g transform="translate(50, 95)">
+    <rect width="260" height="295" rx="8" fill="#0F172A"/>
+    
+    <!-- Blueprint Sub-grid -->
+    <path d="M20 0 V295 M60 0 V295 M100 0 V295 M140 0 V295 M180 0 V295 M220 0 V295" stroke="rgba(56, 189, 248, 0.08)" stroke-width="1"/>
+    <path d="M0 40 H260 M0 80 H260 M0 120 H260 M0 160 H260 M0 200 H260 M0 240 H260 M0 280 H260" stroke="rgba(56, 189, 248, 0.08)" stroke-width="1"/>
+
+    <!-- Building Structure Vector -->
+    <!-- Structure A -->
+    <rect x="30" y="80" width="90" height="185" fill="none" stroke="#38BDF8" stroke-width="2" stroke-dasharray="4 2"/>
+    <rect x="40" y="95" width="22" height="30" fill="rgba(56, 189, 248, 0.15)" stroke="#38BDF8" stroke-width="1.5"/>
+    <rect x="70" y="95" width="22" height="30" fill="rgba(56, 189, 248, 0.15)" stroke="#38BDF8" stroke-width="1.5"/>
+    <rect x="40" y="140" width="22" height="30" fill="rgba(56, 189, 248, 0.15)" stroke="#38BDF8" stroke-width="1.5"/>
+    <rect x="70" y="140" width="22" height="30" fill="rgba(56, 189, 248, 0.15)" stroke="#38BDF8" stroke-width="1.5"/>
+    <rect x="40" y="185" width="22" height="30" fill="rgba(56, 189, 248, 0.15)" stroke="#38BDF8" stroke-width="1.5"/>
+    <rect x="70" y="185" width="22" height="30" fill="rgba(56, 189, 248, 0.15)" stroke="#38BDF8" stroke-width="1.5"/>
+    <rect x="50" y="230" width="30" height="35" fill="rgba(240, 128, 40, 0.3)" stroke="#F08028" stroke-width="1.5"/>
+
+    <!-- Tower Structure B -->
+    <rect x="135" y="45" width="95" height="220" fill="none" stroke="#38BDF8" stroke-width="2"/>
+    <!-- Floor dividers -->
+    <line x1="135" y1="90" x2="230" y2="90" stroke="#38BDF8" stroke-width="1.5"/>
+    <line x1="135" y1="135" x2="230" y2="135" stroke="#38BDF8" stroke-width="1.5"/>
+    <line x1="135" y1="180" x2="230" y2="180" stroke="#38BDF8" stroke-width="1.5"/>
+    <line x1="135" y1="225" x2="230" y2="225" stroke="#38BDF8" stroke-width="1.5"/>
+
+    <!-- Windows grid -->
+    <circle cx="160" cy="68" r="6" stroke="#38BDF8" stroke-width="1.5"/>
+    <circle cx="205" cy="68" r="6" stroke="#38BDF8" stroke-width="1.5"/>
+
+    <rect x="145" y="103" width="25" height="20" fill="rgba(56, 189, 248, 0.2)" stroke="#38BDF8" stroke-width="1"/>
+    <rect x="190" y="103" width="25" height="20" fill="rgba(56, 189, 248, 0.2)" stroke="#38BDF8" stroke-width="1"/>
+
+    <rect x="145" y="148" width="25" height="20" fill="rgba(56, 189, 248, 0.2)" stroke="#38BDF8" stroke-width="1"/>
+    <rect x="190" y="148" width="25" height="20" fill="rgba(56, 189, 248, 0.2)" stroke="#38BDF8" stroke-width="1"/>
+
+    <!-- Crane Graphic overhead -->
+    <path d="M120 20 L250 20 M190 20 L190 45" stroke="#F08028" stroke-width="2"/>
+    <path d="M120 20 L140 5 L210 5 L190 20" stroke="#F08028" stroke-width="1.5" fill="none"/>
+    <line x1="240" y1="20" x2="240" y2="70" stroke="#F08028" stroke-width="1" stroke-dasharray="2 2"/>
+    <rect x="233" y="70" width="14" height="12" fill="#F08028" rx="2"/>
+
+    <!-- Dimension Label Callout -->
+    <rect x="10" y="10" width="90" height="24" rx="4" fill="#1E293B" stroke="#38BDF8" stroke-width="1"/>
+    <text x="55" y="26" font-family="sans-serif" font-size="10" font-weight="700" fill="#38BDF8" text-anchor="middle">CAD TAKEOFF</text>
+  </g>
+
+  <!-- Right Side: Cost Breakdown & Estimate Analytics Cards -->
+  <g transform="translate(330, 95)">
+    <!-- Summary Header Badge -->
+    <rect width="260" height="50" rx="8" fill="url(#navyGrad)"/>
+    <text x="16" y="22" font-family="sans-serif" font-size="11" font-weight="600" fill="#94A3B8">ESTIMATED TOTAL COST</text>
+    <text x="16" y="41" font-family="sans-serif" font-size="18" font-weight="800" fill="#FFFFFF">$1,485,200.00</text>
+    <rect x="180" y="14" width="66" height="22" rx="11" fill="rgba(240, 128, 40, 0.2)"/>
+    <text x="213" y="29" font-family="sans-serif" font-size="10" font-weight="700" fill="#F08028" text-anchor="middle">+98.4% Acc.</text>
+
+    <!-- Material & Labor Breakdown List Cards -->
+    <!-- Card 1: Materials -->
+    <g transform="translate(0, 62)">
+      <rect width="260" height="66" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+      <circle cx="28" cy="33" r="16" fill="#EFF6FF"/>
+      <!-- Icon: Concrete / Materials -->
+      <path d="M22 27 h12 v12 h-12 z" stroke="#2563EB" stroke-width="1.5" fill="none"/>
+      <text x="56" y="28" font-family="sans-serif" font-size="12" font-weight="700" fill="#1E293B">Material Cost Takeoff</text>
+      <text x="56" y="46" font-family="sans-serif" font-size="11" font-weight="500" fill="#64748B">Concrete, Lumber, Steel</text>
+      <text x="244" y="37" font-family="sans-serif" font-size="13" font-weight="700" fill="#1E293B" text-anchor="end">$642,800</text>
+      <rect x="56" y="52" width="130" height="4" rx="2" fill="#E2E8F0"/>
+      <rect x="56" y="52" width="90" height="4" rx="2" fill="#2563EB"/>
+    </g>
+
+    <!-- Card 2: Labor & Equipment -->
+    <g transform="translate(0, 138)">
+      <rect width="260" height="66" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+      <circle cx="28" cy="33" r="16" fill="#FFF7ED"/>
+      <!-- Icon: Hardhat / Labor -->
+      <path d="M20 36 C20 30 24 26 28 26 C32 26 36 30 36 36 Z" stroke="#F08028" stroke-width="1.5" fill="none"/>
+      <line x1="18" y1="36" x2="38" y2="36" stroke="#F08028" stroke-width="1.5"/>
+      <text x="56" y="28" font-family="sans-serif" font-size="12" font-weight="700" fill="#1E293B">Labor &amp; Equipment</text>
+      <text x="56" y="46" font-family="sans-serif" font-size="11" font-weight="500" fill="#64748B">Specialized Manpower</text>
+      <text x="244" y="37" font-family="sans-serif" font-size="13" font-weight="700" fill="#1E293B" text-anchor="end">$520,400</text>
+      <rect x="56" y="52" width="130" height="4" rx="2" fill="#E2E8F0"/>
+      <rect x="56" y="52" width="105" height="4" rx="2" fill="#F08028"/>
+    </g>
+
+    <!-- Card 3: Overhead & Contingency -->
+    <g transform="translate(0, 214)">
+      <rect width="260" height="66" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+      <circle cx="28" cy="33" r="16" fill="#F0FDF4"/>
+      <!-- Icon: Chart / Profit -->
+      <path d="M22 38 L26 32 L30 35 L35 27" stroke="#16A34A" stroke-width="1.5" fill="none"/>
+      <text x="56" y="28" font-family="sans-serif" font-size="12" font-weight="700" fill="#1E293B">Subcontractor Quotes</text>
+      <text x="56" y="46" font-family="sans-serif" font-size="11" font-weight="500" fill="#64748B">Electrical, Plumbing, HVAC</text>
+      <text x="244" y="37" font-family="sans-serif" font-size="13" font-weight="700" fill="#1E293B" text-anchor="end">$322,000</text>
+      <rect x="56" y="52" width="130" height="4" rx="2" fill="#E2E8F0"/>
+      <rect x="56" y="52" width="70" height="4" rx="2" fill="#16A34A"/>
+    </g>
+  </g>
+
+  <!-- Bottom Floating Callout Pill -->
+  <g transform="translate(190, 395)">
+    <rect x="-10" y="-12" width="280" height="30" rx="15" fill="#1E293B" filter="url(#shadow)"/>
+    <circle cx="8" cy="3" r="4" fill="#10B981"/>
+    <text x="20" y="7" font-family="sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">100% ACCURATE BID &amp; COST TAKEOFF</text>
+  </g>
+</svg>
