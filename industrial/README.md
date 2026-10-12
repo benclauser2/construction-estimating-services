@@ -9,7 +9,6 @@ Plain HTML, CSS and JavaScript. No build step and no dependencies.
 index.html            Page markup (all copy from the brief lives here)
 css/styles.css        Styles, mobile-first, tokens in :root
 js/main.js            Interactions (vanilla JS, loaded with defer)
-assets/logos/*.svg    Trust logos exported from Figma
 ```
 
 Open `index.html` directly, or serve the folder (for example `npx serve .`).
@@ -18,8 +17,8 @@ Open `index.html` directly, or serve the folder (for example `npx serve .`).
 
 | Width        | Layout                                                        |
 |--------------|---------------------------------------------------------------|
-| < 768px      | Mobile: single column, stacked cards, logo marquee            |
-| 768–1199px   | Tablet: 2-column grids, logo marquee                          |
+| < 768px      | Mobile: single column, stacked cards                           |
+| 768–1199px   | Tablet: 2-column grids                                        |
 | ≥ 1200px     | Desktop: 3/4-column grids, static logo row                    |
 | > 1250px     | Full header nav (below this, the menu button opens a drawer)  |
 
@@ -31,7 +30,7 @@ Open `index.html` directly, or serve the folder (for example `npx serve .`).
 - **Tooltips**: any element with `data-tooltip="…"`. One shared floating tooltip that opens on hover or focus, toggles on tap, and closes with Escape, on scroll or on an outside click.
 - **Trade carousel**: arrow buttons scroll the pill row (`[data-carousel]`).
 - **FAQ accordion**: native `<details>`/`<summary>`, so it works without JS.
-- **Logo marquee**: CSS-only. It pauses on hover or focus and switches off for `prefers-reduced-motion`.
+- **Trust logos**: static centered row matching the home page. Each "i" badge uses the shared tooltip.
 - **Calculator form**: validates the selects and dispatches a `calculator:submit` event with the values. Connect it to your backend there.
 
 ## Text clamp utilities

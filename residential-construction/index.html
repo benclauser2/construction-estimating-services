@@ -18,9 +18,6 @@
   <symbol id="i-img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
     <rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 18l5-5 4 4 3-3 4 4"/>
   </symbol>
-  <symbol id="i-star" viewBox="0 0 20 20" fill="currentColor">
-    <path d="M10 1.8l2.5 5.2 5.7.8-4.1 4 1 5.7L10 14.8l-5.1 2.7 1-5.7-4.1-4 5.7-.8z"/>
-  </symbol>
   <symbol id="i-info" viewBox="0 0 16 16">
     <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.3"/>
     <path class="i" d="M8 7.2v4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" fill="none"/>
@@ -140,37 +137,98 @@
   </div>
 </section>
 
-<!-- ===================== REVIEWS ===================== -->
-<section class="section" aria-labelledby="reviews-title">
+<!-- ===================== TRUST LOGOS ===================== -->
+<section class="trust" aria-label="Trusted by">
   <div class="container">
-    <div class="reviews__head">
-      <div>
-        <p class="eyebrow">Field notes / Verified reviews</p>
-        <h2 class="h2" id="reviews-title">What estimators and homeowners found out</h2>
+    <ul class="trust-logos">
+      <li class="trust-logo">
+        <svg width="92" height="26" viewBox="0 0 86 28" fill="currentColor" role="img" aria-label="Google"><text x="0" y="21" font-family="sans-serif" font-size="24" font-weight="700" font-style="italic">Google</text></svg>
+        <button class="trust-logo__info" type="button" aria-label="About Google" aria-describedby="tooltip" data-tip="Trusted by teams at Google">i</button>
+      </li>
+      <li class="trust-logo">
+        <svg width="120" height="26" viewBox="0 0 114 28" fill="currentColor" role="img" aria-label="Facebook"><text x="0" y="21" font-family="sans-serif" font-size="22" font-weight="800">facebook</text></svg>
+        <button class="trust-logo__info" type="button" aria-label="About Facebook" aria-describedby="tooltip" data-tip="Trusted by teams at Facebook">i</button>
+      </li>
+      <li class="trust-logo">
+        <svg width="112" height="26" viewBox="0 0 110 28" fill="currentColor" role="img" aria-label="YouTube"><rect x="0" y="5" width="30" height="18" rx="5"/><path d="M12 9L22 14L12 19Z" fill="#fff"/><text x="34" y="20" font-family="sans-serif" font-size="18" font-weight="700">YouTube</text></svg>
+        <button class="trust-logo__info" type="button" aria-label="About YouTube" aria-describedby="tooltip" data-tip="Trusted by teams at YouTube">i</button>
+      </li>
+      <li class="trust-logo">
+        <svg width="118" height="26" viewBox="0 0 118 28" fill="currentColor" role="img" aria-label="Pinterest"><circle cx="12" cy="14" r="12"/><path d="M11 20L14 8M8 12C8 9 10 7 13 7C16 7 18 9 17 12C16.5 14 15 15 13 14.5" stroke="#fff" stroke-width="1.8" fill="none"/><text x="28" y="20" font-family="sans-serif" font-size="18" font-weight="700">Pinterest</text></svg>
+        <button class="trust-logo__info" type="button" aria-label="About Pinterest" aria-describedby="tooltip" data-tip="Trusted by teams at Pinterest">i</button>
+      </li>
+      <li class="trust-logo">
+        <svg width="84" height="26" viewBox="0 0 78 28" fill="currentColor" role="img" aria-label="Twitch"><text x="0" y="20" font-family="sans-serif" font-size="20" font-weight="800" font-style="italic">twitch</text></svg>
+        <button class="trust-logo__info" type="button" aria-label="About Twitch" aria-describedby="tooltip" data-tip="Trusted by teams at Twitch">i</button>
+      </li>
+      <li class="trust-logo">
+        <svg width="98" height="26" viewBox="0 0 92 28" fill="currentColor" role="img" aria-label="Webflow"><text x="0" y="20" font-family="sans-serif" font-size="20" font-weight="700" font-style="italic">webflow</text></svg>
+        <button class="trust-logo__info" type="button" aria-label="About Webflow" aria-describedby="tooltip" data-tip="Trusted by teams at Webflow">i</button>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section class="reviews-section" id="reviews" aria-labelledby="reviews-title">
+  <div class="container">
+    <div class="reviews-header-wrap">
+      <div class="reviews-title-block">
+        <h2 class="reviews-main-title" id="reviews-title">Construction Estimating<br>Service Reviews</h2>
+        <p class="reviews-sub-desc">Direct feedback from contractors and project owners on estimate accuracy, turnaround time, and responsiveness during the bidding process.</p>
       </div>
-      <div class="rating">
-        <span class="rating__label">Average variance vs. final bid</span>
-        <span class="rating__pill">4.7 / 5 &nbsp;·&nbsp; across 214 projects</span>
+      <div class="reviews-badge-block">
+        <p class="reviews-rating-pill">
+          <span class="rating-num">4.9</span>
+          <span class="rating-stars" role="img" aria-label="Rated 4.9 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        </p>
+        <span class="reviews-orange-tag">REVIEWS</span>
       </div>
     </div>
-    <div class="grid cols-3 m-carousel">
-      <figure class="testimonial" style="margin:0">
-        <div class="stars" role="img" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-        <blockquote>“Ran the framing and foundation numbers against our own takeoff and landed within 3%. That almost never happens on a first pass.”</blockquote>
-        <figcaption><div class="testimonial__name">Marcus Webb</div><div class="testimonial__meta">General Contractor, 14 yrs · 2,400 SF · New build</div></figcaption>
-      </figure>
-      <figure class="testimonial" style="margin:0">
-        <div class="stars" role="img" aria-label="4 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg class="is-off"><use href="#i-star"/></svg></div>
-        <blockquote>“Good breakdown of labor vs. materials for a kitchen remodel. Wish it flagged permit cost swings by county, but the base numbers held up.”</blockquote>
-        <figcaption><div class="testimonial__name">Priya Anand</div><div class="testimonial__meta">Remodeling Estimator · 680 SF · Kitchen remodel</div></figcaption>
-      </figure>
-      <figure class="testimonial" style="margin:0">
-        <div class="stars" role="img" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-        <blockquote>“First time pricing an addition myself. This is the first guide that actually explained why two contractor bids were $18K apart.”</blockquote>
-        <figcaption><div class="testimonial__name">Dana Ferris</div><div class="testimonial__meta">Homeowner · 340 SF · Room addition</div></figcaption>
-      </figure>
+
+    <div class="carousel-outer-wrapper">
+      <button class="carousel-arrow left-arrow" type="button" data-reviews-prev aria-controls="reviewsCarouselTrack" aria-label="Previous reviews">&larr;</button>
+      <button class="carousel-arrow right-arrow" type="button" data-reviews-next aria-controls="reviewsCarouselTrack" aria-label="Next reviews">&rarr;</button>
+
+      <ul class="reviews-carousel-track" id="reviewsCarouselTrack" tabindex="0" aria-label="Customer reviews">
+        <li class="review-card">
+          <p class="review-stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <blockquote class="review-quote-text">The quantity takeoff came back within two days and lined up closely with our actual site numbers for the residential addition.</blockquote>
+          <h3 class="review-client-name">Robert Miller</h3>
+          <p class="review-project-type">Residential Addition</p>
+        </li>
+        <li class="review-card">
+          <p class="review-stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <blockquote class="review-quote-text">Extremely detailed commercial cost breakdown. Helped us win our $3.2M office renovation bid with total budget clarity.</blockquote>
+          <h3 class="review-client-name">Sarah Jenkins</h3>
+          <p class="review-project-type">Commercial Renovation</p>
+        </li>
+        <li class="review-card">
+          <p class="review-stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <blockquote class="review-quote-text">Spot-on MEP and structural takeoff sheets. Delivered 12 hours ahead of our bid deadline with thorough material lists.</blockquote>
+          <h3 class="review-client-name">David Vance</h3>
+          <p class="review-project-type">Multi-Family Development</p>
+        </li>
+        <li class="review-card">
+          <p class="review-stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <blockquote class="review-quote-text">Highly reliable estimating partner. Their preliminary budget models saved our design team from costly late-stage revisions.</blockquote>
+          <h3 class="review-client-name">Elena Rodriguez</h3>
+          <p class="review-project-type">Institutional Facility</p>
+        </li>
+        <li class="review-card">
+          <p class="review-stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <blockquote class="review-quote-text">Fast turnaround and super accurate RSMeans regional pricing. We submit all our subcontractor trade bids using their numbers.</blockquote>
+          <h3 class="review-client-name">Marcus Thorne</h3>
+          <p class="review-project-type">General Contracting</p>
+        </li>
+        <li class="review-card">
+          <p class="review-stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+          <blockquote class="review-quote-text">Professional bid management support. Their itemized spreadsheets made client approvals smooth and straightforward.</blockquote>
+          <h3 class="review-client-name">Amanda Hayes</h3>
+          <p class="review-project-type">Industrial Warehouse</p>
+        </li>
+      </ul>
     </div>
-    <div class="dots" aria-hidden="true"></div>
   </div>
 </section>
 
@@ -658,7 +716,7 @@
   </div>
 </footer>
 
-<div class="tooltip" role="tooltip" id="trade-tooltip"></div>
+<div class="tooltip" role="tooltip" id="tooltip"></div>
 
 <script src="script.js"></script>
 </body>

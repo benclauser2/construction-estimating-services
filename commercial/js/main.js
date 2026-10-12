@@ -9,6 +9,7 @@
  *  4. Trade carousel arrows
  *  5. Tooltips (one floating element shared by every [data-tooltip])
  *  6. Calculator form (demo handler)
+ *  7. Reviews carousel arrows
  */
 (() => {
   "use strict";
@@ -287,6 +288,24 @@
     });
   }
 
+  /* ------------------------------------------------------------------
+     7. Reviews carousel — arrows scroll the track one card at a time.
+  ------------------------------------------------------------------ */
+  function initReviews() {
+    const track = $("#reviewsCarouselTrack");
+    const prev = $("[data-reviews-prev]");
+    const next = $("[data-reviews-next]");
+    if (!track || !prev || !next) return;
+
+    const step = () => {
+      const card = track.firstElementChild;
+      if (!card) return track.clientWidth;
+      return card.offsetWidth + parseFloat(getComputedStyle(track).columnGap || 0);
+    };
+    prev.addEventListener("click", () => track.scrollBy({ left: -step(), behavior: reduceMotion.matches ? "auto" : "smooth" }));
+    next.addEventListener("click", () => track.scrollBy({ left: step(), behavior: reduceMotion.matches ? "auto" : "smooth" }));
+  }
+
   /* ------------------------------------------------------------------ */
   initMenu();
   initTabs();
@@ -294,4 +313,5 @@
   initCarousels();
   initTooltips();
   initCalculator();
+  initReviews();
 })();

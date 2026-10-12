@@ -53,13 +53,12 @@
 
   /* -------------------------------------------------------------
      2. Trade pill tabs — built from the panel data so the copy
-        lives in one place, plus arrow scrolling and tooltips.
+        lives in one place, plus arrow scrolling.
   ------------------------------------------------------------- */
   function initTrades() {
     const track = document.querySelector("[data-trades]");
     const panelsWrap = document.querySelector("[data-trade-panels]");
     if (!track || !panelsWrap) return;
-    const tooltip = document.getElementById("trade-tooltip");
     const panels = Array.from(panelsWrap.querySelectorAll('[role="tabpanel"]'));
 
     panels.forEach((panel, i) => {
@@ -73,7 +72,7 @@
       pill.innerHTML =
         '<button class="pill__tab" role="tab" id="' + tabId + '" aria-controls="' + panel.id + '" aria-selected="' + (i === 0) + '"' + (i ? ' tabindex="-1"' : "") + ">" +
         panel.dataset.title + "</button>" +
-        '<button class="pill__info" type="button" aria-label="About ' + panel.dataset.title + '" aria-describedby="trade-tooltip" data-tip="' + panel.dataset.desc.replace(/"/g, "&quot;") + '">' +
+        '<button class="pill__info" type="button" aria-label="About ' + panel.dataset.title + '" aria-describedby="tooltip" data-tip="' + panel.dataset.desc.replace(/"/g, "&quot;") + '">' +
         '<svg aria-hidden="true"><use href="#i-info"/></svg></button>';
       track.appendChild(pill);
     });
@@ -81,37 +80,6 @@
     initTablist(track, {
       onToggle(tab, on) { tab.closest(".pill").classList.toggle("is-active", on); },
     });
-
-    // Tooltip (fixed-position so the scrolling track can't clip it)
-    let hideTimer;
-    function showTip(btn) {
-      clearTimeout(hideTimer);
-      tooltip.textContent = btn.dataset.tip;
-      tooltip.classList.add("is-visible");
-      const r = btn.getBoundingClientRect();
-      const tw = tooltip.offsetWidth;
-      let left = r.left + r.width / 2 - 40;
-      left = Math.max(12, Math.min(left, window.innerWidth - tw - 12));
-      tooltip.style.left = left + "px";
-      tooltip.style.top = r.bottom + 10 + "px";
-    }
-    function hideTip() {
-      hideTimer = setTimeout(() => tooltip.classList.remove("is-visible"), 80);
-    }
-    track.querySelectorAll(".pill__info").forEach((btn) => {
-      btn.addEventListener("mouseenter", () => showTip(btn));
-      btn.addEventListener("focus", () => showTip(btn));
-      btn.addEventListener("mouseleave", hideTip);
-      btn.addEventListener("blur", hideTip);
-      // Touch: tap toggles the tooltip
-      btn.addEventListener("click", (e) => {
-        e.preventDefault();
-        tooltip.classList.contains("is-visible") && tooltip.textContent === btn.dataset.tip ? hideTip() : showTip(btn);
-      });
-    });
-    document.addEventListener("keydown", (e) => { if (e.key === "Escape") tooltip.classList.remove("is-visible"); });
-    window.addEventListener("scroll", () => tooltip.classList.remove("is-visible"), { passive: true });
-    track.addEventListener("scroll", () => tooltip.classList.remove("is-visible"), { passive: true });
 
     // Arrow buttons
     const carousel = track.closest(".tabs-carousel");
@@ -133,7 +101,49 @@
   }
 
   /* -------------------------------------------------------------
-     3. Read More / Learn More expanders for clamped text
+     3. Tooltips — one fixed-position element shared by every
+        [data-tip] button (trade pills, trust logos). Fixed so
+        scrolling containers can't clip it.
+  ------------------------------------------------------------- */
+  function initTooltips() {
+    const tooltip = document.getElementById("tooltip");
+    const buttons = document.querySelectorAll("[data-tip]");
+    if (!tooltip || !buttons.length) return;
+
+    let hideTimer;
+    const hideNow = () => tooltip.classList.remove("is-visible");
+    function showTip(btn) {
+      clearTimeout(hideTimer);
+      tooltip.textContent = btn.dataset.tip;
+      tooltip.classList.add("is-visible");
+      const r = btn.getBoundingClientRect();
+      const tw = tooltip.offsetWidth;
+      let left = r.left + r.width / 2 - 40;
+      left = Math.max(12, Math.min(left, window.innerWidth - tw - 12));
+      tooltip.style.left = left + "px";
+      tooltip.style.top = r.bottom + 10 + "px";
+    }
+    function hideTip() {
+      hideTimer = setTimeout(hideNow, 80);
+    }
+    buttons.forEach((btn) => {
+      btn.addEventListener("mouseenter", () => showTip(btn));
+      btn.addEventListener("focus", () => showTip(btn));
+      btn.addEventListener("mouseleave", hideTip);
+      btn.addEventListener("blur", hideTip);
+      // Touch: tap toggles the tooltip
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        tooltip.classList.contains("is-visible") && tooltip.textContent === btn.dataset.tip ? hideTip() : showTip(btn);
+      });
+    });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") hideNow(); });
+    // Capture catches scrolling inside containers (trade track) as well as the page
+    document.addEventListener("scroll", hideNow, { capture: true, passive: true });
+  }
+
+  /* -------------------------------------------------------------
+     4. Read More / Learn More expanders for clamped text
   ------------------------------------------------------------- */
   function initExpanders() {
     document.querySelectorAll("[data-expand]").forEach((btn) => {
@@ -159,7 +169,7 @@
   }
 
   /* -------------------------------------------------------------
-     4. Accordion
+     5. Accordion
   ------------------------------------------------------------- */
   function initAccordions() {
     document.querySelectorAll(".acc-btn").forEach((btn) => {
@@ -173,7 +183,7 @@
   }
 
   /* -------------------------------------------------------------
-     5. Mobile nav drawer (same markup as the home page header)
+     6. Mobile nav drawer (same markup as the home page header)
   ------------------------------------------------------------- */
   function initMenu() {
     const openBtn = document.getElementById("mobileMenuOpen");
@@ -204,7 +214,7 @@
   }
 
   /* -------------------------------------------------------------
-     6. Mobile carousel dots
+     7. Mobile carousel dots
   ------------------------------------------------------------- */
   function initDots() {
     document.querySelectorAll(".m-carousel").forEach((row) => {
@@ -226,7 +236,7 @@
   }
 
   /* -------------------------------------------------------------
-     7. "On this page" chips — highlight the section in view
+     8. "On this page" chips — highlight the section in view
   ------------------------------------------------------------- */
   function initToc() {
     const chips = Array.from(document.querySelectorAll(".chip[href^='#']"));
@@ -247,13 +257,34 @@
     map.forEach((_, id) => { const el = document.getElementById(id); if (el) io.observe(el); });
   }
 
+  /* -------------------------------------------------------------
+     9. Reviews carousel — arrows scroll the track one card at a time.
+  ------------------------------------------------------------- */
+  function initReviews() {
+    const track = document.getElementById("reviewsCarouselTrack");
+    const prev = document.querySelector("[data-reviews-prev]");
+    const next = document.querySelector("[data-reviews-next]");
+    if (!track || !prev || !next) return;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    function step() {
+      const card = track.firstElementChild;
+      if (!card) return track.clientWidth;
+      return card.offsetWidth + parseFloat(getComputedStyle(track).columnGap || 0);
+    }
+    prev.addEventListener("click", () => track.scrollBy({ left: -step(), behavior: reduceMotion.matches ? "auto" : "smooth" }));
+    next.addEventListener("click", () => track.scrollBy({ left: step(), behavior: reduceMotion.matches ? "auto" : "smooth" }));
+  }
+
   /* ------------------------------------------------------------- */
   document.querySelectorAll("[data-select]").forEach((list) => initTablist(list));
   initTablist(document.querySelector("[data-faq-tabs]"));
   initTrades();
+  initTooltips();
   initExpanders();
   initAccordions();
   initMenu();
   initDots();
   initToc();
+  initReviews();
 })();
