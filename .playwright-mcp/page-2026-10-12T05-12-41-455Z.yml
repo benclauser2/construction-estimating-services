@@ -1,0 +1,685 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Construction" [ref=e4] [cursor=pointer]:
+        - /url: "#home"
+      - navigation [ref=e13]:
+        - link "Home" [ref=e14] [cursor=pointer]:
+          - /url: "#home"
+        - link "Services" [ref=e15] [cursor=pointer]:
+          - /url: "#services"
+        - link "Trades" [ref=e16] [cursor=pointer]:
+          - /url: "#what-is-included"
+        - link "About Us" [ref=e17] [cursor=pointer]:
+          - /url: "#why-choose"
+        - link "Portfolio" [ref=e18] [cursor=pointer]:
+          - /url: "#estimating-projects"
+        - link "Contact Us" [ref=e19] [cursor=pointer]:
+          - /url: "#request-estimate"
+      - generic [ref=e20]:
+        - link "Free Consultation" [ref=e21] [cursor=pointer]:
+          - /url: "#request-estimate"
+        - link "Add phone number" [ref=e22] [cursor=pointer]:
+          - /url: tel:+18005550199
+        - link "Get Estimate Now" [ref=e26] [cursor=pointer]:
+          - /url: "#request-estimate"
+  - complementary [ref=e27]:
+    - generic [ref=e28]:
+      - generic [ref=e29]: Menu
+      - button "×" [ref=e30] [cursor=pointer]
+    - generic [ref=e31]:
+      - link "Home" [ref=e32] [cursor=pointer]:
+        - /url: "#home"
+      - link "Services" [ref=e33] [cursor=pointer]:
+        - /url: "#services"
+      - link "Trades" [ref=e34] [cursor=pointer]:
+        - /url: "#what-is-included"
+      - link "About Us" [ref=e35] [cursor=pointer]:
+        - /url: "#why-choose"
+      - link "Portfolio" [ref=e36] [cursor=pointer]:
+        - /url: "#estimating-projects"
+      - link "Contact Us" [ref=e37] [cursor=pointer]:
+        - /url: "#request-estimate"
+    - generic [ref=e38]:
+      - link "Free Consultation" [ref=e39] [cursor=pointer]:
+        - /url: "#request-estimate"
+      - link "Add phone number" [ref=e40] [cursor=pointer]:
+        - /url: tel:+18005550199
+      - link "Get Estimate Now" [ref=e44] [cursor=pointer]:
+        - /url: "#request-estimate"
+  - generic [ref=e46]:
+    - generic [ref=e47]:
+      - heading "Construction Estimating Services" [level=1] [ref=e48]
+      - paragraph [ref=e49]: Construction estimating services provide detailed cost projections before construction begins. Professional estimates measure materials, labor, equipment, subcontractor work, and applicable project expenses. Construction estimating services support bidding, budgeting, procurement, feasibility analysis, and financial planning across residential, commercial, industrial, and civil construction.
+      - link "Read More →" [ref=e51] [cursor=pointer]:
+        - /url: "#"
+      - generic [ref=e52]:
+        - link "Request an Estimate →" [ref=e53] [cursor=pointer]:
+          - /url: "#request-estimate"
+        - link "Call Our Estimators" [ref=e54] [cursor=pointer]:
+          - /url: tel:+18005550199
+    - img "Construction Estimating Blueprint Illustration" [ref=e56]
+  - generic [ref=e59]:
+    - generic [ref=e60]:
+      - img [ref=e61]:
+        - generic [ref=e62]: Google
+      - generic [ref=e63] [cursor=pointer]: i
+    - generic [ref=e64]:
+      - img [ref=e65]:
+        - generic [ref=e66]: facebook
+      - generic [ref=e67] [cursor=pointer]: i
+    - generic [ref=e68]:
+      - img [ref=e69]:
+        - generic [ref=e72]: YouTube
+      - generic [ref=e73] [cursor=pointer]: i
+    - generic [ref=e74]:
+      - img [ref=e75]:
+        - generic [ref=e78]: Pinterest
+      - generic [ref=e79] [cursor=pointer]: i
+    - generic [ref=e80]:
+      - img [ref=e81]:
+        - generic [ref=e82]: twitch
+      - generic [ref=e83] [cursor=pointer]: i
+    - generic [ref=e84]:
+      - img [ref=e85]:
+        - generic [ref=e86]: webflow
+      - generic [ref=e87] [cursor=pointer]: i
+  - generic [ref=e89]:
+    - generic [ref=e90]:
+      - generic [ref=e91]:
+        - heading "Construction Estimating Service Reviews" [level=2] [ref=e92]: Construction EstimatingService Reviews
+        - paragraph [ref=e93]: Direct feedback from contractors and project owners on estimate accuracy, turnaround time, and responsiveness during the bidding process.
+      - generic [ref=e94]:
+        - generic [ref=e95]:
+          - generic [ref=e96]: "4.9"
+          - generic [ref=e97]: ★★★★★
+        - button "REVIEWS" [ref=e98] [cursor=pointer]
+    - generic [ref=e99]:
+      - button "Previous review" [ref=e100] [cursor=pointer]: ←
+      - button "Next review" [ref=e101] [cursor=pointer]: →
+      - generic [ref=e102]:
+        - generic [ref=e103]:
+          - generic [ref=e104]: ★★★★★
+          - paragraph [ref=e105]: The quantity takeoff came back within two days and lined up closely with our actual site numbers for the residential addition.
+          - heading "Robert Miller" [level=4] [ref=e106]
+          - paragraph [ref=e107]: Residential Addition
+        - generic [ref=e108]:
+          - generic [ref=e109]: ★★★★★
+          - paragraph [ref=e110]: Extremely detailed commercial cost breakdown. Helped us win our $3.2M office renovation bid with total budget clarity.
+          - heading "Sarah Jenkins" [level=4] [ref=e111]
+          - paragraph [ref=e112]: Commercial Renovation
+        - generic [ref=e113]:
+          - generic [ref=e114]: ★★★★★
+          - paragraph [ref=e115]: Spot-on MEP and structural takeoff sheets. Delivered 12 hours ahead of our bid deadline with thorough material lists.
+          - heading "David Vance" [level=4] [ref=e116]
+          - paragraph [ref=e117]: Multi-Family Development
+        - generic [ref=e118]:
+          - generic [ref=e119]: ★★★★★
+          - paragraph [ref=e120]: Highly reliable estimating partner. Their preliminary budget models saved our design team from costly late-stage revisions.
+          - heading "Elena Rodriguez" [level=4] [ref=e121]
+          - paragraph [ref=e122]: Institutional Facility
+        - generic [ref=e123]:
+          - generic [ref=e124]: ★★★★★
+          - paragraph [ref=e125]: Fast turnaround and super accurate RSMeans regional pricing. We submit all our subcontractor trade bids using their numbers.
+          - heading "Marcus Thorne" [level=4] [ref=e126]
+          - paragraph [ref=e127]: General Contracting
+        - generic [ref=e128]:
+          - generic [ref=e129]: ★★★★★
+          - paragraph [ref=e130]: Professional bid management support. Their itemized spreadsheets made client approvals smooth and straightforward.
+          - heading "Amanda Hayes" [level=4] [ref=e131]
+          - paragraph [ref=e132]: Industrial Warehouse
+  - generic [ref=e134]:
+    - generic [ref=e135]:
+      - heading "Our Construction Estimating Services" [level=2] [ref=e136]
+      - paragraph [ref=e137]: Construction estimating services cover project costing, quantity measurement, bidding support, and trade-specific pricing. Each service addresses a different stage of construction planning and supports accurate financial preparation.
+    - generic [ref=e138]:
+      - generic [ref=e139]:
+        - heading "1. Construction Cost Estimating Services" [level=3] [ref=e147]
+        - paragraph [ref=e148]:
+          - text: Construction cost estimating services calculate the expected financial requirements for a complete construction project. Estimates account for labor, materials, equipment, subcontractor work, site expenses, overhead, and applicable project costs.
+          - button "Read More →" [ref=e149] [cursor=pointer]
+      - generic [ref=e150]:
+        - heading "2. Quantity Takeoff Services" [level=3] [ref=e155]
+        - paragraph [ref=e156]:
+          - text: Quantity takeoff services measure construction components from drawings and project documents. The process converts plans into measurable quantities for concrete, steel, lumber, finishes, fixtures, earthwork, and other construction materials.
+          - button "Read More →" [ref=e157] [cursor=pointer]
+      - generic [ref=e158]:
+        - heading "3. Material Takeoff Services" [level=3] [ref=e163]
+        - paragraph [ref=e164]:
+          - text: Material takeoff services identify and quantify materials required for construction. Takeoffs organize quantities for purchasing, budgeting, bidding, and project planning.
+          - button "Read More →" [ref=e165] [cursor=pointer]
+      - generic [ref=e166]:
+        - heading "4. Bid Estimating Services" [level=3] [ref=e171]
+        - paragraph [ref=e172]:
+          - text: Bid estimating services prepare project costs for contractors and subcontractors competing for construction work. Estimators review plans, measure quantities, apply labor and material rates, and organize costs into a bid-ready format.
+          - button "Read More →" [ref=e173] [cursor=pointer]
+      - generic [ref=e174]:
+        - heading "5. Residential Construction Estimating" [level=3] [ref=e178]
+        - paragraph [ref=e179]:
+          - text: Residential construction estimating covers homes, additions, renovations, extensions, and other housing projects. Estimates account for material quantities, labor requirements, equipment, subcontractor scopes, and project-specific expenses.
+          - button "Read More →" [ref=e180] [cursor=pointer]
+      - generic [ref=e181]:
+        - heading "6. Commercial Construction Estimating" [level=3] [ref=e185]
+        - paragraph [ref=e186]:
+          - text: Commercial construction estimating covers offices, retail buildings, restaurants, schools, medical facilities, and other commercial developments. Estimates organize costs across architectural, structural, mechanical, electrical, plumbing, interior, and site-related scopes.
+          - button "Read More →" [ref=e187] [cursor=pointer]
+      - generic [ref=e188]:
+        - heading "7. Industrial Construction Estimating" [level=3] [ref=e192]
+        - paragraph [ref=e193]:
+          - text: Industrial construction estimating covers warehouses, manufacturing facilities, processing buildings, distribution centers, and related developments. Estimates account for structural systems, equipment, utilities, mechanical systems, electrical installations, sitework, and specialized construction requirements.
+          - button "Read More →" [ref=e194] [cursor=pointer]
+      - generic [ref=e195]:
+        - heading "8. MEP Estimating Services" [level=3] [ref=e200]
+        - paragraph [ref=e201]:
+          - text: MEP estimating services cover mechanical, electrical, and plumbing construction costs. Estimators quantify equipment, fixtures, piping, ductwork, wiring, controls, fittings, and associated installation requirements.
+          - button "Read More →" [ref=e202] [cursor=pointer]
+  - generic [ref=e204]:
+    - generic [ref=e205]:
+      - heading "Why Choose Our Construction Estimating Services?" [level=2] [ref=e206]
+      - paragraph [ref=e207]: Construction estimating services provide greater value when accuracy, experience, regional pricing, and organized deliverables work together. A structured estimating process gives contractors and project owners clearer cost information before financial commitments are made.
+    - generic [ref=e208]:
+      - generic [ref=e209]:
+        - heading "Accurate Construction Estimates" [level=3] [ref=e214]
+        - paragraph [ref=e215]:
+          - text: Detailed quantity measurement and cost classification create a clearer project cost picture.
+          - button "Read More →" [ref=e216] [cursor=pointer]
+      - generic [ref=e217]:
+        - heading "Experienced Construction Estimators" [level=3] [ref=e221]
+        - paragraph [ref=e222]:
+          - text: Professional estimators interpret drawings, specifications, schedules, and trade requirements.
+          - button "Read More →" [ref=e223] [cursor=pointer]
+      - generic [ref=e224]:
+        - heading "Location-Based Construction Pricing" [level=3] [ref=e229]
+        - paragraph [ref=e230]:
+          - text: Regional labour rates, supplier pricing, transportation expenses, and market conditions influence construction costs.
+          - button "Read More →" [ref=e231] [cursor=pointer]
+      - generic [ref=e232]:
+        - heading "Bid-Ready Deliverables" [level=3] [ref=e237]
+        - paragraph [ref=e238]:
+          - text: Organised estimates provide quantities, unit costs, extensions, and trade breakdowns in a format suited to bidding and project review.
+          - button "Read More →" [ref=e239] [cursor=pointer]
+  - generic [ref=e241]:
+    - generic [ref=e242]:
+      - heading "Construction Estimating Services Across the United States" [level=2] [ref=e243]
+      - paragraph [ref=e244]: Construction estimating services support projects across the United States, with pricing adapted to the project location and construction market. Labor rates, material costs, equipment expenses, transportation, and local market conditions influence regional construction pricing.
+    - generic [ref=e245]:
+      - generic [ref=e246]:
+        - generic [ref=e247]:
+          - generic [ref=e248]: SITE PLAN — UNITED STATES
+          - generic [ref=e249]: 50 STATES COVERAGE
+        - img [ref=e251]:
+          - generic [ref=e254]:
+            - generic "Alabama" [ref=e255] [cursor=pointer]
+            - generic "Alaska" [ref=e258] [cursor=pointer]
+            - generic "Arizona" [ref=e261] [cursor=pointer]
+            - generic "Arkansas" [ref=e264] [cursor=pointer]
+            - generic "California" [ref=e267] [cursor=pointer]
+            - generic "Colorado" [ref=e270] [cursor=pointer]
+            - generic "Connecticut" [ref=e273] [cursor=pointer]
+            - generic "Delaware" [ref=e276] [cursor=pointer]
+            - generic "Florida" [ref=e279] [cursor=pointer]
+            - generic "Georgia" [ref=e282] [cursor=pointer]
+            - generic "Hawaii" [ref=e285] [cursor=pointer]
+            - generic "Idaho" [ref=e288] [cursor=pointer]
+            - generic "Illinois" [ref=e291] [cursor=pointer]
+            - generic "Indiana" [ref=e294] [cursor=pointer]
+            - generic "Iowa" [ref=e297] [cursor=pointer]
+            - generic "Kansas" [ref=e300] [cursor=pointer]
+            - generic "Kentucky" [ref=e303] [cursor=pointer]
+            - generic "Louisiana" [ref=e306] [cursor=pointer]
+            - generic "Maine" [ref=e309] [cursor=pointer]
+            - generic "Maryland" [ref=e312] [cursor=pointer]
+            - generic "Massachusetts" [ref=e315] [cursor=pointer]
+            - generic "Michigan" [ref=e318] [cursor=pointer]
+            - generic "Minnesota" [ref=e321] [cursor=pointer]
+            - generic "Mississippi" [ref=e324] [cursor=pointer]
+            - generic "Missouri" [ref=e327] [cursor=pointer]
+            - generic "Montana" [ref=e330] [cursor=pointer]
+            - generic "Nebraska" [ref=e333] [cursor=pointer]
+            - generic "Nevada" [ref=e336] [cursor=pointer]
+            - generic "New Hampshire" [ref=e339] [cursor=pointer]
+            - generic "New Jersey" [ref=e342] [cursor=pointer]
+            - generic "New Mexico" [ref=e345] [cursor=pointer]
+            - generic "New York" [ref=e348] [cursor=pointer]
+            - generic "North Carolina" [ref=e351] [cursor=pointer]
+            - generic "North Dakota" [ref=e354] [cursor=pointer]
+            - generic "Ohio" [ref=e357] [cursor=pointer]
+            - generic "Oklahoma" [ref=e360] [cursor=pointer]
+            - generic "Oregon" [ref=e363] [cursor=pointer]
+            - generic "Pennsylvania" [ref=e366] [cursor=pointer]
+            - generic "Rhode Island" [ref=e369] [cursor=pointer]
+            - generic "South Carolina" [ref=e372] [cursor=pointer]
+            - generic "South Dakota" [ref=e375] [cursor=pointer]
+            - generic "Tennessee" [ref=e378] [cursor=pointer]
+            - generic "Texas" [ref=e381] [cursor=pointer]
+            - generic "Utah" [ref=e384] [cursor=pointer]
+            - generic "Vermont" [ref=e387] [cursor=pointer]
+            - generic "Virginia" [ref=e390] [cursor=pointer]
+            - generic "Washington" [ref=e393] [cursor=pointer]
+            - generic "West Virginia" [ref=e396] [cursor=pointer]
+            - generic "Wisconsin" [ref=e399] [cursor=pointer]
+            - generic "Wyoming" [ref=e402] [cursor=pointer]
+        - paragraph [ref=e407]: Select a state from the dropdown menu to find specialized regional estimating information.
+      - generic [ref=e408]:
+        - heading "Find Construction Estimating Services in Your State" [level=3] [ref=e409]
+        - paragraph [ref=e410]: Finding construction estimating services in a specific state starts with selecting the relevant location from the state menu. The selected state directs the search toward regional estimating information and location-specific construction pricing.
+        - paragraph [ref=e411]: State-based estimating supports projects where labour costs, material prices, transportation expenses, and local construction conditions affect the final budget. Regional information provides a stronger starting point for project planning and bid preparation.
+        - generic [ref=e412]:
+          - generic [ref=e413]:
+            - generic [ref=e414]: Select Your State ▾
+            - combobox [ref=e416] [cursor=pointer]:
+              - option "Select Your State" [disabled] [selected]
+              - option "Alabama"
+              - option "Alaska"
+              - option "Arizona"
+              - option "Arkansas"
+              - option "California"
+              - option "Colorado"
+              - option "Connecticut"
+              - option "Delaware"
+              - option "Florida"
+              - option "Georgia"
+              - option "Hawaii"
+              - option "Idaho"
+              - option "Illinois"
+              - option "Indiana"
+              - option "Iowa"
+              - option "Kansas"
+              - option "Kentucky"
+              - option "Louisiana"
+              - option "Maine"
+              - option "Maryland"
+              - option "Massachusetts"
+              - option "Michigan"
+              - option "Minnesota"
+              - option "Mississippi"
+              - option "Missouri"
+              - option "Montana"
+              - option "Nebraska"
+              - option "Nevada"
+              - option "New Hampshire"
+              - option "New Jersey"
+              - option "New Mexico"
+              - option "New York"
+              - option "North Carolina"
+              - option "North Dakota"
+              - option "Ohio"
+              - option "Oklahoma"
+              - option "Oregon"
+              - option "Pennsylvania"
+              - option "Rhode Island"
+              - option "South Carolina"
+              - option "South Dakota"
+              - option "Tennessee"
+              - option "Texas"
+              - option "Utah"
+              - option "Vermont"
+              - option "Virginia"
+              - option "Washington"
+              - option "West Virginia"
+              - option "Wisconsin"
+              - option "Wyoming"
+          - button "View Construction Estimating Services →" [ref=e417] [cursor=pointer]
+        - paragraph [ref=e418]: State-specific estimating services are available across all 50 US states.
+  - generic [ref=e420]:
+    - generic [ref=e421]:
+      - heading "How Our Construction Estimating Process Works" [level=2] [ref=e422]
+      - paragraph [ref=e423]: Construction estimating follows a structured workflow from document submission through final estimate delivery. Each stage converts project information into measurable quantities, applicable pricing, and an organized cost report.
+    - generic [ref=e424]:
+      - generic [ref=e425]:
+        - generic [ref=e426]:
+          - generic [ref=e427]: "01"
+          - heading "Submit Your Plans and Project Details" [level=3] [ref=e428]
+          - paragraph [ref=e429]: Submit project drawings, specifications, schedules, scope documents, and relevant project information. Include architectural, structural, civil, mechanical, electrical, and plumbing documents when applicable.
+        - button "Read More →" [ref=e430] [cursor=pointer]
+      - generic [ref=e431]:
+        - generic [ref=e432]:
+          - generic [ref=e433]: "02"
+          - heading "Review Plans and Project Scope" [level=3] [ref=e434]
+          - paragraph [ref=e435]: Review the submitted drawings and specifications to establish project scope and estimating requirements. The review identifies building areas, construction systems, trade divisions, project phases, and relevant details.
+        - button "Read More →" [ref=e436] [cursor=pointer]
+      - generic [ref=e437]:
+        - generic [ref=e438]:
+          - generic [ref=e439]: "03"
+          - heading "Complete Quantity Takeoffs and Pricing" [level=3] [ref=e440]
+          - paragraph [ref=e441]: Complete quantity takeoffs by measuring materials and construction components from the project documents. Apply labor rates, material prices, equipment costs, subcontractor pricing, and applicable project expenses to the measured quantities.
+        - button "Read More →" [ref=e442] [cursor=pointer]
+      - generic [ref=e443]:
+        - generic [ref=e444]:
+          - generic [ref=e445]: "04"
+          - heading "Review and Deliver the Estimate" [level=3] [ref=e446]
+          - paragraph [ref=e447]: Review the completed estimate for quantity accuracy, pricing consistency, scope coverage, and calculation errors. Quality control provides a final opportunity to identify missing work, duplicated quantities, or inconsistent rates.
+        - button "Read More →" [ref=e448] [cursor=pointer]
+  - generic [ref=e450]:
+    - generic [ref=e451]:
+      - generic [ref=e452]: Client Categories
+      - heading "Who Uses Construction Estimating Services?" [level=2] [ref=e453]
+      - paragraph [ref=e454]: Construction estimating services support professionals who need reliable cost information before bidding, purchasing, development, or construction. Contractors and project stakeholders use estimates to establish budgets and evaluate project financial requirements.
+    - generic [ref=e455]:
+      - generic [ref=e456]:
+        - heading "1. General Contractors" [level=3] [ref=e461]
+        - paragraph [ref=e462]:
+          - text: General contractors use construction estimating services to prepare competitive project bids. Detailed estimates help establish material, labor, equipment, subcontractor, and overhead costs before submitting the proposal.
+          - button "Read More →" [ref=e463] [cursor=pointer]
+      - generic [ref=e464]:
+        - heading "2. Subcontractors" [level=3] [ref=e468]
+        - paragraph [ref=e469]:
+          - text: Subcontractors use estimating services for trade-specific quantity takeoffs and bid preparation. Electrical, plumbing, mechanical, concrete, framing, roofing, flooring, and other trades require focused measurements for accurate proposals.
+          - button "Read More →" [ref=e470] [cursor=pointer]
+      - generic [ref=e471]:
+        - heading "3. Home Builders and Remodelers" [level=3] [ref=e475]
+        - paragraph [ref=e476]:
+          - text: Home builders and remodelers use estimating services to develop residential budgets before construction begins. Estimates are available for new homes, additions, renovations, kitchen projects, bathroom upgrades, and larger remodeling projects.
+          - button "Read More →" [ref=e477] [cursor=pointer]
+      - generic [ref=e478]:
+        - heading "4. Developers and Property Owners" [level=3] [ref=e482]
+        - paragraph [ref=e483]:
+          - text: Developers and property owners use estimating services for feasibility studies, budgeting, financing preparation, and project cost planning. Early cost information helps evaluate whether a proposed development aligns with available financial resources.
+          - button "Read More →" [ref=e484] [cursor=pointer]
+  - generic [ref=e486]:
+    - generic [ref=e488]:
+      - heading "Construction Project Types We Estimate" [level=2] [ref=e489]
+      - paragraph [ref=e490]: Construction estimating services cover a broad range of project categories, from new buildings to renovations and infrastructure work. Project-specific estimating accounts for the construction methods, trades, quantities, and site requirements involved.
+    - generic [ref=e491]:
+      - generic [ref=e492]:
+        - generic [ref=e493]:
+          - heading "1. New Construction Projects" [level=3] [ref=e498]
+          - paragraph [ref=e499]: New construction estimates cover ground-up residential, commercial, industrial, and mixed-use developments. Estimators quantify building materials, labor, equipment, subcontractor work, sitework, and associated construction expenses.
+        - button "Read More →" [ref=e501] [cursor=pointer]
+      - generic [ref=e502]:
+        - generic [ref=e503]:
+          - heading "2. Renovation and Remodeling Projects" [level=3] [ref=e507]
+          - paragraph [ref=e508]: Renovation and remodeling estimates cover additions, alterations, upgrades, interior changes, and building improvements. Estimators separate existing conditions from proposed work when project documents provide sufficient information.
+        - button "Read More →" [ref=e510] [cursor=pointer]
+      - generic [ref=e511]:
+        - generic [ref=e512]:
+          - heading "3. Multifamily Projects" [level=3] [ref=e517]
+          - paragraph [ref=e518]: Multifamily estimating covers apartments, condominiums, townhomes, student housing, and similar residential developments. Estimates organize repeated unit layouts alongside shared spaces, sitework, utilities, and building systems.
+        - button "Read More →" [ref=e520] [cursor=pointer]
+      - generic [ref=e521]:
+        - generic [ref=e522]:
+          - heading "4. Civil and Infrastructure Projects" [level=3] [ref=e526]
+          - paragraph [ref=e527]: Civil and infrastructure estimating covers sitework, excavation, utilities, roads, grading, drainage, paving, and related construction. Estimates measure earthwork quantities, utility components, aggregate, concrete, asphalt, equipment, and labor.
+        - button "Read More →" [ref=e529] [cursor=pointer]
+  - generic [ref=e531]:
+    - generic [ref=e532]:
+      - generic [ref=e533]: Deliverable Scope
+      - heading "What is Included in a Construction Estimate?" [level=2] [ref=e534]
+      - paragraph [ref=e535]: A construction estimate includes measured quantities and costs for the project scopes identified within the available drawings and specifications. Deliverables can include material quantities, labor costs, equipment expenses, subcontractor pricing, and trade-level cost breakdowns.
+    - generic [ref=e536]:
+      - generic [ref=e537]:
+        - heading "1. Material Quantities and Takeoffs" [level=3] [ref=e541]
+        - paragraph [ref=e542]:
+          - text: Material quantities and takeoffs identify measurable construction components required for the project. Quantities can cover concrete, steel, lumber, masonry, finishes, fixtures, piping, ductwork, electrical components, and other specified materials.
+          - button "Read More →" [ref=e543] [cursor=pointer]
+      - generic [ref=e544]:
+        - heading "2. Labor, Material, and Equipment Costs" [level=3] [ref=e549]
+        - paragraph [ref=e550]:
+          - text: Labor, materials, and equipment costs are the primary direct cost components in a construction estimate. Labor reflects installation requirements, material costs reflect required products, and equipment costs reflect machinery or specialized tools needed for construction.
+          - button "Read More →" [ref=e551] [cursor=pointer]
+      - generic [ref=e552]:
+        - heading "3. Trade by Trade Cost Breakdown" [level=3] [ref=e556]
+        - paragraph [ref=e557]:
+          - text: Trade-by-trade cost breakdowns organize project expenses according to construction discipline or division. Common divisions include concrete, masonry, metals, finishes, electrical, plumbing, mechanical, and sitework.
+          - button "Read More →" [ref=e558] [cursor=pointer]
+  - generic [ref=e560]:
+    - generic [ref=e561]:
+      - heading "Construction Cost Calculation Example" [level=2] [ref=e562]
+      - paragraph [ref=e563]: A construction estimate combines measured quantities with applicable unit costs, then adds project-level expenses. A sample $1,000,000 project demonstrates how major cost categories contribute to the estimated construction budget.
+    - generic [ref=e564]:
+      - generic [ref=e565]: Sample project
+      - heading "Representative Construction Project" [level=3] [ref=e566]
+      - paragraph [ref=e567]: A sample construction cost estimate is shown in the table below. It demonstrates how major cost categories contribute to an estimated construction budget.
+    - generic [ref=e568]:
+      - heading "Cost breakdown" [level=3] [ref=e569]
+      - paragraph [ref=e570]: A sample construction cost estimate is shown in the table below.
+      - table [ref=e572]:
+        - rowgroup [ref=e573]:
+          - row [ref=e574]:
+            - columnheader "Cost Category" [ref=e575]
+            - columnheader "Sample Amount" [ref=e576]
+            - columnheader "What It Covers" [ref=e577]
+        - rowgroup [ref=e578]:
+          - row [ref=e579]:
+            - cell "Materials" [ref=e580]
+            - cell "$350,000" [ref=e587]
+            - cell "Raw materials, fixtures, and finishes used to build out the project" [ref=e588]
+          - row [ref=e589]:
+            - cell "Labour" [ref=e590]
+            - cell "$250,000" [ref=e597]
+            - cell "Wages for the crews and skilled trades who carry out the work" [ref=e598]
+          - row [ref=e599]:
+            - cell "Equipment" [ref=e600]
+            - cell "$75,000" [ref=e606]
+            - cell "Rental, fuel, and use of machinery and tools needed on site" [ref=e607]
+          - row [ref=e608]:
+            - cell "Subcontractor Work" [ref=e609]
+            - cell "$200,000" [ref=e616]
+            - cell "Specialized trade work performed by subcontractors on the project" [ref=e617]
+          - row [ref=e618]:
+            - cell "Overhead" [ref=e619]
+            - cell "$75,000" [ref=e625]
+            - cell "Project management, permits, insurance, and administrative costs" [ref=e626]
+          - row [ref=e627]:
+            - cell "Other Applicable Costs" [ref=e628]
+            - cell "$50,000" [ref=e634]
+            - cell "Contingency, site preparation, or other project-specific items" [ref=e635]
+        - rowgroup [ref=e636]:
+          - row [ref=e637]:
+            - cell "Estimated Project Cost" [ref=e638]
+            - cell "$1,000,000" [ref=e639]
+            - cell "Total combined construction project estimate" [ref=e640]
+    - generic [ref=e641]:
+      - heading "Calculation formula" [level=3] [ref=e642]
+      - generic [ref=e643]:
+        - generic [ref=e644]:
+          - paragraph [ref=e645]: Materials + Labor + Equipment + Subcontractor Work + Overhead + Other Applicable Costs = Estimated Project Cost
+          - generic [ref=e646]:
+            - generic [ref=e647]:
+              - generic [ref=e648]: $350,000
+              - generic [ref=e649]: +
+              - generic [ref=e650]: $250,000
+              - generic [ref=e651]: +
+              - generic [ref=e652]: $75,000
+              - generic [ref=e653]: +
+            - generic [ref=e654]:
+              - generic [ref=e655]: $200,000
+              - generic [ref=e656]: +
+              - generic [ref=e657]: $75,000
+              - generic [ref=e658]: +
+              - generic [ref=e659]: $50,000
+        - generic [ref=e660]:
+          - generic [ref=e661]: Estimated project cost
+          - generic [ref=e662]: $1,000,000
+          - generic [ref=e663]: Illustrative example only — not a quote or fixed price
+    - generic [ref=e664]:
+      - generic [ref=e665]:
+        - heading "How the categories add up" [level=3] [ref=e666]
+        - paragraph [ref=e667]: The calculation begins by adding materials, labor, equipment, subcontractor work, overhead, and other applicable costs. The sample figures produce a total estimated project cost of $1,000,000.
+        - paragraph [ref=e668]: Actual construction costs depend on project size, scope, location, specifications, labor rates, material prices, equipment requirements, and subcontractor pricing. A professional estimate replaces sample figures with project-specific quantities and current applicable rates.
+      - generic [ref=e669]:
+        - heading "What can change an estimate" [level=4] [ref=e670]
+        - paragraph [ref=e671]: Actual construction costs depend on project size, scope, location, specifications, labor rates, material prices, equipment requirements, and subcontractor pricing. A professional estimate replaces sample figures with project-specific quantities and current applicable rates.
+        - paragraph [ref=e672]: "Factors affecting construction estimates:"
+        - list [ref=e673]:
+          - listitem [ref=e674]: Project scope
+          - listitem [ref=e675]: Material quantities
+          - listitem [ref=e676]: Labor requirements
+          - listitem [ref=e677]: Equipment needs
+          - listitem [ref=e678]: Subcontractor scope
+          - listitem [ref=e679]: Project location
+          - listitem [ref=e680]: Current material and labor pricing
+          - listitem [ref=e681]: Site conditions
+          - listitem [ref=e682]: Project specifications
+  - generic [ref=e684]:
+    - generic [ref=e685]:
+      - heading "Construction Estimating Projects" [level=2] [ref=e686]
+      - paragraph [ref=e687]: Construction estimating projects demonstrate how estimating services apply across different building categories and project scopes. Representative examples include residential, commercial, industrial, and civil work.
+    - generic [ref=e688]:
+      - generic [ref=e689]:
+        - generic [ref=e694]:
+          - generic [ref=e695]: ✔ Representative example
+          - heading "1. Residential Construction Estimate" [level=3] [ref=e696]
+          - paragraph [ref=e697]: "Project type: Residential construction"
+          - paragraph [ref=e698]:
+            - text: A residential construction estimate can cover a new home with structural, architectural, mechanical, electrical, plumbing, and finish scopes. The estimate separates material quantities, labor requirements, equipment, subcontractor work, and applicable overhead.
+            - button "Read More →" [ref=e699] [cursor=pointer]
+          - heading "Estimating scope" [level=4] [ref=e700]
+          - paragraph [ref=e701]: Demonstrates how architectural and structural drawings can be measured to produce a construction cost estimate covering the full scope of a residential build, from foundation through finishes.
+          - heading "Key estimating components" [level=4] [ref=e702]
+          - list [ref=e703]:
+            - listitem [ref=e704]: Material quantity takeoffs
+            - listitem [ref=e705]: Framing, foundation, and finish costs
+            - listitem [ref=e706]: Labor allowances by trade
+            - listitem [ref=e707]: Applicable subcontractor cost lines
+        - paragraph [ref=e709]: Figures and details shown are illustrative only and do not represent an actual client, address, or completed project.
+      - generic [ref=e710]:
+        - generic [ref=e715]:
+          - generic [ref=e716]: ✔ Representative example
+          - heading "2. Commercial Construction Estimate" [level=3] [ref=e717]
+          - paragraph [ref=e718]: "Project type: Commercial construction"
+          - paragraph [ref=e719]:
+            - text: A commercial construction estimate can cover an office building with sitework, structural work, interiors, mechanical systems, electrical installations, and plumbing. Trade-level pricing creates a detailed financial structure for the proposed development.
+            - button "Read More →" [ref=e720] [cursor=pointer]
+          - heading "Estimating scope" [level=4] [ref=e721]
+          - paragraph [ref=e722]: Demonstrates how commercial construction plans can be reviewed, quantities measured, and a construction cost breakdown organized by applicable trades or CSI divisions.
+          - heading "Key estimating components" [level=4] [ref=e723]
+          - list [ref=e724]:
+            - listitem [ref=e725]: Trade-by-trade quantity takeoffs
+            - listitem [ref=e726]: Sitework, structure, and MEP cost categories
+            - listitem [ref=e727]: Labor and equipment cost organization
+            - listitem [ref=e728]: Bid-ready cost summary structure
+        - paragraph [ref=e730]: Figures and details shown are illustrative only and do not represent an actual client, address, or completed project.
+      - generic [ref=e731]:
+        - generic [ref=e735]:
+          - generic [ref=e736]: ✔ Representative example
+          - heading "3. Industrial or Civil Construction Estimate" [level=3] [ref=e737]
+          - paragraph [ref=e738]: "Project type: Industrial or civil construction"
+          - paragraph [ref=e739]:
+            - text: An industrial or civil construction estimate can cover a warehouse, a manufacturing facility, a utility project, a road improvement, or a large site development. The estimate requires detailed quantities for structural work, equipment, utilities, earthwork, paving, and related construction.
+            - button "Read More →" [ref=e740] [cursor=pointer]
+          - heading "Estimating scope" [level=4] [ref=e741]
+          - paragraph [ref=e742]: Demonstrates how larger or more complex construction scopes, such as excavation, utilities, or infrastructure work, can be broken down into measurable quantities and organized cost categories.
+          - heading "Key estimating components" [level=4] [ref=e743]
+          - list [ref=e744]:
+            - listitem [ref=e745]: Sitework and earthwork quantities
+            - listitem [ref=e746]: Utility and infrastructure cost categories
+            - listitem [ref=e747]: Equipment and heavy-labor allowances
+            - listitem [ref=e748]: Phased construction cost planning
+        - paragraph [ref=e750]: Figures and details shown are illustrative only and do not represent an actual client, address, or completed project.
+  - generic [ref=e752]:
+    - generic [ref=e753]:
+      - generic [ref=e754]: Knowledge Hub & FAQs
+      - heading "Construction Estimating Knowledge Center" [level=2] [ref=e755]
+      - paragraph [ref=e756]: Explore detailed guides, cost calculation methodologies, estimator workflows, and pricing insights organized category by category.
+    - generic [ref=e757]:
+      - button "Scroll left" [ref=e758] [cursor=pointer]
+      - generic [ref=e761]:
+        - button "Construction Estimating Basics" [ref=e762] [cursor=pointer]
+        - button "Construction Cost Estimation" [ref=e767] [cursor=pointer]
+        - button "Construction Estimators" [ref=e772] [cursor=pointer]
+        - button "Construction Estimates & Pricing" [ref=e777] [cursor=pointer]
+      - button "Scroll right" [ref=e782] [cursor=pointer]
+    - generic [ref=e787]:
+      - heading "What is Construction Estimating?" [level=2] [ref=e789]
+      - generic [ref=e790]:
+        - paragraph [ref=e791]: Construction estimating is the process of calculating the expected cost of a construction project from drawings, specifications, quantities, rates, and project requirements. Estimating converts construction scope into a structured financial projection for bidding, budgeting, planning, and procurement.
+        - button "Read More →" [ref=e792] [cursor=pointer]
+      - generic [ref=e793]:
+        - generic [ref=e794]:
+          - generic [ref=e795] [cursor=pointer]:
+            - heading "What Is the Purpose of Construction Estimating?" [level=3] [ref=e796]
+            - generic [ref=e797]: +
+          - paragraph [ref=e798]: The purpose of construction estimating is to establish an informed projection of project costs before construction begins. Contractors use estimates for bid preparation, while owners and developers use estimates for budgeting and feasibility analysis. Estimating provides a financial reference for procurement, subcontractor coordination, financing discussions, and project planning. A detailed cost breakdown further identifies the expenses associated with individual construction trades and project components.
+        - generic [ref=e799]:
+          - generic [ref=e800] [cursor=pointer]:
+            - heading "How does Construction Estimating Work?" [level=3] [ref=e801]
+            - generic [ref=e802]: +
+          - paragraph [ref=e803]: Construction estimating works by converting project documents into quantities and assigning applicable costs to each measured item. Estimators first review drawings and specifications before completing quantity takeoffs and applying labor, material, equipment, and subcontractor rates. The resulting costs are organized into trade categories and project-level expenses. Quality review then checks quantities, calculations, scope coverage, and pricing before the completed estimate is sent to the client.
+        - generic [ref=e804]:
+          - generic [ref=e805] [cursor=pointer]:
+            - heading "What Factors Affect Construction Costs?" [level=4] [ref=e806]
+            - generic [ref=e807]: +
+          - generic:
+            - paragraph [ref=e808]: Construction costs are affected by several connected project conditions that influence quantities, rates, and total expenditure.
+            - paragraph [ref=e809]: The factors affecting construction costs are listed below.
+            - list [ref=e810]:
+              - listitem [ref=e811]:
+                - strong [ref=e812]: "Project Scope:"
+                - text: Building size, design complexity, construction systems, finishes, and project requirements influence the quantity of work.
+              - listitem [ref=e813]:
+                - strong [ref=e814]: "Location:"
+                - text: Labor rates, supplier pricing, transportation expenses, local market conditions, and regional requirements affect project costs.
+              - listitem [ref=e815]:
+                - strong [ref=e816]: "Materials:"
+                - text: Material type, quantity, quality, availability, and supplier pricing directly influence construction costs.
+              - listitem [ref=e817]:
+                - strong [ref=e818]: "Labor:"
+                - text: Wage rates, crew requirements, productivity, project duration, and trade availability affect installation costs.
+              - listitem [ref=e819]:
+                - strong [ref=e820]: "Site Conditions:"
+                - text: Soil conditions, access, grading, utilities, excavation, and site restrictions influence construction requirements.
+  - contentinfo [ref=e821]:
+    - generic [ref=e822]:
+      - generic [ref=e823]:
+        - generic [ref=e824]:
+          - link "Construction" [ref=e825] [cursor=pointer]:
+            - /url: "#"
+          - paragraph [ref=e834]: Leading construction estimating and quantity takeoff service provider in North America. Delivering fast, precise, and certified cost estimates for builders, contractors, and developers.
+        - generic [ref=e835]:
+          - heading "Our Services" [level=4] [ref=e836]
+          - generic [ref=e837]:
+            - link "Cost Estimating" [ref=e838] [cursor=pointer]:
+              - /url: "#services"
+            - link "Quantity Takeoffs" [ref=e839] [cursor=pointer]:
+              - /url: "#services"
+            - link "Material Takeoffs" [ref=e840] [cursor=pointer]:
+              - /url: "#services"
+            - link "Bid Estimating" [ref=e841] [cursor=pointer]:
+              - /url: "#services"
+            - link "MEP Services" [ref=e842] [cursor=pointer]:
+              - /url: "#services"
+        - generic [ref=e843]:
+          - heading "Quick Links" [level=4] [ref=e844]
+          - generic [ref=e845]:
+            - link "Home" [ref=e846] [cursor=pointer]:
+              - /url: "#home"
+            - link "Why Choose Us" [ref=e847] [cursor=pointer]:
+              - /url: "#why-choose"
+            - link "Our Process" [ref=e848] [cursor=pointer]:
+              - /url: "#process"
+            - link "Who Uses Us" [ref=e849] [cursor=pointer]:
+              - /url: "#who-uses"
+            - link "Submit Plans" [ref=e850] [cursor=pointer]:
+              - /url: "#request-estimate"
+        - generic [ref=e851]:
+          - heading "Knowledge Center" [level=4] [ref=e852]
+          - generic [ref=e853]:
+            - link "Estimating Basics" [ref=e854] [cursor=pointer]:
+              - /url: "#knowledge-hub"
+            - link "Cost Estimation" [ref=e855] [cursor=pointer]:
+              - /url: "#knowledge-hub"
+            - link "Construction Estimators" [ref=e856] [cursor=pointer]:
+              - /url: "#knowledge-hub"
+            - link "Estimates & Pricing" [ref=e857] [cursor=pointer]:
+              - /url: "#knowledge-hub"
+        - generic [ref=e858]:
+          - heading "Contact Us" [level=4] [ref=e859]
+          - generic [ref=e860]:
+            - generic [ref=e861]: 📞
+            - generic [ref=e862]: (800) 555-0199
+          - generic [ref=e863]:
+            - generic [ref=e864]: ✉
+            - generic [ref=e865]: estimates@constructionestimating.com
+          - generic [ref=e866]:
+            - generic [ref=e867]: 📍
+            - generic [ref=e868]: 500 Construction Plaza, New York, NY 10001
+      - generic [ref=e869]:
+        - generic [ref=e870]: © 2026 Construction Estimating Services. All Rights Reserved.
+        - generic [ref=e871]:
+          - link "Privacy Policy" [ref=e872] [cursor=pointer]:
+            - /url: "#"
+          - link "Terms of Service" [ref=e873] [cursor=pointer]:
+            - /url: "#"
+          - link "Sitemap" [ref=e874] [cursor=pointer]:
+            - /url: "#"

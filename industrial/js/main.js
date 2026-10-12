@@ -40,30 +40,37 @@
      1. Mobile menu
   ------------------------------------------------------------------ */
   function initMenu() {
-    const btn = $(".menu-btn");
-    const nav = $("#site-nav");
-    if (!btn || !nav) return;
+    const openBtn = $("#mobileMenuOpen");
+    const closeBtn = $("#mobileMenuClose");
+    const drawer = $("#mobileNavDrawer");
+    const overlay = $("#navOverlay");
+    if (!openBtn || !drawer || !overlay) return;
 
-    const desktop = window.matchMedia("(min-width: 1200px)");
+    const desktop = window.matchMedia("(min-width: 1251px)");
 
     const setOpen = (open) => {
-      btn.setAttribute("aria-expanded", String(open));
-      btn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-      nav.classList.toggle("is-open", open);
+      drawer.classList.toggle("open", open);
+      drawer.inert = !open;
+      overlay.classList.toggle("visible", open);
+      openBtn.setAttribute("aria-expanded", String(open));
+      document.body.style.overflow = open ? "hidden" : "";
+      if (open && closeBtn) closeBtn.focus();
     };
 
-    btn.addEventListener("click", () => setOpen(btn.getAttribute("aria-expanded") !== "true"));
-    nav.addEventListener("click", (e) => {
+    openBtn.addEventListener("click", () => setOpen(true));
+    closeBtn?.addEventListener("click", () => {
+      setOpen(false);
+      openBtn.focus();
+    });
+    overlay.addEventListener("click", () => setOpen(false));
+    drawer.addEventListener("click", (e) => {
       if (e.target.closest("a")) setOpen(false);
     });
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && nav.classList.contains("is-open")) {
+      if (e.key === "Escape" && drawer.classList.contains("open")) {
         setOpen(false);
-        btn.focus();
+        openBtn.focus();
       }
-    });
-    document.addEventListener("click", (e) => {
-      if (nav.classList.contains("is-open") && !e.target.closest(".site-header")) setOpen(false);
     });
     desktop.addEventListener("change", (e) => e.matches && setOpen(false));
   }

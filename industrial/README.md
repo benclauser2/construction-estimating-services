@@ -21,7 +21,7 @@ Open `index.html` directly, or serve the folder (for example `npx serve .`).
 | < 768px      | Mobile: single column, stacked cards, logo marquee            |
 | 768–1199px   | Tablet: 2-column grids, logo marquee                          |
 | ≥ 1200px     | Desktop: 3/4-column grids, static logo row                    |
-| ≥ 1280px     | Full header nav (below this, the menu button opens a drawer)  |
+| > 1250px     | Full header nav (below this, the menu button opens a drawer)  |
 
 ## Interactions (js/main.js)
 
@@ -41,6 +41,7 @@ Open `index.html` directly, or serve the folder (for example `npx serve .`).
 
 ## Notes
 
+- Header, mobile drawer and footer are copied from the home page (same as `commercial/`).
 - The header phone ("Add phone number") is a placeholder carried over from the reference site.
 - Links marked `href="#"` (anchor-text phrases and legal links) need real URLs.
 - Calculator select options are placeholders until the real inputs are defined.
