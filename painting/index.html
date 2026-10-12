@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paint Estimating Costs | Construction</title>
+  <meta name="description" content="Paint estimating cost is the total calculated by combining paint quantity, material price, labor, and surface preparation into a single project figure.">
+  <meta name="theme-color" content="#1f3864">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 28 28%27 fill=%27%23253c6d%27%3E%3Ccircle cx=%2723.6%27 cy=%273.9%27 r=%273.9%27/%3E%3Ccircle cx=%2723.6%27 cy=%2713.6%27 r=%273.9%27/%3E%3Ccircle cx=%2723.6%27 cy=%2723.6%27 r=%273.9%27/%3E%3Ccircle cx=%2713.6%27 cy=%2713.6%27 r=%273.9%27/%3E%3Ccircle cx=%2713.6%27 cy=%2723.6%27 r=%273.9%27/%3E%3Ccircle cx=%273.9%27 cy=%2723.6%27 r=%273.9%27/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+  <link rel="stylesheet" href="../assets/site-nav.css">
+  <script src="../assets/site-nav.js" defer></script>
+</head>
+<body>
+
+<!-- Icon sprite -->
+<svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <symbol id="i-info" viewBox="0 0 16 16">
+    <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.3"/>
+    <path d="M8 7.2v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    <circle cx="8" cy="4.8" r="0.95" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-star" viewBox="0 0 20 20" fill="currentColor">
+    <path d="M10 1.8l2.5 5.2 5.7.8-4.1 4 1 5.7L10 14.8l-5.1 2.7 1-5.7-4.1-4 5.7-.8z"/>
+  </symbol>
+  <g fill="none" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round">
+    <symbol id="i-doc" viewBox="0 0 11 17"><path fill="none" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" d="M9.8 4L6.5.7H.7v15h9.1V4zM6.5.7V4h3.3M3.2 8.2h4.1M3.2 11.5h4.1"/></symbol>
+    <symbol id="i-ruler" viewBox="0 0 15 15"><path fill="none" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" d="M4 8.2l1.7 1.6m.8-4.1l1.7 1.6M9 3.2l1.7 1.6M.7 11.5L11.5.7 14 3.2 3.2 14 .7 11.5z"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 17 17"><path fill="none" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" d="M.7 8.2l7.5 4.1 7.5-4.1M.7 11.5l7.5 4.2 7.5-4.2M8.2.7l7.5 4.1L8.2 9 .7 4.8 8.2.7z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 15 11"><path fill="none" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" d="M.7 5.7l4.1 4.1L14 .7"/></symbol>
+    <symbol id="i-star-line" viewBox="0 0 17 16"><path fill="none" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" d="M10.3 5.7L8.2.7 6.1 5.7.7 6.1l4.1 3.3-1.2 5.4 4.6-2.9 4.6 2.9-1.3-5.4 4.2-3.3-5.4-.4z"/></symbol>
+    <symbol id="i-gem" viewBox="0 0 12 16"><path fill="none" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" d="M4 4.8h3.3m-1.6 10L.7 7.3V4L3.2.7h5L10.7 4v3.3l-5 7.5z"/></symbol>
+    <symbol id="i-worker" viewBox="0 0 13 15"><path fill="none" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" d="M.7 14l1.6-5h8.4l1.6 5M4 .7h5v5H4v-5z"/></symbol>
+    <symbol id="i-hammer" viewBox="0 0 15 15"><path fill="none" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" d="M6.5 8.2L.7 14M9 .7l5 5-2.5 2.5-5-5L9 .7z"/></symbol>
+    <symbol id="i-building" viewBox="0 0 17 16"><path fill="none" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" d="M2.3 14.8V.7h7.5v14.1m0-10H14v10M.7 14.8h15M4.8 4h2.5M4.8 7.3h2.5m-2.5 3.4h2.5"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 15 13"><path fill="none" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" d="M.7 12.3H14M3.2 12.3V5.7m4.1 6.6V.7m4.2 11.6V8.2"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 15 17"><path fill="none" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" d="M.7 8.2L2.3 4l5-2.5 5 2.5M9 4h3.3V.7M14 8.2l-1.7 4.1-5 2.5-5-2.5m3.4 0H2.3v3.4"/></symbol>
+    <symbol id="i-home" viewBox="0 0 17 15"><path fill="none" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" d="M.7 6.5L8.2.7l7.5 5.8M3.2 4.8V14h10V4.8"/></symbol>
+    <symbol id="i-calc" viewBox="0 0 12 17"><path fill="none" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" d="M3.2 9H4m3.3 0h.9m-5 3.3H4m3.3 0h.9M.7.7h10v15H.7V.7zm1.6 2.5H9v2.5H2.3V3.2z"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 15 15"><path fill="none" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" d="M.7.7h5v5h-5zM9 .7h5v5H9zM.7 9h5v5h-5zM9 9h5v5H9z"/></symbol>
+  </g>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============================ HEADER ============================ -->
+<header class="header">
+  <div class="container header-container">
+    <!-- Logo -->
+    <a href="../index.html#home" class="logo-link">
+      <svg width="32" height="28" viewBox="0 0 30 26" fill="none">
+        <circle cx="4" cy="22" r="4" fill="#1F3864"/>
+        <circle cx="15" cy="13" r="4" fill="#1F3864"/>
+        <circle cx="15" cy="22" r="4" fill="#1F3864"/>
+        <circle cx="26" cy="4" r="4" fill="#1F3864"/>
+        <circle cx="26" cy="13" r="4" fill="#1F3864"/>
+        <circle cx="26" cy="22" r="4" fill="#1F3864"/>
+      </svg>
+      <span class="logo-text">Construction</span>
+    </a>
+
+    <!-- Navigation Links matching user specification -->
+    <nav class="nav-menu">
+      <a href="../index.html#home" class="nav-link">Home</a>
+      <div class="nav-dropdown">
+        <button class="nav-link nav-dropdown__toggle" type="button" aria-expanded="false" aria-controls="servicesMenu">Services <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="nav-dropdown__menu" id="servicesMenu">
+          <li><a class="nav-dropdown__all" href="../index.html#services">All Estimating Services</a></li>
+          <li><a href="../residential-construction/index.html">Residential Construction</a></li>
+          <li><a href="../commercial/index.html">Commercial Construction</a></li>
+          <li><a href="../industrial/index.html">Industrial Construction</a></li>
+          <li><a href="../civil/index.html">Civil Construction</a></li>
+          <li><a href="../multifamily/index.html">Multifamily Construction</a></li>
+          <li><a href="../infrastructure/index.html">Infrastructure Construction</a></li>
+          <li><a href="../roofing/index.html">Roofing Construction</a></li>
+          <li><a href="../renovation/index.html">Renovation and Remodeling</a></li>
+          <li><a href="../flooring/index.html">Flooring Construction</a></li>
+          <li><a href="../painting/index.html" aria-current="page">Painting Construction</a></li>
+        </ul>
+      </div>
+      <a href="../index.html#what-is-included" class="nav-link">Trades</a>
+      <a href="../index.html#why-choose" class="nav-link">About Us</a>
+      <a href="../index.html#estimating-projects" class="nav-link">Portfolio</a>
+      <a href="#contact" class="nav-link">Contact Us</a>
+    </nav>
+
+    <!-- Action Buttons matching screenshot -->
+    <div class="header-actions">
+      <a href="#contact" class="btn btn-outline-nav">Free Consultation</a>
+      <a href="tel:+18005550199" class="header-phone-link">
+        <svg class="phone-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <span class="phone-text">Add phone number</span>
+      </a>
+      <a href="#contact" class="btn btn-orange">Get Estimate Now</a>
+      <button type="button" class="mobile-toggle" id="mobileMenuOpen" aria-label="Open mobile menu" aria-controls="mobileNavDrawer" aria-expanded="false">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Drawer Navigation -->
+<div class="nav-overlay" id="navOverlay"></div>
+<aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile menu" inert>
+  <div class="mobile-drawer-header">
+    <span class="logo-text" style="font-size: 18px;">Menu</span>
+    <button type="button" class="mobile-drawer-close" id="mobileMenuClose" aria-label="Close mobile menu">&times;</button>
+  </div>
+  <div class="mobile-nav-links">
+    <a href="../index.html#home">Home</a>
+    <a href="../index.html#services">Services</a>
+    <ul class="mobile-nav-sub" aria-label="Construction estimating cost guides">
+      <li><a href="../residential-construction/index.html">Residential Construction</a></li>
+      <li><a href="../commercial/index.html">Commercial Construction</a></li>
+      <li><a href="../industrial/index.html">Industrial Construction</a></li>
+      <li><a href="../civil/index.html">Civil Construction</a></li>
+      <li><a href="../multifamily/index.html">Multifamily Construction</a></li>
+      <li><a href="../infrastructure/index.html">Infrastructure Construction</a></li>
+      <li><a href="../roofing/index.html">Roofing Construction</a></li>
+      <li><a href="../renovation/index.html">Renovation and Remodeling</a></li>
+      <li><a href="../flooring/index.html">Flooring Construction</a></li>
+      <li><a href="../painting/index.html" aria-current="page">Painting Construction</a></li>
+    </ul>
+    <a href="../index.html#what-is-included">Trades</a>
+    <a href="../index.html#why-choose">About Us</a>
+    <a href="../index.html#estimating-projects">Portfolio</a>
+    <a href="#contact">Contact Us</a>
+  </div>
+  <div class="mobile-drawer-actions" style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px;">
+    <a href="#contact" class="btn btn-outline-nav" style="text-align: center; justify-content: center; width: 100%;">Free Consultation</a>
+    <a href="tel:+18005550199" class="header-phone-link" style="justify-content: center; padding: 6px 0;">
+      <svg class="phone-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      <span class="phone-text">Add phone number</span>
+    </a>
+    <a href="#contact" class="btn btn-orange btn-full" style="text-align: center; justify-content: center; width: 100%;">Get Estimate Now</a>
+  </div>
+</aside>
+
+<main id="main">
+
+<!-- ============================ HERO ============================ -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container hero__grid">
+    <div class="hero__content">
+      <p class="eyebrow">Painting · cost reference</p>
+      <h1 class="h1" id="hero-title">Paint Estimating Costs</h1>
+      <div class="hero__text">
+        <p class="clamp clamp-sm">Paint estimating cost is the total calculated by combining paint quantity, material price, labor, and surface preparation into a single project figure. A paint calculator converts wall and ceiling dimensions into a gallon count, dividing paintable square footage by a stated coverage rate. Interior and exterior projects price out differently, since exterior work adds facade texture, weather exposure, and taller access to the same base calculation. Every estimate reduces to a single relationship. Paintable square footage determines the gallons and labor hours a project requires.</p>
+      </div>
+      <button class="read-more" type="button" data-read-more>Read More →</button>
+      <ul class="chips" aria-label="Topics on this page">
+        <li>paint calculator</li>
+        <li>coverage rate</li>
+        <li>sq ft estimate</li>
+        <li>interior versus exterior</li>
+        <li>surface prep</li>
+        <li>labor cost</li>
+      </ul>
+    </div>
+
+    <figure class="price-card wall-card">
+      <svg class="wall-card__art" viewBox="0 0 400 226" fill="none" role="img" aria-label="Wall elevation: measure width and height, subtract door and window openings to get the paintable surface">
+        <path d="M24 24 H324 M24 18 V30 M324 18 V30" stroke="#C9D3E6" stroke-width="1.5"/>
+        <text x="174" y="12" text-anchor="middle" fill="#C9D3E6" font-size="11.5" font-weight="600">Width</text>
+        <rect x="24" y="40" width="300" height="150" fill="#fff" fill-opacity=".06" stroke="#fff" stroke-width="2"/>
+        <rect x="66" y="110" width="48" height="80" fill="#F2842F" fill-opacity=".12" stroke="#F2842F" stroke-width="1.5" stroke-dasharray="6 5"/>
+        <rect x="196" y="74" width="76" height="48" fill="#F2842F" fill-opacity=".12" stroke="#F2842F" stroke-width="1.5" stroke-dasharray="6 5"/>
+        <text x="90" y="156" text-anchor="middle" fill="#F6B27A" font-size="10.5" font-weight="500">Door</text>
+        <text x="234" y="102" text-anchor="middle" fill="#F6B27A" font-size="10.5" font-weight="500">Window</text>
+        <text x="214" y="162" text-anchor="middle" fill="#fff" font-size="12.5" font-weight="700">Paintable surface</text>
+        <path d="M342 40 V190 M336 40 H348 M336 190 H348" stroke="#C9D3E6" stroke-width="1.5"/>
+        <text x="352" y="119" fill="#C9D3E6" font-size="11.5" font-weight="600">Height</text>
+        <path d="M8 190.5 H340" stroke="#fff" stroke-opacity=".35" stroke-width="1.5"/>
+      </svg>
+      <figcaption class="price-card__note">Height × width − openings = paintable sq ft ÷ coverage rate × coats = gallons</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============================ HERO STATS ============================ -->
+<section class="hero-stats" aria-label="Paint estimating at a glance">
+  <div class="container hero-stats__grid">
+    <div class="stat">
+      <p class="stat__value">350 sq ft</p>
+      <h2 class="stat__label">Coverage Per Gallon</h2>
+      <p class="stat__desc">Standard interior paint spreads across this range per gallon before texture or porosity lowers the effective figure.</p>
+    </div>
+    <div class="stat">
+      <p class="stat__value">$1-$2.50/sq ft</p>
+      <h2 class="stat__label">Interior Labor Range</h2>
+      <p class="stat__desc">Typical charge for interior wall labor, rising with ceiling height, trim detail, and surface condition.</p>
+    </div>
+    <div class="stat">
+      <p class="stat__value">2 coats</p>
+      <h2 class="stat__label">Standard Coverage Assumption</h2>
+      <p class="stat__desc">Baseline assumption for full, even color coverage, doubling material on most residential estimates.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ TRUST LOGOS ============================ -->
+<section class="trust" aria-label="Trusted by">
+  <div class="container">
+    <ul class="trust-logos">
+      <li class="trust-logo" tabindex="0" aria-describedby="trust-tip-google">
+        <svg width="92" height="26" viewBox="0 0 86 28" fill="currentColor" role="img" aria-label="Google"><text x="0" y="21" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" font-style="italic">Google</text></svg>
+        <span class="trust-logo__badge" aria-hidden="true">i</span>
+        <span class="trust-logo__tip" role="tooltip" id="trust-tip-google">Trusted by teams at Google</span>
+      </li>
+      <li class="trust-logo" tabindex="0" aria-describedby="trust-tip-facebook">
+        <svg width="120" height="26" viewBox="0 0 114 28" fill="currentColor" role="img" aria-label="Facebook"><text x="0" y="21" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800" font-style="normal">facebook</text></svg>
+        <span class="trust-logo__badge" aria-hidden="true">i</span>
+        <span class="trust-logo__tip" role="tooltip" id="trust-tip-facebook">Trusted by teams at Facebook</span>
+      </li>
+      <li class="trust-logo" tabindex="0" aria-describedby="trust-tip-youtube">
+        <svg width="112" height="26" viewBox="0 0 110 28" fill="currentColor" role="img" aria-label="YouTube"><rect x="0" y="5" width="30" height="18" rx="5"/><path d="M12 9L22 14L12 19Z" fill="#fff"/><text x="34" y="20" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" font-style="normal">YouTube</text></svg>
+        <span class="trust-logo__badge" aria-hidden="true">i</span>
+        <span class="trust-logo__tip" role="tooltip" id="trust-tip-youtube">Trusted by teams at YouTube</span>
+      </li>
+      <li class="trust-logo" tabindex="0" aria-describedby="trust-tip-pinterest">
+        <svg width="118" height="26" viewBox="0 0 118 28" fill="currentColor" role="img" aria-label="Pinterest"><circle cx="12" cy="14" r="12"/><path d="M11 20L14 8M8 12C8 9 10 7 13 7C16 7 18 9 17 12C16.5 14 15 15 13 14.5" stroke="#fff" stroke-width="1.8" fill="none"/><text x="28" y="20" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" font-style="normal">Pinterest</text></svg>
+        <span class="trust-logo__badge" aria-hidden="true">i</span>
+        <span class="trust-logo__tip" role="tooltip" id="trust-tip-pinterest">Trusted by teams at Pinterest</span>
+      </li>
+      <li class="trust-logo" tabindex="0" aria-describedby="trust-tip-twitch">
+        <svg width="84" height="26" viewBox="0 0 78 28" fill="currentColor" role="img" aria-label="Twitch"><text x="0" y="20" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="800" font-style="italic">twitch</text></svg>
+        <span class="trust-logo__badge" aria-hidden="true">i</span>
+        <span class="trust-logo__tip" role="tooltip" id="trust-tip-twitch">Trusted by teams at Twitch</span>
+      </li>
+      <li class="trust-logo" tabindex="0" aria-describedby="trust-tip-webflow">
+        <svg width="98" height="26" viewBox="0 0 92 28" fill="currentColor" role="img" aria-label="Webflow"><text x="0" y="20" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" font-style="italic">webflow</text></svg>
+        <span class="trust-logo__badge" aria-hidden="true">i</span>
+        <span class="trust-logo__tip" role="tooltip" id="trust-tip-webflow">Trusted by teams at Webflow</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================ REVIEWS ============================ -->
+<section class="reviews" aria-labelledby="reviews-title">
+  <div class="container">
+    <div class="reviews__header">
+      <div class="reviews__title-block">
+        <h2 class="reviews__title" id="reviews-title">Construction Estimating<br>Service Reviews</h2>
+        <p class="reviews__desc">Direct feedback from contractors and project owners on estimate accuracy, turnaround time, and responsiveness during the bidding process.</p>
+      </div>
+      <div class="reviews__badges">
+        <p class="reviews__rating"><span class="reviews__score">4.9</span><span class="reviews__stars" role="img" aria-label="Rated 4.9 out of 5"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span></p>
+        <span class="reviews__tag">Reviews</span>
+      </div>
+    </div>
+    <div class="reviews__carousel" data-reviews>
+      <button class="reviews__arrow reviews__arrow--prev" type="button" aria-label="Previous review" data-reviews-prev>←</button>
+      <button class="reviews__arrow reviews__arrow--next" type="button" aria-label="Next review" data-reviews-next>→</button>
+      <div class="reviews__track" tabindex="0" aria-label="Customer reviews" data-reviews-track>
+        <figure class="review-card">
+          <span class="review-stars" role="img" aria-label="5 out of 5 stars"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+          <blockquote class="review-card__quote">The quantity takeoff came back within two days and lined up closely with our actual site numbers for the residential addition.</blockquote>
+          <figcaption><span class="review-card__name">Robert Miller</span><span class="review-card__type">Residential Addition</span></figcaption>
+        </figure>
+        <figure class="review-card">
+          <span class="review-stars" role="img" aria-label="5 out of 5 stars"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+          <blockquote class="review-card__quote">Extremely detailed commercial cost breakdown. Helped us win our $3.2M office renovation bid with total budget clarity.</blockquote>
+          <figcaption><span class="review-card__name">Sarah Jenkins</span><span class="review-card__type">Commercial Renovation</span></figcaption>
+        </figure>
+        <figure class="review-card">
+          <span class="review-stars" role="img" aria-label="5 out of 5 stars"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+          <blockquote class="review-card__quote">Spot-on MEP and structural takeoff sheets. Delivered 12 hours ahead of our bid deadline with thorough material lists.</blockquote>
+          <figcaption><span class="review-card__name">David Vance</span><span class="review-card__type">Multi-Family Development</span></figcaption>
+        </figure>
+        <figure class="review-card">
+          <span class="review-stars" role="img" aria-label="5 out of 5 stars"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+          <blockquote class="review-card__quote">Highly reliable estimating partner. Their preliminary budget models saved our design team from costly late-stage revisions.</blockquote>
+          <figcaption><span class="review-card__name">Elena Rodriguez</span><span class="review-card__type">Institutional Facility</span></figcaption>
+        </figure>
+        <figure class="review-card">
+          <span class="review-stars" role="img" aria-label="5 out of 5 stars"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+          <blockquote class="review-card__quote">Fast turnaround and super accurate RSMeans regional pricing. We submit all our subcontractor trade bids using their numbers.</blockquote>
+          <figcaption><span class="review-card__name">Marcus Thorne</span><span class="review-card__type">General Contracting</span></figcaption>
+        </figure>
+        <figure class="review-card">
+          <span class="review-stars" role="img" aria-label="5 out of 5 stars"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+          <blockquote class="review-card__quote">Professional bid management support. Their itemized spreadsheets made client approvals smooth and straightforward.</blockquote>
+          <figcaption><span class="review-card__name">Amanda Hayes</span><span class="review-card__type">Industrial Warehouse</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ INCLUDED ============================ -->
+<section class="section section--tint" id="included" aria-labelledby="included-title">
+  <div class="container">
+    <header class="section-head section-head--center">
+      <p class="eyebrow">Estimate inclusions</p>
+      <h2 class="h2" id="included-title">What Is Included in a Paint Estimate?</h2>
+      <p class="lead clamp lines-2">A paint estimate is composed of measurable, calculable components that combine into a total project figure. Each component ties directly to the next, since surface area drives quantity, quantity drives material cost, and preparation drives labor.</p>
+      <button class="read-more" type="button" data-read-more>Read More →</button>
+      <p class="list-intro">Components included in a paint estimate are listed below.</p>
+    </header>
+    <div class="grid grid--3-2">
+      <article class="card">
+        <span class="card__icon" aria-hidden="true"><svg><use href="#i-doc"/></svg></span>
+        <span class="card__num">01</span>
+        <h3 class="card__title">Paint Quantity</h3>
+        <p class="card__summary">The volume of paint required to cover the calculated surface area. Coverage rate and number of coats determine the final figure.</p>
+        <p class="card__body clamp lines-6">Paint quantity is the volume of paint calculated as necessary to cover a defined surface area across a set number of coats. Division of total square footage by the coverage rate of a chosen product produces the base one-coat figure, and multiplication by planned coats produces the final quantity. Texture, porosity, and color change each shift the result beyond a standard coverage assumption. Accurate <a class="text-link" href="#">paint quantity</a> calculation prevents both material shortages and unnecessary excess purchases.</p>
+        <button class="read-more" type="button" data-read-more>Read More →</button>
+      </article>
+      <article class="card">
+        <span class="card__icon" aria-hidden="true"><svg><use href="#i-ruler"/></svg></span>
+        <span class="card__num">02</span>
+        <h3 class="card__title">Paint Coverage</h3>
+        <p class="card__summary">Paint coverage refers to the square footage a gallon or liter of paint covers under standard conditions. Coverage rates vary by paint type and surface texture.</p>
+        <p class="card__body clamp lines-6">Paint coverage is the square footage that a gallon or liter of paint covers under standard, manufacturer-tested conditions. Manufacturers commonly list coverage near 300-400 square feet per gallon for interior wall paint. Surface texture, application method, and primer condition each shift the practical coverage figure. Reference to the specific product label produces a more reliable <a class="text-link" href="#">paint coverage</a> estimate than a generic industry average.</p>
+        <button class="read-more" type="button" data-read-more>Read More →</button>
+      </article>
+      <article class="card">
+        <span class="card__icon" aria-hidden="true"><svg><use href="#i-layers"/></svg></span>
+        <span class="card__num">03</span>
+        <h3 class="card__title">Paint Material Cost</h3>
+        <p class="card__summary">Paint material cost combines paint, primer, and supporting supplies into a single price. Product quality and brand selection directly influence this figure.</p>
+        <p class="card__body clamp lines-6">Paint material cost is the combined price of paint, primer, and supporting supplies for a project. Per-gallon pricing commonly ranges from $25 to $ 80, depending on brand and finish quality. Primer, tape, and patching compound add smaller, consistent charges alongside the primary paint expense. Project size multiplies <a class="text-link" href="#">paint material cost</a> directly, since larger areas require proportionally more product.</p>
+        <button class="read-more" type="button" data-read-more>Read More →</button>
+      </article>
+      <article class="card">
+        <span class="card__icon" aria-hidden="true"><svg><use href="#i-hammer"/></svg></span>
+        <span class="card__num">04</span>
+        <h3 class="card__title">Painting Labor Cost</h3>
+        <p class="card__summary">Painting labor cost accounts for hours and the hourly rate charged for preparation and application. Project size and surface condition affect total labor hours.</p>
+        <p class="card__body clamp lines-6">Painting labor cost is the charge assigned to hours spent on preparation and application. Hourly rates commonly fall in the $25-$75 range, depending on the region and crew experience. Surface condition, accessibility, and detail work extend labor hours beyond a straightforward repaint. Labor commonly represents the largestshare of total <a class="text-link" href="#">painting labor cost</a> within a project estimate.</p>
+        <button class="read-more" type="button" data-read-more>Read More →</button>
+      </article>
+      <article class="card">
+        <span class="card__icon" aria-hidden="true"><svg><use href="#i-building"/></svg></span>
+        <span class="card__num">05</span>
+        <h3 class="card__title">Surface Preparation</h3>
+        <p class="card__summary">Surface preparation covers cleaning, sanding, patching, and masking performed before painting begins. Poor surface condition increases preparation time and raises overall cost.</p>
+        <p class="card__body clamp lines-6">Surface preparation covers cleaning, sanding, patching, masking, and priming performed before paint application. Each task addresses a specific issue, from dust and residue removal to crack filling and stain blocking. Poor surface condition extends preparation time and substantially raises the overall project cost. Careful attention to <a class="text-link" href="#">surface preparation</a> stands among the strongest variables affecting a final paint estimate.</p>
+        <button class="read-more" type="button" data-read-more>Read More →</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PAINT QUANTITY ============================ -->
+<section class="section" id="paint-quantity" aria-labelledby="calc-title">
+  <div class="container">
+    <header class="section-head section-head--center">
+      <p class="eyebrow">Paint quantity</p>
+      <h2 class="h2" id="calc-title">How Is Paint Quantity Calculated?</h2>
+      <p class="lead clamp lines-2">Paint quantity is calculated by converting measured paintable surface area into a gallon requirement using a coverage rate and coat count. Division of total surface area by the coverage rate of a chosen product produces the single-coat figure, and multiplication by intended coats produces the total. A common paint calculation formula is surface area divided by coverage rate, multiplied by coats, to equal total gallons. Paint area calculation, the initial measurement step, determines accuracy across the entire estimate.</p>
+      <button class="read-more" type="button" data-read-more>Read More →</button>
+    </header>
+    <div class="breakdown">
+      <div class="steps-card">
+        <h3 class="h3">How Do You Calculate Paint Area for a Painting Project?</h3>
+        <p class="list-intro">Calculate paint area for a painting project by following these five steps.</p>
+        <ol class="steps">
+          <li><span class="steps__num" aria-hidden="true">01</span><p><strong>First,</strong> measure the wall height and width, then multiply the two measurements to calculate the square footage of each wall.</p></li>
+          <li><span class="steps__num" aria-hidden="true">02</span><p><strong>Second,</strong> add up the individual wall areas to get the total wall area for the room.</p></li>
+          <li><span class="steps__num" aria-hidden="true">03</span><p><strong>Third,</strong> calculate the ceiling area separately by multiplying length by width when included.</p></li>
+          <li><span class="steps__num" aria-hidden="true">04</span><p><strong>Fourth,</strong> subtract door and window openings using standard dimensions near 15-21 square feet per door and 10-15 square feet per window.</p></li>
+          <li><span class="steps__num" aria-hidden="true">05</span><p><strong>Lastly,</strong> combine every included surface into a single paintable square footage figure.</p></li>
+        </ol>
+      </div>
+
+      <div class="calc-card">
+        <dl class="formula">
+          <div class="formula__row"><dt>Paintable surface area</dt><dd class="formula__op">sq ft</dd></div>
+          <div class="formula__row"><dt>Coverage rate</dt><dd class="formula__op">÷ sq ft per gallon</dd></div>
+          <div class="formula__row"><dt>Number of coats</dt><dd class="formula__op">× coats</dd></div>
+          <div class="formula__row formula__row--total"><dt>Total paint quantity</dt><dd class="formula__op">= total gallons</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div class="grid grid--2">
+      <article class="card">
+        <span class="card__icon" aria-hidden="true"><svg><use href="#i-home"/></svg></span>
+        <h3 class="card__title">How Does Paint Coverage Affect the Amount of Paint Needed?</h3>
+        <p class="card__body clamp lines-5">Paint coverage affects the amount of paint needed by setting the direct rate at which a higher coverage figure lowers the gallons required and a lower figure raises that amount. A gallon commonly covers near 300-400 square feet, while a liter covers a proportionally smaller range near 65-90 square feet. Surface texture, paint type, and application method each shift actual coverage away from the labeled figure. The number of coats compounds coverage effects, since each layer consumes an amount proportional to the single-coat rate.</p>
+        <button class="read-more" type="button" data-read-more>Read More →</button>
+      </article>
+      <article class="card">
+        <span class="card__icon" aria-hidden="true"><svg><use href="#i-building"/></svg></span>
+        <h3 class="card__title">How Much Paint Is Needed Per Square Foot?</h3>
+        <p class="card__body clamp lines-5">A small fraction of a gallon, near 0.0025-0.0029 gallons, is needed per square foot for a single coat of standard interior paint. This figure comes from dividing total paintable square footage by the coverage rate of the selected product, commonly near one gallon per 350-400 square feet under typical conditions. Textured or unprimed surfaces frequently require 10-20 percent more product than the theoretical figure. Reference to the coverage rate of the selected product produces a more reliable result than a generalized assumption.</p>
+        <button class="read-more" type="button" data-read-more>Read More →</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PAINT FACTORS ============================ -->
+<section class="section section--tint" id="cost-factors" aria-labelledby="factors-title">
+  <div class="container">
+    <header class="section-head section-head--center">
+      <p class="eyebrow">What moves the cost</p>
+      <h2 class="h2" id="factors-title">What Factors Affect Paint Estimating Costs?</h2>
+      <p class="lead">Multiple variables combine to determine the final figure within a paint estimating cost calculation. Surface area, material selection, and labor demands each play a distinct role.</p>
+      <p class="list-intro">Factors that affect paint estimating costs are listed below.</p>
+    </header>
+    <div data-tabs>
+      <div class="carousel" data-carousel>
+        <button class="carousel__arrow" type="button" data-carousel-prev aria-label="Scroll Paint cost factors left">‹</button>
+        <div class="carousel__viewport" role="tablist" aria-label="Paint cost factors" data-carousel-viewport>
+          <div class="pill is-active"><button class="pill__tab" role="tab" type="button" id="pf-tab-1" aria-controls="pf-panel-1" aria-selected="true">Paintable Surface Area</button><button class="info-btn" type="button" aria-label="About paintable surface area" data-tooltip="The total square footage of walls, ceilings, and other surfaces in scope. A larger area increases material quantity and labor hours in direct proportion."><svg aria-hidden="true"><use href="#i-info"/></svg></button></div>
+          <div class="pill"><button class="pill__tab" role="tab" type="button" id="pf-tab-2" aria-controls="pf-panel-2" aria-selected="false" tabindex="-1">Paint Type and Quality</button><button class="info-btn" type="button" aria-label="About paint type and quality" data-tooltip="Paint type and quality range from economy to premium formulations, with per-gallon pricing shifting accordingly. Specialty finishes carry pricing above standard product lines."><svg aria-hidden="true"><use href="#i-info"/></svg></button></div>
+          <div class="pill"><button class="pill__tab" role="tab" type="button" id="pf-tab-3" aria-controls="pf-panel-3" aria-selected="false" tabindex="-1">Number of Coats</button><button class="info-btn" type="button" aria-label="About number of coats" data-tooltip="Increasing the number of coats increases material consumption and labor time, since each layer must fully dry before the next is applied. Dramatic color changes commonly require an extra coat."><svg aria-hidden="true"><use href="#i-info"/></svg></button></div>
+          <div class="pill"><button class="pill__tab" role="tab" type="button" id="pf-tab-4" aria-controls="pf-panel-4" aria-selected="false" tabindex="-1">Surface Condition</button><button class="info-btn" type="button" aria-label="About surface condition" data-tooltip="Surface condition determines the extent of preparation required before painting begins. Damaged or heavily textured surfaces extend labor hours and raise overall cost."><svg aria-hidden="true"><use href="#i-info"/></svg></button></div>
+          <div class="pill"><button class="pill__tab" role="tab" type="button" id="pf-tab-5" aria-controls="pf-panel-5" aria-selected="false" tabindex="-1">Interior or Exterior Application</button><button class="info-btn" type="button" aria-label="About interior or exterior application" data-tooltip="The application location affects material selection and labor complexity. Exterior projects commonly involve exposure to the elements and the use of specialized formulations."><svg aria-hidden="true"><use href="#i-info"/></svg></button></div>
+        </div>
+        <button class="carousel__arrow" type="button" data-carousel-next aria-label="Scroll Paint cost factors right">›</button>
+      </div>
+
+      <div class="tab-card">
+        <div class="tab-panel" role="tabpanel" id="pf-panel-1" aria-labelledby="pf-tab-1" tabindex="0">
+          <span class="tab-panel__tag">PF-01</span>
+          <h3 class="h3">Paintable Surface Area</h3>
+          <p class="clamp clamp-md">Paintable surface area is the total measured square footage of walls, ceilings, and additional surfaces within a project. Wall height and width, multiplied and summed across a room, produce the base figure, with ceiling area added separately when included. Door and window openings are commonly subtracted once their combined area becomes significant. A larger <a class="text-link" href="#">paintable surface area</a> directly increases both the quantity of paint and labor hours proportionally.</p>
+          <button class="read-more read-more--accent" type="button" data-read-more>Read More →</button>
+        </div>
+        <div class="tab-panel" role="tabpanel" id="pf-panel-2" aria-labelledby="pf-tab-2" tabindex="0" hidden>
+          <span class="tab-panel__tag">PF-02</span>
+          <h3 class="h3">Paint Type and Quality</h3>
+          <p class="clamp clamp-md">Paint types and quality span economy, mid-range, and premium formulations, each with distinct performance and price points. Economy paint commonly prices near $20-$35 per gallon, while premium lines reach near $55-$90 per gallon. Specialty formulations, including low-VOC or high-gloss enamel products, carry pricing above standard interior lines. The selection of <a class="text-link" href="#">paint type and quality</a> directly affects the total material cost in an estimate.</p>
+          <button class="read-more read-more--accent" type="button" data-read-more>Read More →</button>
+        </div>
+        <div class="tab-panel" role="tabpanel" id="pf-panel-3" aria-labelledby="pf-tab-3" tabindex="0" hidden>
+          <span class="tab-panel__tag">PF-03</span>
+          <h3 class="h3">Number of Coats</h3>
+          <p class="clamp clamp-md">Number of coats refers to the count of paint layers applied to achieve full, even coverage. Two coats represent the standard baseline, while strongly contrasting color transitions frequently require a third. Porous or textured surfaces often require an additional coat beyond a smooth, previously painted wall. Each additional layer beyond the standard <a class="text-link" href="#">number of coats</a> increases both quantity and labor time proportionally.</p>
+          <button class="read-more read-more--accent" type="button" data-read-more>Read More →</button>
+        </div>
+        <div class="tab-panel" role="tabpanel" id="pf-panel-4" aria-labelledby="pf-tab-4" tabindex="0" hidden>
+          <span class="tab-panel__tag">PF-04</span>
+          <h3 class="h3">Surface Condition</h3>
+          <p class="clamp clamp-md">Surface condition describes the state of a surface before paint application, ranging from clean to damaged to unprepared. Cracked, peeling, or unprimed surfaces require scraping, patching, and sanding before primer becomes possible. Mold, stains, and glossy existing finishes each require specialized treatment ahead of standard application. Poor <a class="text-link" href="#">surface condition</a> substantially increases preparation labor and material costs compared with a well-maintained surface.</p>
+          <button class="read-more read-more--accent" type="button" data-read-more>Read More →</button>
+        </div>
+        <div class="tab-panel" role="tabpanel" id="pf-panel-5" aria-labelledby="pf-tab-5" tabindex="0" hidden>
+          <span class="tab-panel__tag">PF-05</span>
+          <h3 class="h3">Interior or Exterior Application</h3>
+          <p class="clamp clamp-md">Interior or exterior status shapes material selection, the scope of preparation, and labor complexity in an estimate. Interior projects commonly involve controlled conditions and standard access, while exterior projects introduce weather exposure and extended ladder work. Preparation expands for exterior surfaces, often including power washing and wood repair. Project scope, defined by <a class="text-link" href="#">interior or exterior application</a>, ultimately determines labor rates, as exterior work often exceeds interior rates due to additional physical demands.</p>
+          <button class="read-more read-more--accent" type="button" data-read-more>Read More →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ COST PER SQUARE FOOT ============================ -->
+<section class="section" id="cost-per-square-foot" aria-labelledby="persqft-title">
+  <div class="container">
+    <header class="section-head section-head--center">
+      <p class="eyebrow">Cost per square foot</p>
+      <h2 class="h2" id="persqft-title">How Is Painting Cost Calculated Per Square Foot?</h2>
+      <p class="lead clamp lines-2">Painting cost per square foot is calculated by dividing the total project cost by the total paintable square footage. Material-only cost commonly falls near $0.50-$1.50 per square foot, while labor-only cost falls near $1-$3 per square foot. Combined painting cost per square foot typically ranges from $1.50-$4 for standard interior projects. Regional labor pricing substantially shifts the combined rate across markets.</p>
+      <button class="read-more" type="button" data-read-more>Read More →</button>
+    </header>
+    <div class="subhead">
+      <h3 class="h3">What Is Included in Painting Cost Per Square Foot?</h3>
+      <p>A square-foot painting rate commonly represents several combined cost components rather than a single expense. Paint, labor, preparation, primer, and coat count each contribute a separate share of that rate.</p>
+      <p class="list-intro">The cost components are listed below.</p>
+    </div>
+    <ul class="grid factors factors--3-2">
+      <li class="factor"><span class="factor__num">01</span><h3 class="factor__title">Paint</h3><button class="info-btn" type="button" aria-label="About paint" data-tooltip="Paint expense reflects the per-gallon product cost divided across covered square footage. Brand and quality selection directly shift this figure."><svg aria-hidden="true"><use href="#i-info"/></svg></button></li>
+      <li class="factor"><span class="factor__num">02</span><h3 class="factor__title">Labor</h3><button class="info-btn" type="button" aria-label="About labor" data-tooltip="Labor expense reflects the hourly application rate converted into a per-square-foot figure. Project size determines how that rate scales."><svg aria-hidden="true"><use href="#i-info"/></svg></button></li>
+      <li class="factor"><span class="factor__num">03</span><h3 class="factor__title">Preparation</h3><button class="info-btn" type="button" aria-label="About preparation" data-tooltip="Preparation expense reflects the time required for cleaning, sanding, and patching before application. This adds directly to the overall rate."><svg aria-hidden="true"><use href="#i-info"/></svg></button></li>
+      <li class="factor"><span class="factor__num">04</span><h3 class="factor__title">Primer</h3><button class="info-btn" type="button" aria-label="About primer" data-tooltip="Primer expense applies when stain blocking or new surface sealing becomes necessary. Its cost adds to the base paint figure."><svg aria-hidden="true"><use href="#i-info"/></svg></button></li>
+      <li class="factor"><span class="factor__num">05</span><h3 class="factor__title">Number of Coats</h3><button class="info-btn" type="button" aria-label="About number of coats" data-tooltip="The number of coats multiplies the material and labor expense within the rate. Each additional layer consumes a proportional amount of time and product."><svg aria-hidden="true"><use href="#i-info"/></svg></button></li>
+    </ul>
+
+    <aside class="callout" aria-labelledby="labor-rate-title">
+      <h3 id="labor-rate-title">Does Painting Labor Cost Affect the Square-Foot Rate?</h3>
+      <p class="clamp lines-3">Yes, painting labor costs directly affect the square-foot rate, since labor typically accounts for the larger share of the combined figure. Higher regional rates or extended project conditions raise the overall per-square-foot figure independent of material selection. Labor-only pricing isolates the application charge from the material expense, producing a lower standalone rate than a combined figure.</p>
+      <button class="read-more" type="button" data-read-more>Read More →</button>
+    </aside>
+  </div>
+</section>
+
+<!-- ============================ ESTIMATE TYPES ============================ -->
+<section class="section section--tint" id="estimate-types" aria-labelledby="types-title">
+  <div class="container">
+    <header class="section-head section-head--center">
+      <p class="eyebrow">Estimate types</p>
+      <h2 class="h2" id="types-title">What Are the Different Types of Paint Estimates?</h2>
+      <p class="lead clamp lines-2">Paint estimates take several distinct forms depending on project scope and setting. Interior work, exterior work, full houses, single rooms, and commercial spaces each require a distinct approach to estimating.</p>
+      <button class="read-more" type="button" data-read-more>Read More →</button>
+      <p class="list-intro">The different types of paint estimates are listed below.</p>
+    </header>
+    <div class="grid grid--3-2">
+      <article class="card">
+        <span class="card__icon" aria-hidden="true"><svg><use href="#i-layers"/></svg></span>
+        <span class="card__num">01</span>
+        <h3 class="card__title">Interior Painting Estimate</h3>
+        <p class="card__summary">An interior painting estimate calculates paint, material, and labor for indoor walls, ceilings, and trim. This applies to residential or commercial indoor spaces.</p>
+        <p class="card__body clamp lines-5">An interior painting estimate calculates the quantity of paint, material costs, and labor for indoor wall, ceiling, and trim painting. Wall and ceiling area measurement forms the starting point for the calculation, following standard height and width principles. Interior paint selection emphasizes washability and finish sheen rather than the weather resistance prioritized in exterior products. Labor hours for an <a class="text-link" href="#">interior painting estimate</a> generally fall below comparable exterior projects due to controlled conditions and standard access.</p>
+        <button class="read-more" type="button" data-read-more>Read More →</button>
+      </article>
+      <article class="card">
+        <span class="card__icon" aria-hidden="true"><svg><use href="#i-ruler"/></svg></span>
+        <span class="card__num">02</span>
+        <h3 class="card__title">Exterior Painting Estimate</h3>
+        <p class="card__summary">An exterior painting estimate calculates the cost for facade walls and trim. Weather-resistant materials and specialized access typically factor into this figure.</p>
+        <p class="card__body clamp lines-5">An exterior painting estimate calculates the quantity of paint, material costs, and labor for facade and exterior feature painting. Material selection emphasizes UV resistance and moisture protection suited to outdoor exposure. Preparation expands considerably, frequently including power washing, caulking, and wood repair. Weather dependency introduces scheduling constraints that shape every <a class="text-link" href="#">exterior painting estimate</a> beyond a comparable interior project.</p>
+        <button class="read-more" type="button" data-read-more>Read More →</button>
+      </article>
+      <article class="card">
+        <span class="card__icon" aria-hidden="true"><svg><use href="#i-home"/></svg></span>
+        <span class="card__num">03</span>
+        <h3 class="card__title">House Painting Estimate</h3>
+        <p class="card__summary">A house painting estimate combines interior, exterior, or both into a single project-wide figure. It covers an entire residential structure.</p>
+        <p class="card__body clamp lines-5">A house painting estimate combines interior, exterior, or both into a single comprehensive project figure. Total house size, room count, and architectural complexity each shift the final paintable area beyond a simple square-footage reference. Exterior scope, when included, adds substantially to the total project cost. A calculator used to build a <a class="text-link" href="#">house painting estimate</a> typically requests square footage and interior-versus-exterior scope as primary inputs.</p>
+        <button class="read-more" type="button" data-read-more>Read More →</button>
+      </article>
+      <article class="card">
+        <span class="card__icon" aria-hidden="true"><svg><use href="#i-grid"/></svg></span>
+        <span class="card__num">04</span>
+        <h3 class="card__title">Room Painting Estimate</h3>
+        <p class="card__summary">A room painting estimate applies to one enclosed space. It calculates the wall, ceiling, and trim area for that room alone.</p>
+        <p class="card__body clamp lines-5">A room painting estimate calculates the quantity of paint, material costs, and labor for a single enclosed interior space. Wall measurement follows standard height-times-width calculation, with ceiling area added separately when included. Room dimensions and the number of openings affect the final paintable area, independent of the stated floor square footage. A calculated <a class="text-link" href="#">room painting estimate</a> serves as a practical starting point for many residential projects.</p>
+        <button class="read-more" type="button" data-read-more>Read More →</button>
+      </article>
+      <article class="card">
+        <span class="card__icon" aria-hidden="true"><svg><use href="#i-building"/></svg></span>
+        <span class="card__num">05</span>
+        <h3 class="card__title">Commercial Painting Estimate</h3>
+        <p class="card__summary">A commercial painting estimate addresses offices, retail spaces, or industrial facilities. Specialized coatings and extended timelines commonly apply.</p>
+        <p class="card__body clamp lines-5">A commercial painting estimate addresses larger-scale spaces such as offices, retail locations, or industrial facilities. Square footage commonly exceeds residential scale substantially, raising material quantity and labor hours in proportion. Specialized coatings, including fire-resistant or anti-microbial finishes, are frequently applied within commercial settings. Timeline planning for a <a class="text-link" href="#">commercial painting estimate</a> commonly extends longer than residential projects, given the combined scope and coordination.</p>
+        <button class="read-more" type="button" data-read-more>Read More →</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ HOUSE PAINTING COST ============================ -->
+<section class="section" id="house-cost" aria-labelledby="house-title">
+  <div class="container">
+    <header class="section-head section-head--center">
+      <p class="eyebrow">House painting cost</p>
+      <h2 class="h2" id="house-title">How Much Does It Cost to Paint a House?</h2>
+      <p class="lead clamp lines-3">Painting a house commonly costs between $1,500-$10,000, depending on house size, surface area, paint type, number of coats, labor, preparation, and interior-versus-exterior scope. Interior-only projects for a mid-size home commonly fall in the $1,500-$4,000 range, while exterior-only projects commonly range in the $2,500-$6,500 range. Combined interior and exterior projects frequently land within a broader range of $4,000-$10,000. Surface condition and coat count shift the final figure beyond a baseline tied solely to square footage.</p>
+      <button class="read-more" type="button" data-read-more>Read More →</button>
+    </header>
+    <div class="grid grid--2">
+      <article class="card">
+        <span class="card__icon" aria-hidden="true"><svg><use href="#i-home"/></svg></span>
+        <h3 class="card__title">How Does House Size Affect Painting Cost?</h3>
+        <p class="card__body clamp lines-5">House size affects painting costs through direct proportional scaling of paint, labor, and preparation. A smaller home near 1,000-1,500 square feet requires less material and shorter labor time than a larger comparable structure. A home exceeding 2,500-3,500 square feet further increases requirements, often necessitating an expanded crew. Ceiling height and architectural complexity add further variation beyond raw square footage figures.</p>
+        <button class="read-more" type="button" data-read-more>Read More →</button>
+      </article>
+      <article class="card">
+        <span class="card__icon" aria-hidden="true"><svg><use href="#i-chart"/></svg></span>
+        <h3 class="card__title">How Does Interior Painting Cost Differ From Exterior Painting Cost?</h3>
+        <p class="card__body clamp lines-5">Interior painting costs differ from exterior painting costs by running $1,000-$2,500 lower for comparable surface area, since exterior work entails additional preparation and access requirements. Preparation scope expands for exterior work, commonly including power washing and wood repair, and is absent from interior preparation. Accessibility differs as well, since exterior work frequently requires ladder or scaffolding equipment for upper stories. These combined factors commonly place exterior painting costs above interior painting costs for comparable surface areas.</p>
+        <button class="read-more" type="button" data-read-more>Read More →</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ROOM PAINT ============================ -->
+<section class="section section--tint" id="room-paint" aria-labelledby="room-title">
+  <div class="container">
+    <header class="section-head section-head--center">
+      <p class="eyebrow">Room paint</p>
+      <h2 class="h2" id="room-title">How Do You Estimate Paint for a Room?</h2>
+      <p class="lead clamp lines-3">Room paint estimation begins with measuring room dimensions, then calculating wall and ceiling area, adjusting for doors and windows, applying a coverage rate, and multiplying by the intended number of coats. Room length, width, and wall height are measured first, establishing the figures used in every subsequent step and answering how much paint I need to paint a room at its most basic level. Wall area is calculated by multiplying the room perimeter by the wall height, with ceiling area added separately when included, and door and window openings subtracted once their combined size becomes significant. Coverage rate division converts the adjusted square footage into a base paint quantity, and multiplication by the number of coats yields the final figure, addressing common questions such as how much paint is needed for a 12x12 room, a 10x10 room, or a bedroom.</p>
+      <button class="read-more" type="button" data-read-more>Read More →</button>
+    </header>
+    <div class="grid grid--2">
+      <article class="card">
+        <span class="card__icon" aria-hidden="true"><svg><use href="#i-grid"/></svg></span>
+        <h3 class="card__title">How Much Paint Is Needed for a 12x12 Room?</h3>
+        <p class="card__body clamp lines-5">A 12x12 room typically requires about 2-3 gallons of paint for a standard two-coat application, assuming standard 8-foot ceilings. The wall area calculates to nearly 384 square feet before opening subtraction, with the ceiling area adding a separate 144 square feet when included. Higher ceilings or additional openings shift the figure beyond this baseline example. Referencing the actual wall height and opening count yields a more precise quantity than a generic room-size assumption.</p>
+        <button class="read-more" type="button" data-read-more>Read More →</button>
+      </article>
+      <article class="card">
+        <span class="card__icon" aria-hidden="true"><svg><use href="#i-ruler"/></svg></span>
+        <h3 class="card__title">How Much Paint Is Needed for One Wall?</h3>
+        <p class="card__body clamp lines-5">A single standard wall, 10 feet wide by 8 feet tall, requires roughly a fraction of a gallon per coat, based on its 80 square foot area. Wall height and width are measured and multiplied to produce that square footage, with door or window openings subtracted once their combined size becomes relevant. Dividing the adjusted square footage by the selected product's coverage rate yields the exact quantity for one coat. A paint calculator for one wall applies this isolated calculation, which is useful for accent walls or partial-repaint projects.</p>
+        <button class="read-more" type="button" data-read-more>Read More →</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ EXTERIOR PAINTING ============================ -->
+<section class="section" id="exterior-painting" aria-labelledby="exterior-title">
+  <div class="container">
+    <header class="section-head section-head--center">
+      <p class="eyebrow">Exterior painting</p>
+      <h2 class="h2" id="exterior-title">How Do You Estimate Exterior House Painting Costs?</h2>
+      <p class="lead clamp lines-3">Exterior painting estimates are developed from surface area, coverage, coats, preparation, accessibility, paint type, and labor, combined into a total. Coverage rate for exterior paint commonly falls near 250-350 square feet per gallon, lower than many interior products. Preparation, including power washing and wood repair, adds substantial labor time beyond the application itself. Combined, materials and labor typically total $3,000-$8,000 for a standard mid-size home.</p>
+      <button class="read-more" type="button" data-read-more>Read More →</button>
+    </header>
+    <aside class="callout" aria-labelledby="exterior-paint-title">
+      <h3 id="exterior-paint-title">How Much Paint Is Needed for an Exterior House?</h3>
+      <p class="clamp lines-3">An exterior house commonly requires near 10-18 gallons of paint for a standard two-coat application, based on a mid-size facade. Total exterior surface area for a mid-size home commonly falls near 1,500-2,500 square feet, with that range as the starting figure. Surface condition substantially affects the figure, since bare wood or masonry absorbs additional product compared with a previously painted surface. Coverage rate for exterior paint, typically 250-350 square feet per gallon, determines the conversion between measured area and final quantity.</p>
+      <button class="read-more" type="button" data-read-more>Read More →</button>
+    </aside>
+  </div>
+</section>
+
+<!-- ============================ SERVICES INCLUDE ============================ -->
+<section class="section section--tint" id="services" aria-labelledby="services-title">
+  <div class="container">
+    <header class="section-head section-head--center">
+      <p class="eyebrow">Estimating services</p>
+      <h2 class="h2" id="services-title">What Do Professional Painting Estimating Services Include?</h2>
+      <p class="lead">Professional painting estimating services combine several structured steps into a documented project proposal. Measurement, quantity calculation, pricing, and labor assessment each contribute a distinct piece of that proposal.</p>
+      <p class="list-intro">Professional painting estimating services include are listed below.</p>
+    </header>
+    <div data-tabs>
+      <div class="carousel" data-carousel>
+        <button class="carousel__arrow" type="button" data-carousel-prev aria-label="Scroll Painting estimating services left">‹</button>
+        <div class="carousel__viewport" role="tablist" aria-label="Painting estimating services" data-carousel-viewport>
+          <div class="pill is-active"><button class="pill__tab" role="tab" type="button" id="es-tab-1" aria-controls="es-panel-1" aria-selected="true">Painting Area Measurement</button><button class="info-btn" type="button" aria-label="About painting area measurement" data-tooltip="Painting area measurement involves measuring walls, ceilings, and exterior surfaces on-site or remotely. The establishes the paintable square footage used in later steps."><svg aria-hidden="true"><use href="#i-info"/></svg></button></div>
+          <div class="pill"><button class="pill__tab" role="tab" type="button" id="es-tab-2" aria-controls="es-panel-2" aria-selected="false" tabindex="-1">Paint Quantity Calculation</button><button class="info-btn" type="button" aria-label="About paint quantity calculation" data-tooltip="Converts measured area into a gallon requirement. Coverage rate and coat count drive the conversion."><svg aria-hidden="true"><use href="#i-info"/></svg></button></div>
+          <div class="pill"><button class="pill__tab" role="tab" type="button" id="es-tab-3" aria-controls="es-panel-3" aria-selected="false" tabindex="-1">Material Cost Calculation</button><button class="info-btn" type="button" aria-label="About material cost calculation" data-tooltip="Material cost calculation prices out paint, primer, and supplies based on calculated quantities. Selected product lines determine the final figure."><svg aria-hidden="true"><use href="#i-info"/></svg></button></div>
+          <div class="pill"><button class="pill__tab" role="tab" type="button" id="es-tab-4" aria-controls="es-panel-4" aria-selected="false" tabindex="-1">Labor Cost Calculation</button><button class="info-btn" type="button" aria-label="About labor cost calculation" data-tooltip="Estimates the hours required for preparation and application. Applicable hourly rates convert those hours into a charge."><svg aria-hidden="true"><use href="#i-info"/></svg></button></div>
+          <div class="pill"><button class="pill__tab" role="tab" type="button" id="es-tab-5" aria-controls="es-panel-5" aria-selected="false" tabindex="-1">Painting Quotation</button><button class="info-btn" type="button" aria-label="About painting quotation" data-tooltip="A painting quotation compiles measurement, quantity, material, and labor figures into a formal proposal. Clients review the proposal before work begins."><svg aria-hidden="true"><use href="#i-info"/></svg></button></div>
+        </div>
+        <button class="carousel__arrow" type="button" data-carousel-next aria-label="Scroll Painting estimating services right">›</button>
+      </div>
+
+      <div class="tab-card">
+        <div class="tab-panel" role="tabpanel" id="es-panel-1" aria-labelledby="es-tab-1" tabindex="0">
+          <span class="tab-panel__tag">ES-01</span>
+          <h3 class="h3">Painting Area Measurement</h3>
+          <p class="clamp clamp-md">Painting area measurement establishes the paintable square footage of every wall, ceiling, and exterior surface in a project. On-site measurement involves the direct application of a tape measure or a laser device across the included surfaces. Opening subtraction removes door and window square footage once the combined opening size becomes significant. Accuracy at this stage directly shapes every subsequent quantity and cost calculation drawn from <a class="text-link" href="#">painting area measurement</a>.</p>
+          <button class="read-more read-more--accent" type="button" data-read-more>Read More →</button>
+        </div>
+        <div class="tab-panel" role="tabpanel" id="es-panel-2" aria-labelledby="es-tab-2" tabindex="0" hidden>
+          <span class="tab-panel__tag">ES-02</span>
+          <h3 class="h3">Paint Quantity Calculation</h3>
+          <p class="clamp clamp-md">Paint quantity calculation converts the measured paintable area into a specific gallon requirement for a project. Dividing total square footage by the coverage rate produces the base figure, which is multiplied by planned coats to obtain the final total. Surface condition adjustment often adds a buffer beyond the theoretical calculation to prevent a shortage. Professional services commonly round the final figure upward to the nearest full container size once <a class="text-link" href="#">paint quantity calculation</a> is complete.</p>
+          <button class="read-more read-more--accent" type="button" data-read-more>Read More →</button>
+        </div>
+        <div class="tab-panel" role="tabpanel" id="es-panel-3" aria-labelledby="es-tab-3" tabindex="0" hidden>
+          <span class="tab-panel__tag">ES-03</span>
+          <h3 class="h3">Material Cost Calculation</h3>
+          <p class="clamp clamp-md">Material cost calculation prices out all required products based on calculated quantities and selected product lines. Paint pricing multiplies the gallon quantity by the per-gallon cost, while primer and supplies add smaller, separate charges. Regional pricing variations affect material costs depending on local supplier availability. All products are combined into a single line item once the <a class="text-link" href="#">material cost calculation</a> is complete.</p>
+          <button class="read-more read-more--accent" type="button" data-read-more>Read More →</button>
+        </div>
+        <div class="tab-panel" role="tabpanel" id="es-panel-4" aria-labelledby="es-tab-4" tabindex="0" hidden>
+          <span class="tab-panel__tag">ES-04</span>
+          <h3 class="h3">Labor Cost Calculation</h3>
+          <p class="clamp clamp-md">Labor cost calculation estimates hours required for preparation and application, multiplied by an applicable rate. Preparation and application hours are determined by documented surface conditions and project complexity. Crew size, experience level, and regional market conditions shift the applied hourly rate. Combined labor hours appear alongside material costs once <a class="text-link" href="#">labor cost calculation</a> is complete.</p>
+          <button class="read-more read-more--accent" type="button" data-read-more>Read More →</button>
+        </div>
+        <div class="tab-panel" role="tabpanel" id="es-panel-5" aria-labelledby="es-tab-5" tabindex="0" hidden>
+          <span class="tab-panel__tag">ES-05</span>
+          <h3 class="h3">Painting Quotation</h3>
+          <p class="clamp clamp-md">A painting quotation compiles measurement data, paint quantities, material costs, and labor costs into a documented proposal. The project scope description and itemized cost breakdown are now open for client review. Timeline estimation and payment terms typically accompany the cost breakdown. Disputes during project execution decline once a client approves a well-documented <a class="text-link" href="#">painting quotation</a>.</p>
+          <button class="read-more read-more--accent" type="button" data-read-more>Read More →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ACCURACY AND INPUTS ============================ -->
+<section class="section" id="accuracy" aria-labelledby="accuracy-title">
+  <div class="container">
+    <header class="section-head section-head--center">
+      <p class="eyebrow">Accuracy and inputs</p>
+      <h2 class="h2" id="accuracy-title">How Accurate Are Paint Estimates?</h2>
+      <p class="lead clamp lines-2">Paint estimates commonly reach near 90-95% accuracy when built from precise measurements, correct coverage assumptions, and a complete project scope. Precise measurement forms the foundation of that accuracy, since every downstream calculation derives from the initial area figure. Coverage assumptions drawn from product specifications produce more reliable results than generalized industry averages. Completeness of scope prevents omission errors that commonly cause the final cost to exceed an initial estimate, pulling accuracy below that range.</p>
+      <button class="read-more" type="button" data-read-more>Read More →</button>
+    </header>
+    <div class="subhead">
+      <h3 class="h3">What Information Is Needed for a Paint Estimate?</h3>
+      <p>Information needed for a paint estimate consists of several specific data points gathered before the calculation begins. Dimensions, surfaces, condition, and material selection each supply a distinct input into the final figure.</p>
+      <p class="list-intro">The information needed for a paint estimate is listed below.</p>
+    </div>
+    <ul class="grid factors factors--9">
+      <li class="factor"><span class="factor__num">01</span><h3 class="factor__title">Project Dimensions</h3><button class="info-btn" type="button" aria-label="About project dimensions" data-tooltip="Project dimensions include room or building measurements and wall height. Total square footage derives from these figures."><svg aria-hidden="true"><use href="#i-info"/></svg></button></li>
+      <li class="factor"><span class="factor__num">02</span><h3 class="factor__title">Paintable Surfaces</h3><button class="info-btn" type="button" aria-label="About paintable surfaces" data-tooltip="Paintable surfaces identify which walls, ceilings, and trim receive paint. This defines the scope of the project."><svg aria-hidden="true"><use href="#i-info"/></svg></button></li>
+      <li class="factor"><span class="factor__num">03</span><h3 class="factor__title">Room or Building Size</h3><button class="info-btn" type="button" aria-label="About room or building size" data-tooltip="Room or building size establishes overall project scale. Material quantity and labor duration follow from this figure."><svg aria-hidden="true"><use href="#i-info"/></svg></button></li>
+      <li class="factor"><span class="factor__num">04</span><h3 class="factor__title">Surface Condition</h3><button class="info-btn" type="button" aria-label="About surface condition" data-tooltip="Documents damage and prior paint status. Preparation requirements derive directly from this assessment."><svg aria-hidden="true"><use href="#i-info"/></svg></button></li>
+      <li class="factor"><span class="factor__num">05</span><h3 class="factor__title">Paint Type</h3><button class="info-btn" type="button" aria-label="About paint type" data-tooltip="Paint type selection determines coverage rate and pricing. It shapes the calculation throughout the estimate."><svg aria-hidden="true"><use href="#i-info"/></svg></button></li>
+      <li class="factor"><span class="factor__num">06</span><h3 class="factor__title">Number of Coats</h3><button class="info-btn" type="button" aria-label="About number of coats" data-tooltip="The number of coats indicates how many layers contribute to the quantity. Labor time scales with this figure."><svg aria-hidden="true"><use href="#i-info"/></svg></button></li>
+      <li class="factor"><span class="factor__num">07</span><h3 class="factor__title">Existing Finishes</h3><button class="info-btn" type="button" aria-label="About existing finishes" data-tooltip="Identify prior sheen and color. This influences preparation and coat count requirements."><svg aria-hidden="true"><use href="#i-info"/></svg></button></li>
+      <li class="factor"><span class="factor__num">08</span><h3 class="factor__title">Preparation Requirements</h3><button class="info-btn" type="button" aria-label="About preparation requirements" data-tooltip="Outline cleaning and priming tasks. These tasks precede paint application."><svg aria-hidden="true"><use href="#i-info"/></svg></button></li>
+      <li class="factor"><span class="factor__num">09</span><h3 class="factor__title">Labor Requirements</h3><button class="info-btn" type="button" aria-label="About labor requirements" data-tooltip="Estimate total hours across preparation and application. The combined project scope determines this figure."><svg aria-hidden="true"><use href="#i-info"/></svg></button></li>
+    </ul>
+
+    <aside class="callout" aria-labelledby="measurement-title">
+      <h3 id="measurement-title">Does Surface Measurement Affect Paint Estimate Accuracy?</h3>
+      <p class="clamp lines-3">Yes, surface measurement affects paint estimate accuracy directly, since every subsequent calculation depends on the initial area figure. Inaccurate measurement produces a skewed quantity calculation, resulting in a shortage or unnecessary excess purchase. Small discrepancies compound across a full house project, producing a larger cumulative error than a single-room miscalculation.</p>
+      <button class="read-more" type="button" data-read-more>Read More →</button>
+    </aside>
+  </div>
+</section>
+
+<!-- ============================ KNOWLEDGE CENTER ============================ -->
+<section class="section section--tint" id="faq" aria-label="Paint estimating costs FAQs">
+  <div class="container">
+    <header class="section-head section-head--center">
+      <p class="eyebrow">Knowledge hub &amp; FAQs</p>
+      <h2 class="h2" id="faq-title">Paint Estimating Costs</h2>
+    </header>
+
+    <div class="tab-card">
+      <div class="faq__lead">
+        <h3 class="h3">How Are Paint Estimating Costs Calculated?</h3>
+        <p class="clamp lines-3">Paint estimating costs are calculated by combining paint quantity, material price, labor hours, and preparation time into a single project total. Surface area, measured first, is divided by the selected product's coverage rate and multiplied by the number of coats to determine the required gallons. Material cost follows from multiplying that gallon figure by the per-gallon product price, while labor cost follows from multiplying estimated hours by an applicable hourly rate. Preparation time, driven by surface conditions, directly adds to the labor portion of the calculation. Combined material and labor figures produce the final paint-estimating cost presented in a project quotation.</p>
+        <button class="read-more read-more--accent" type="button" data-read-more>Read More →</button>
+      </div>
+      <div class="accordion">
+            <details class="acc">
+              <summary>How Much Paint Do I Need for a 1,000 Square Foot House?</summary>
+              <div class="acc__body"><p>A 1,000 square foot house typically needs near 10-14 gallons of paint for a standard two-coat interior application. This figure derives from paintable interior wall area near 1,800-2,400 square feet with standard 8-foot ceilings, converted through coverage rate rather than raw floor square footage. Exterior painting on a comparably sized home adds a separate figure near 6-10 gallons. Reference to the converted wall area, rather than floor square footage alone, yields a more reliable quantity for a house of this size.</p></div>
+            </details>
+            <details class="acc">
+              <summary>How Many Gallons of Paint Are Needed Per Square Foot?</summary>
+              <div class="acc__body"><p>A small fraction near 0.0025-0.0029 gallons is needed per square foot for a single coat of standard interior paint. This figure is based on the coverage rate of the selected product rather than a single fixed ratio, typically around 350-400 square feet per gallon under typical conditions. Textured or unprimed surfaces lower effective coverage, raising the practical gallon-per-square-foot figure above that baseline. Exterior paint typically has a lower coverage rate, around 250-350 square feet per gallon, which raises its per-square-foot requirement above that of standard interior products.</p></div>
+            </details>
+            <details class="acc">
+              <summary>How Much Does Paint Cost Per Square Foot?</summary>
+              <div class="acc__body"><p>Paint cost per square foot commonly falls near $0.10-$0.55, depending on product quality and the number of coats. Economy paint produces a material cost near $0.10-$0.20 per square foot for a two-coat application, while premium paint raises that figure to a range near $0.35-$0.55 for comparable coverage. This figure reflects material expense alone, calculated through the division of total paint cost by paintable square footage. The number of coats compounds the figure proportionally, since each layer adds a further material charge.</p></div>
+            </details>
+            <details class="acc">
+              <summary>How Do You Calculate Painting Labor Cost Per Square Foot?</summary>
+              <div class="acc__body"><p>Painting labor cost per square foot is calculated through the division of the total labor charge by the total paintable square footage. Estimated hours, multiplied by an applicable hourly rate, produce the total labor charge for the project. Standard interior projects commonly produce a labor cost per square foot of $1-$2.50. Exterior projects raise the figure due to added access requirements, commonly falling near $1.50-$3.50 per square foot.</p></div>
+            </details>
+            <details class="acc">
+              <summary>Can a Paint Calculator Estimate Total Painting Cost?</summary>
+              <div class="acc__body"><p>Yes, a paint calculator can estimate the total painting cost when combined with material pricing and labor rate inputs alongside its core calculation. Basic calculators primarily convert measured square footage into a gallon requirement, addressing quantity rather than cost directly. Extended calculators incorporate per-gallon pricing and labor rates, producing a fuller combined total. Accuracy depends on the quality of underlying inputs, including precise measurements and current pricing figures.</p></div>
+            </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Bio Column -->
+      <div>
+        <a href="../index.html" class="logo-link footer-logo" style="margin-bottom: 18px;">
+          <svg width="32" height="28" viewBox="0 0 30 26" fill="none">
+            <circle cx="4" cy="22" r="4" fill="#F08028"/>
+            <circle cx="15" cy="13" r="4" fill="#F08028"/>
+            <circle cx="15" cy="22" r="4" fill="#F08028"/>
+            <circle cx="26" cy="4" r="4" fill="#F08028"/>
+            <circle cx="26" cy="13" r="4" fill="#F08028"/>
+            <circle cx="26" cy="22" r="4" fill="#F08028"/>
+          </svg>
+          <span class="logo-text" style="color: #ffffff;">Construction</span>
+        </a>
+        <p class="footer-bio">
+          Leading construction estimating and quantity takeoff service provider in North America. Delivering fast, precise, and certified cost estimates for builders, contractors, and developers.
+        </p>
+      </div>
+
+      <!-- Col 2: Services -->
+      <div>
+        <h4 class="footer-col-title">Our Services</h4>
+        <div class="footer-links">
+          <a href="../index.html#services">Cost Estimating</a>
+          <a href="../index.html#services">Quantity Takeoffs</a>
+          <a href="../index.html#services">Material Takeoffs</a>
+          <a href="../index.html#services">Bid Estimating</a>
+          <a href="../index.html#services">MEP Services</a>
+        </div>
+      </div>
+
+      <!-- Col 3: Quick Links -->
+      <div>
+        <h4 class="footer-col-title">Quick Links</h4>
+        <div class="footer-links">
+          <a href="../index.html#home">Home</a>
+          <a href="../index.html#why-choose">Why Choose Us</a>
+          <a href="../index.html#process">Our Process</a>
+          <a href="../index.html#who-uses">Who Uses Us</a>
+          <a href="#contact">Submit Plans</a>
+        </div>
+      </div>
+
+      <!-- Col 4: Knowledge -->
+      <div>
+        <h4 class="footer-col-title">Knowledge Center</h4>
+        <div class="footer-links">
+          <a href="../index.html#knowledge-hub">Estimating Basics</a>
+          <a href="../index.html#knowledge-hub">Cost Estimation</a>
+          <a href="../index.html#knowledge-hub">Construction Estimators</a>
+          <a href="../index.html#knowledge-hub">Estimates &amp; Pricing</a>
+        </div>
+      </div>
+
+      <!-- Col 5: Contact -->
+      <div>
+        <h4 class="footer-col-title">Contact Us</h4>
+        <div class="footer-contact-item">
+          <span>&#128222;</span>
+          <span>(800) 555-0199</span>
+        </div>
+        <div class="footer-contact-item">
+          <span>&#9993;</span>
+          <span>estimates@constructionestimating.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <span>&#128205;</span>
+          <span>500 Construction Plaza, New York, NY 10001</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 Construction Estimating Services. All Rights Reserved.</div>
+      <div style="display: flex; gap: 20px;">
+        <a href="#" style="color: #94A3B8;">Privacy Policy</a>
+        <a href="#" style="color: #94A3B8;">Terms of Service</a>
+        <a href="#" style="color: #94A3B8;">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="tooltip" id="tooltip" role="tooltip"></div>
+
+</body>
+</html>
+
