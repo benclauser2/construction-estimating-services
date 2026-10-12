@@ -1,0 +1,114 @@
+/* ==========================================================================
+   Site navigation: "Services" dropdown (desktop header) and its sub-list
+   in the mobile drawer. Shared by every page; uses the home page header
+   tokens (--navy-dark, --orange-primary …), which each page already
+   defines on .header / .mobile-nav-drawer.
+   ========================================================================== */
+
+.nav-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-dropdown__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  background: none;
+  border: 0;
+  font: inherit;
+  font-size: 14.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav-dropdown__toggle svg {
+  flex: none;
+  transition: transform 0.2s ease;
+}
+
+.nav-dropdown.is-open .nav-dropdown__toggle svg { transform: rotate(180deg); }
+
+.nav-dropdown__menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: -16px;
+  z-index: 1001;
+  display: none;
+  min-width: 260px;
+  margin: 0;
+  padding: 8px;
+  list-style: none;
+  background: #FFFFFF;
+  border: 1px solid #E4E7ED;
+  border-radius: 10px;
+  box-shadow: 0 12px 32px rgba(31, 56, 100, 0.14);
+}
+
+/* Bridges the gap so the menu stays open while the pointer moves onto it */
+.nav-dropdown__menu::before {
+  content: "";
+  position: absolute;
+  inset: -12px 0 auto;
+  height: 12px;
+}
+
+.nav-dropdown.is-open .nav-dropdown__menu { display: block; }
+
+@media (hover: hover) {
+  .nav-dropdown:hover .nav-dropdown__menu { display: block; }
+}
+
+.nav-dropdown__menu a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--navy-dark, #1F3864);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.nav-dropdown__menu a:hover,
+.nav-dropdown__menu a:focus-visible {
+  background: #F8F9FC;
+  color: var(--orange-primary, #F08028);
+}
+
+.nav-dropdown__menu a[aria-current="page"] {
+  background: #F8F9FC;
+  color: var(--orange-primary, #F08028);
+}
+
+.nav-dropdown__menu .nav-dropdown__all {
+  margin-bottom: 4px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #E4E7ED;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Mobile drawer sub-list */
+.mobile-nav-sub {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0 0 6px;
+  padding: 0 0 0 12px;
+  list-style: none;
+  border-left: 2px solid #E4E7ED;
+  margin-left: 12px;
+}
+
+.mobile-nav-links .mobile-nav-sub a {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+}
+
+.mobile-nav-links .mobile-nav-sub a[aria-current="page"] {
+  background: #F8F9FC;
+  color: var(--orange-primary, #F08028);
+}

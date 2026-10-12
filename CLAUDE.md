@@ -18,6 +18,12 @@ Open `index.html` directly, or serve the folder so relative paths and the subpag
 npx serve .            # or: python -m http.server 8000
 ```
 
+## Links
+
+Site is opened straight from disk and hosted on GitHub Pages (served under a `/construction-estimating-services/` subpath). Internal links must be relative and point at the file explicitly: `../index.html#services`, `../commercial/index.html`, never `../#services`, `/` or `commercial/` (folder links show a directory listing on `file://`). `.nojekyll` keeps Pages from running Jekyll.
+
+The header "Services" dropdown and its mobile-drawer sub-list (all subpages) are styled/driven by shared `assets/site-nav.css` + `assets/site-nav.js`, linked from every page. Adding a subpage means adding it to that list in all 7 headers + drawers.
+
 ## Architecture
 
 Two independent pages, each with its **own** stylesheet, script, and design tokens. They do not share CSS or JS.
