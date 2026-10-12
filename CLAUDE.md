@@ -25,7 +25,7 @@ Two independent pages, each with its **own** stylesheet, script, and design toke
 | Page | Files | Font | Tokens |
 |------|-------|------|--------|
 | Home (`/`) | `index.html`, `style.css`, `script.js` | Plus Jakarta Sans (`@import` in `style.css`) | `--navy-dark`, `--orange-primary`, `--text-*`, `--bg-*` … |
-| Residential (`/residential-construction/`) | `residential-construction/index.html`, `styles.css`, `script.js` | Inter (`<link>` in HTML) | `--navy`, `--orange`, `--gray`, `--tint` … (from Figma "Reference" page) |
+| Residential (`/residential-construction/`) | `residential-construction/index.html`, `styles.css`, `script.js` | Plus Jakarta Sans (`<link>` in HTML) | `--navy`, `--orange`, `--gray`, `--tint` … (type scale/colors match the other subpages) |
 | Commercial (`/commercial/`) | `commercial/index.html`, `css/styles.css`, `js/main.js` (see `commercial/README.md`) | Plus Jakarta Sans | `--navy`, `--orange`, `--text`, `--muted` … (mobile-first) |
 | Industrial (`/industrial/`) | `industrial/index.html`, `css/styles.css`, `js/main.js` (see `industrial/README.md`) | Plus Jakarta Sans | same base as commercial |
 
