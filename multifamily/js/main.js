@@ -5,6 +5,7 @@
  * Modules:
  *  1. Mobile menu
  *  2. Read More (clamped text + optional hidden content)
+ *  2b. Hero text fit (fills the gap beside the index card on desktop)
  *  3. Tabs (WAI-ARIA tabs pattern, roving tabindex)
  *  4. Trade carousel arrows
  *  5. Tooltips (one floating element shared by every [data-tooltip])
@@ -121,6 +122,36 @@
     window.addEventListener("resize", rafThrottle(update));
     document.addEventListener("tabchange", update);
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(update);
+  }
+
+  /* ------------------------------------------------------------------
+     2b. Hero text fit — on desktop the hero sits beside the index card.
+     Show as many lines of the clamped intro as fit beside the card so
+     the text column doesn't leave an empty gap; Read More reveals the rest.
+     Runs before Read More so its button check sees the new clamp.
+  ------------------------------------------------------------------ */
+  function initHeroFit() {
+    const grid = $(".hero__grid");
+    const card = grid && $(":scope > aside", grid);
+    const content = grid && $(".hero__content", grid);
+    const text = content && $(".hero__text .clamp", content);
+    if (!card || !text) return;
+
+    const desktop = window.matchMedia("(min-width: 1200px)");
+
+    const fit = () => {
+      text.style.removeProperty("--lines");
+      if (!desktop.matches || text.classList.contains("is-expanded")) return;
+      const lineHeight = parseFloat(getComputedStyle(text).lineHeight);
+      const baseLines = parseInt(getComputedStyle(text).getPropertyValue("--lines"), 10);
+      if (!lineHeight || !baseLines) return;
+      const extraLines = Math.floor((card.offsetHeight - content.offsetHeight) / lineHeight);
+      if (extraLines > 0) text.style.setProperty("--lines", String(baseLines + extraLines));
+    };
+
+    fit();
+    window.addEventListener("resize", rafThrottle(fit));
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
   }
 
   /* ------------------------------------------------------------------
@@ -315,6 +346,7 @@
   initMenu();
   initReviews();
   initTabs();
+  initHeroFit();
   initReadMore();
   initCarousels();
   initTooltips();
