@@ -1,5 +1,7 @@
 /**
- * Multifamily Construction Estimating Costs — page interactions.
+ * Shared page interactions for the blog posts and the subpages that link
+ * assets/subpage.js (apartment-building, excavation, flooring,
+ * general-contractors, landscaping, plumbing, warehouse).
  * Vanilla JS, no dependencies. Loaded with `defer`.
  *
  * Modules:

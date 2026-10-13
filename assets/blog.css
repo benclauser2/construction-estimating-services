@@ -1,5 +1,6 @@
 /* ==========================================================================
-   Industrial Construction Estimating Costs
+   Blog posts — shared stylesheet for every blog/<slug>/index.html
+   (linked as ../../assets/blog.css). Edit here, not per post.
    Mobile-first. Breakpoints: 768px (tablet), 1200px (desktop).
    Header/footer come from the home page (desktop-first, max-width breakpoints;
    full header nav above 1250px).
