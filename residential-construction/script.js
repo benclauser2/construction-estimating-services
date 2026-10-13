@@ -6,7 +6,7 @@
   const mqMobile = window.matchMedia("(max-width: 600px)");
 
   /* -------------------------------------------------------------
-     1. Generic tabs: selectable cards + detail panels, FAQ tabs,
+     1. Generic tabs: estimate-scope tabs, FAQ tabs,
         trade pill tabs. Any [role=tablist] whose tabs have
         aria-controls pointing at a [role=tabpanel].
   ------------------------------------------------------------- */
@@ -143,7 +143,7 @@
   }
 
   /* -------------------------------------------------------------
-     4. Read More / Learn More expanders for clamped text
+     4. Read More expanders for clamped text and card details
   ------------------------------------------------------------- */
   function initExpanders() {
     document.querySelectorAll("[data-expand]").forEach((btn) => {
@@ -155,7 +155,8 @@
       // Hide the button if the text isn't actually clamped
       function check() {
         if (target.classList.contains("is-open")) return;
-        const clamped = target.scrollHeight - target.clientHeight > 2;
+        // Cards: a hidden detail paragraph always counts as more to read
+        const clamped = target.querySelector(".reveal-all") !== null || target.scrollHeight - target.clientHeight > 2;
         btn.hidden = !clamped;
       }
       btn.addEventListener("click", () => {
@@ -164,26 +165,14 @@
         btn.textContent = open ? "Show Less ↑" : openLabel;
       });
       check();
-      window.addEventListener("resize", check);
+      // Re-check when the text becomes visible (e.g. inside a tab panel that starts hidden)
+      if ("ResizeObserver" in window) new ResizeObserver(check).observe(target);
+      else window.addEventListener("resize", check);
     });
   }
 
   /* -------------------------------------------------------------
-     5. Accordion
-  ------------------------------------------------------------- */
-  function initAccordions() {
-    document.querySelectorAll(".acc-btn").forEach((btn) => {
-      const panel = document.getElementById(btn.getAttribute("aria-controls"));
-      btn.addEventListener("click", () => {
-        const open = btn.getAttribute("aria-expanded") !== "true";
-        btn.setAttribute("aria-expanded", String(open));
-        panel.hidden = !open;
-      });
-    });
-  }
-
-  /* -------------------------------------------------------------
-     6. Mobile nav drawer (same markup as the home page header)
+     5. Mobile nav drawer (same markup as the home page header)
   ------------------------------------------------------------- */
   function initMenu() {
     const openBtn = document.getElementById("mobileMenuOpen");
@@ -214,32 +203,25 @@
   }
 
   /* -------------------------------------------------------------
-     7. Mobile carousel dots
-  ------------------------------------------------------------- */
-  function initDots() {
-    document.querySelectorAll(".m-carousel").forEach((row) => {
-      const dots = row.nextElementSibling;
-      if (!dots || !dots.classList.contains("dots")) return;
-      const items = Array.from(row.children);
-      dots.innerHTML = items.map(() => "<span></span>").join("");
-      const spans = Array.from(dots.children);
-      function update() {
-        const step = items[1] ? items[1].offsetLeft - items[0].offsetLeft : row.clientWidth;
-        const atEnd = row.scrollLeft + row.clientWidth >= row.scrollWidth - 4;
-        const idx = atEnd ? items.length - 1 : Math.round(row.scrollLeft / step);
-        spans.forEach((s, i) => s.classList.toggle("is-active", i === idx));
-      }
-      row.addEventListener("scroll", update, { passive: true });
-      window.addEventListener("resize", update);
-      update();
-    });
-  }
-
-  /* -------------------------------------------------------------
-     8. "On this page" chips — highlight the section in view
+     6. "On this page" chips — highlight the section in view
   ------------------------------------------------------------- */
   function initToc() {
     const chips = Array.from(document.querySelectorAll(".chip[href^='#']"));
+
+    // A chip (or URL hash) that targets a hidden tab panel opens that tab first
+    function openTabFor(id) {
+      const panel = document.getElementById(id);
+      if (!panel || panel.getAttribute("role") !== "tabpanel" || !panel.hidden) return;
+      const tab = document.querySelector(`[role="tab"][aria-controls="${CSS.escape(id)}"]`);
+      if (tab) tab.click();
+    }
+    chips.forEach((c) => c.addEventListener("click", () => openTabFor(c.getAttribute("href").slice(1))));
+    if (location.hash.length > 1) {
+      openTabFor(decodeURIComponent(location.hash.slice(1)));
+      const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (target) target.scrollIntoView();
+    }
+
     const map = new Map(chips.map((c) => [c.getAttribute("href").slice(1), c]));
     if (!("IntersectionObserver" in window)) return;
     const io = new IntersectionObserver(
@@ -258,7 +240,7 @@
   }
 
   /* -------------------------------------------------------------
-     9. Reviews carousel — arrows scroll the track one card at a time.
+     7. Reviews carousel — arrows scroll the track one card at a time.
   ------------------------------------------------------------- */
   function initReviews() {
     const track = document.getElementById("reviewsCarouselTrack");
@@ -282,9 +264,7 @@
   initTrades();
   initTooltips();
   initExpanders();
-  initAccordions();
   initMenu();
-  initDots();
   initToc();
   initReviews();
 })();

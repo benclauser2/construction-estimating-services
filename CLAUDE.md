@@ -50,7 +50,7 @@ Note the filename difference: root uses `style.css`, subpage uses `styles.css`. 
 
 ### Residential page (`residential-construction/`)
 
-- `script.js` is an IIFE, `"use strict"`, no dependencies. Built around a generic ARIA tabs helper (`initTablist`) that wires any `[role=tablist]` whose tabs use `aria-controls` → `[role=tabpanel]`, with arrow/Home/End keyboard support. Selectable cards, FAQ tabs and trade pills all reuse it — add new tab UIs via markup, not new JS.
+- `script.js` is an IIFE, `"use strict"`, no dependencies. Built around a generic ARIA tabs helper (`initTablist`) that wires any `[role=tablist]` whose tabs use `aria-controls` → `[role=tabpanel]`, with arrow/Home/End keyboard support. Estimate-scope tabs, FAQ tabs and trade pills all reuse it — add new tab UIs via markup, not new JS. Cards, pill tabs (`.tablist` / `.tab`) and `<details class="acc">` accordions use the same markup and look as the other subpages; card Read More uses `data-expand` on a `.clamp-group` (summary `.clamp` + hidden `.reveal-all` detail).
 - Mobile behavior keyed off `matchMedia("(max-width: 600px)")`.
 - More accessibility-oriented than the home page; keep new work to that standard.
 
