@@ -61,6 +61,14 @@
         <a href="#what-is-included" class="nav-link">Trades</a>
         <a href="#why-choose" class="nav-link">About Us</a>
         <a href="#estimating-projects" class="nav-link">Portfolio</a>
+        <div class="nav-dropdown">
+          <button class="nav-link nav-dropdown__toggle" type="button" aria-expanded="false" aria-controls="blogMenu">Blog <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <ul class="nav-dropdown__menu" id="blogMenu">
+            <li><a href="blog/cost-to-build-a-house-in-alabama/index.html">Cost to Build a House in Alabama</a></li>
+            <li><a href="blog/cost-to-build-a-house-in-alaska/index.html">Cost to Build a House in Alaska</a></li>
+            <li><a href="blog/cost-to-build-a-house-in-arkansas/index.html">Cost to Build a House in Arkansas</a></li>
+          </ul>
+        </div>
         <a href="#contact" class="nav-link">Contact Us</a>
       </nav>
 
@@ -111,6 +119,12 @@
       <a href="#what-is-included">Trades</a>
       <a href="#why-choose">About Us</a>
       <a href="#estimating-projects">Portfolio</a>
+      <p class="mobile-nav-label" id="drawerBlogLabel">Blog</p>
+      <ul class="mobile-nav-sub" aria-labelledby="drawerBlogLabel">
+        <li><a href="blog/cost-to-build-a-house-in-alabama/index.html">Cost to Build a House in Alabama</a></li>
+        <li><a href="blog/cost-to-build-a-house-in-alaska/index.html">Cost to Build a House in Alaska</a></li>
+        <li><a href="blog/cost-to-build-a-house-in-arkansas/index.html">Cost to Build a House in Arkansas</a></li>
+      </ul>
       <a href="#contact">Contact Us</a>
     </div>
     <div class="mobile-drawer-actions" style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px;">
@@ -1559,7 +1573,7 @@
       <div class="footer-grid">
         <!-- Bio Column -->
         <div>
-          <a href="#" class="logo-link footer-logo" style="margin-bottom: 18px;">
+          <a href="#home" class="logo-link footer-logo" style="margin-bottom: 18px;">
             <svg width="32" height="28" viewBox="0 0 30 26" fill="none">
               <circle cx="4" cy="22" r="4" fill="#F08028"/>
               <circle cx="15" cy="13" r="4" fill="#F08028"/>

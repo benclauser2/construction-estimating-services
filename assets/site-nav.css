@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Site navigation: "Services" dropdown (desktop header) and its sub-list
+   Site navigation: "Services" and "Blog" dropdowns (desktop header) and their sub-lists
    in the mobile drawer. Shared by every page; uses the home page header
    tokens (--navy-dark, --orange-primary …), which each page already
    defines on .header / .mobile-nav-drawer.
@@ -111,4 +111,45 @@
 .mobile-nav-links .mobile-nav-sub a[aria-current="page"] {
   background: #F8F9FC;
   color: var(--orange-primary, #F08028);
+}
+
+/* Mobile drawer group heading without its own page (Blog) */
+.mobile-nav-label {
+  margin: 0;
+  padding: 10px 12px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--navy-dark, #1F3864);
+}
+
+@media (max-width: 480px) {
+  .mobile-nav-label { padding: 8px 10px; font-size: 14.5px; }
+}
+
+/* Long sub-items wrap instead of being cut off */
+.mobile-nav-links .mobile-nav-sub a { white-space: normal; text-overflow: clip; }
+
+/* Header fit: with Services + Blog the full desktop header needs ~1390px.
+   Below 1440px the phone link shows its icon only (number stays in the
+   accessible name) and spacing tightens; below 1300px the drawer takes over. */
+@media (max-width: 1439px) {
+  .header .logo-link { margin-right: 28px; }
+  .header .nav-menu { gap: 16px; }
+  .header .header-phone-link .phone-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 1300px) {
+  .header .nav-menu,
+  .header .header-actions .btn,
+  .header .header-actions .header-phone-link,
+  .header .header-actions .btn-outline-nav { display: none !important; }
+  .header .mobile-toggle { display: flex !important; }
 }

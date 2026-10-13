@@ -22,7 +22,7 @@ npx serve .            # or: python -m http.server 8000
 
 Site is opened straight from disk and hosted on GitHub Pages (served under a `/construction-estimating-services/` subpath). Internal links must be relative and point at the file explicitly: `../index.html#services`, `../commercial/index.html`, never `../#services`, `/` or `commercial/` (folder links show a directory listing on `file://`). `.nojekyll` keeps Pages from running Jekyll.
 
-The header "Services" dropdown and its mobile-drawer sub-list (all subpages) are styled/driven by shared `assets/site-nav.css` + `assets/site-nav.js`, linked from every page. Adding a subpage means adding it to that list in every header + drawer (17 pages incl. roofing, renovation, flooring, painting, warehouse, excavation, landscaping, general-contractors, apartment-building, plumbing).
+The header "Services" dropdown and its mobile-drawer sub-list (all subpages) are styled/driven by shared `assets/site-nav.css` + `assets/site-nav.js`, linked from every page. Adding a service subpage means adding it to that list in every header + drawer (18 pages incl. roofing, renovation, flooring, painting, warehouse, excavation, landscaping, general-contractors, apartment-building, plumbing). Blog posts live in `blog/<slug>/` (two folders deep, so their links start `../../`) and go in the separate "Blog" dropdown (`#blogMenu`) and the drawer's Blog group (`#drawerBlogLabel`), not under Services. Posts (alphabetical by state): `blog/cost-to-build-a-house-in-alabama/`, `blog/cost-to-build-a-house-in-alaska/`, `blog/cost-to-build-a-house-in-arkansas/`. Below 1440px the header phone link is icon-only and below 1300px the drawer replaces the desktop nav (rules in `site-nav.css`).
 
 ## Architecture
 

@@ -1,4 +1,4 @@
-/* Site navigation: "Services" dropdown in the header (shared by every page).
+/* Site navigation: "Services" and "Blog" dropdowns in the header (shared by every page).
    Click/Enter toggles it, Escape or focus/click outside closes it.
    Mouse hover also opens it (CSS only). */
 (() => {
