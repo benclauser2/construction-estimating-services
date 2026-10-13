@@ -90,6 +90,19 @@
   border-radius: 8px 8px 0 0;
 }
 
+/* Blog menu: one post per state, so it's laid out in 3 columns (reading down
+   each column, alphabetical) and centred under the toggle to keep every item
+   on screen. Only shown at ≥1300px, where 940px always fits. */
+#blogMenu {
+  left: 50%;
+  width: 940px;
+  column-count: 3;
+  column-gap: 4px;
+  transform: translateX(-50%);
+}
+
+#blogMenu li { break-inside: avoid; }
+
 /* Mobile drawer sub-list */
 .mobile-nav-sub {
   display: flex;
