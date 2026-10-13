@@ -114,7 +114,7 @@
         // Hidden tab panels report 0 height; leave their buttons alone until shown.
         if (!target.offsetParent && target.closest("[hidden]")) return;
         const isClamped = (el) => el.scrollHeight - el.clientHeight > 1 || getComputedStyle(el).display === "none";
-        const clamped = target.matches(".clamp-group") ? $$(".clamp", target).some(isClamped) : isClamped(target);
+        const clamped = target.matches(".clamp-group") ? $$(".clamp, .reveal-all", target).some(isClamped) : isClamped(target);
         const hiddenExtra = extra && getComputedStyle(extra).display === "none";
         btn.hidden = !(clamped || hiddenExtra);
       });
