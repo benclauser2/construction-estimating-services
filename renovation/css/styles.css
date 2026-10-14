@@ -1299,3 +1299,6 @@ a.index-item:hover .index-item__title { color: var(--orange-dark); }
 
 /* Project cards carry a summary + clamped detail */
 .project .project__summary { margin-bottom: 12px; }
+
+/* Accordion question headings keep the summary's look */
+.acc__q { margin: 0; font: inherit; color: inherit; letter-spacing: inherit; text-transform: inherit; }

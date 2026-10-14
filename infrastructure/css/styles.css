@@ -1047,7 +1047,7 @@ a.index-item:hover .index-item__title { color: var(--orange-dark); }
 .project .card__title { font-size: 19px; }
 .project__summary { font-size: 14.5px; font-weight: 500; color: var(--text); line-height: 1.6; }
 .project__scope { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); }
-.project__scope h4 { margin: 0 0 6px; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--navy); }
+.project__scope .project__scope-title { margin: 0 0 6px; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--navy); }
 .project__scope p { font-size: 14px; line-height: 1.6; color: var(--muted); }
 
 /* ---------- 19. FAQ / accordion ---------- */
@@ -1074,6 +1074,7 @@ a.index-item:hover .index-item__title { color: var(--orange-dark); }
   cursor: pointer;
   list-style: none;
 }
+.acc__q { margin: 0; font: inherit; color: inherit; letter-spacing: inherit; }
 .acc summary::-webkit-details-marker { display: none; }
 .acc summary::after {
   content: "+";
